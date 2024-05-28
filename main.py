@@ -27,7 +27,6 @@ match selezionato:
         case "1 Problem definition":
             st.page_link("pages/problemdef.py", label="Problem definition")
             
-
         case "2 Data":
-            
+            st.page_link("pages/data.py", label="Data")
             
