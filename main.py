@@ -20,6 +20,9 @@ def sidebar_menu():
 
 selezionato = sidebar_menu()
 
+if st.button("Home", key="secondo"):
+     st.switch_page("home.py")
+    
 match selezionato:
         case "Home":
             st.switch_page("home.py")
