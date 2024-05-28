@@ -26,8 +26,7 @@ match selezionato:
             
         case "1 Problem definition":
 
-            st.header(":blue[1 Problem definition]")
-            problema = st.text_area('DESCRIZIONE DEL PROBLEMA', 'Illustra il tipo di problema')
+            
 
         case "2 Data":
             
