@@ -22,11 +22,11 @@ selezionato = sidebar_menu()
 
 match selezionato:
         case "Home":
-            st.page_link("pages/home.py", label="Home")
+            st.page_link("pagine/home.py", label="Home")
             
         case "1 Problem definition":
-            st.page_link("pages/problemdef.py", label="Problem definition")
+            st.page_link("pagine/problemdef.py", label="Problem definition")
             
         case "2 Data":
-            st.page_link("pages/data.py", label="Data")
+            st.page_link("pagine/data.py", label="Data")
             
