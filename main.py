@@ -24,9 +24,9 @@ show_pages(
         Page("pages/data.py",            "2 Data", ":globe_with_meridians:"), 
         Section("My section", icon="🎈️"),
         # Pages after a section will be indented
-        Page("Another page", icon="💪"),
+            Page("Another page", icon="💪"),
         # Unless you explicitly say in_section=False
-        Page("Not in a section", in_section=False)
+        
         Page("pages/analisi.py",         "3 Analisi dei dati", ":globe_with_meridians:"),  
         Page("pages/interpretazione.py", "4 Interpretazione dei dati", ":globe_with_meridians:"),
         Page("pages/archiviazione.py",   "5 Archiviazione e gestione dei dati", ":globe_with_meridians:"),
