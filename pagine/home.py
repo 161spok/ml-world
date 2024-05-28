@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.title("Metodologia da seguire")
 st.write("E' un processo iterativo")
 st.write("1 - Quale problema stiamo tentando di risolvere ? : 1 Problem definition")
