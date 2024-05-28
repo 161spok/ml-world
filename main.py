@@ -20,8 +20,8 @@ show_pages(
     [
         Page("main.py", "Main", "🏠"),
         Page("pages/home.py", "home", ":books:"),
-        Page("pages/data.py", "data", ":books:"),   
-        Page("pages/problemdef.py", "definizione", ":books:"),     
+        Page("pages/data.py", "data", ":globe_with_meridians:"),   
+        Page("pages/problemdef.py", "definizione", ":department_store:"),     
     ]
 )    
 
