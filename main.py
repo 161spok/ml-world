@@ -13,15 +13,20 @@ from st_pages import Page, show_pages, add_page_title
 
 # Optional -- adds the title and icon to the current page
 add_page_title()
-
+"Home", "1 Problem definition", "2 Data", "3 Analisi dei dati", "4 Interpretazione dei dati", '5 Archiviazione e gestione dei dati','6 Visualizzazione dei dati'
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
 show_pages(
     [
         Page("main.py", "Main", "🏠"),
         Page("pages/home.py", "Home", ":books:"),
-        Page("pages/data.py", "Data", ":globe_with_meridians:"),   
-        Page("pages/problemdef.py", "Definizione", ":department_store:"),     
+        Page("pages/problemdef.py", "1 Problem definition", ":department_store:"),
+        Page("pages/data.py", "2 Data", ":globe_with_meridians:"),   
+        Page("pages/data.py", "3 Analisi dei dati", ":globe_with_meridians:"),  
+        Page("pages/data.py", "4 Interpretazione dei dati", ":globe_with_meridians:"),
+        Page("pages/data.py", "5 Archiviazione e gestione dei dati", ":globe_with_meridians:"),
+        Page("pages/data.py", "6 Visualizzazione dei dati", ":globe_with_meridians:"),
+        
     ]
 )    
 
