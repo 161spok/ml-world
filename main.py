@@ -25,13 +25,13 @@ if st.button("Home", key="secondo"):
     
 match selezionato:
         case "Home":
-            st.switch_page("home.py")
+            st.switch_page("pages/home.py")
             
             
         case "1 Problem definition":
-            st.switch_page("problemdef.py")
+            st.switch_page("pages/problemdef.py")
             
             
         case "2 Data":
-            st.switch_page("data.py")
+            st.switch_page("pages/data.py")
            
