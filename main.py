@@ -22,7 +22,7 @@ show_pages(
         Page("pages/home.py", "Home", ":books:"),
         Page("pages/problemdef.py", "1 Problem definition", ":department_store:"),
         Page("pages/data.py", "2 Data", ":globe_with_meridians:"),   
-        Page("pages/data.py", "3 Analisi dei dati", ":globe_with_meridians:"),  
+        Page("pages/analisi.py", "3 Analisi dei dati", ":globe_with_meridians:"),  
         Page("pages/data.py", "4 Interpretazione dei dati", ":globe_with_meridians:"),
         Page("pages/data.py", "5 Archiviazione e gestione dei dati", ":globe_with_meridians:"),
         Page("pages/data.py", "6 Visualizzazione dei dati", ":globe_with_meridians:"),
