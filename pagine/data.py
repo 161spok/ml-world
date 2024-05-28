@@ -1,3 +1,6 @@
+            import streamlit as st
+            import pandas as pd
+
             st.header(":blue[2 Data]")
             
             #col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1])
