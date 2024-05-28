@@ -19,9 +19,9 @@ add_page_title()
 show_pages(
     [
         Page("main.py", "Main", "🏠"),
-        Page("pages/home.py", "home", ":books:"),
-        Page("pages/data.py", "data", ":globe_with_meridians:"),   
-        Page("pages/problemdef.py", "definizione", ":department_store:"),     
+        Page("pages/home.py", "Home", ":books:"),
+        Page("pages/data.py", "Data", ":globe_with_meridians:"),   
+        Page("pages/problemdef.py", "Definizione", ":department_store:"),     
     ]
 )    
 
