@@ -5,8 +5,8 @@ from streamlit_option_menu import option_menu
 st.set_page_config(layout="wide")
 dati_caricati = False
 
-st.button('Home', key="primo")
-if st.button("Home", key="secondo"):
+caricato = st.button('Home', key="primo")
+if caricato:
          st.switch_page("pages/home.py")
 
     
