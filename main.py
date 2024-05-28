@@ -22,6 +22,7 @@ selezionato = sidebar_menu()
 
 match selezionato:
         case "Home":
+            st.page_link("pages/user.py", label="Your profile")
             st.title("Metodologia da seguire")
             st.write("E' un processo iterativo")
             st.write("1 - Quale problema stiamo tentando di risolvere ? : 1 Problem definition")
