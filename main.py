@@ -13,7 +13,7 @@ from st_pages import Page, show_pages, add_page_title
 
 # Optional -- adds the title and icon to the current page
 add_page_title()
-"Home", "1 Problem definition", "2 Data", "3 Analisi dei dati", "4 Interpretazione dei dati", '5 Archiviazione e gestione dei dati','6 Visualizzazione dei dati'
+
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
 show_pages(
