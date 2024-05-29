@@ -8,7 +8,7 @@ dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
 if st.button("Submit & Process", key="process_button") :
-                                with st.spinner("Processing ..."):
+            with st.spinner("Processing ..."):
                                         st.success("Done !") 
                                         if uploaded_file is not None:
                                             dati_caricati = True
