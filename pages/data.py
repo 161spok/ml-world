@@ -14,16 +14,18 @@ if st.button("Submit & Process", key="process_button") :
                                             dati_caricati = True
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
-
-preelaborazione = st.button("2 Preelaborazione dati")
-
-analisi =         st.button("3 Analisi dei dati")
-
-interpretazione = st.button("4 Interpretazione dei dati")
-
-archiviazione =   st.button("5 Archiviazione e gestione dei dati")
-
-visualizzazione = st.button("6 Visualizzazione dei dati")                            
+with st.container():
+  col1, col2, col3, col4, col5 = st.columns(5)
+  with col1:
+    preelaborazione = st.button("2 Preelaborazione dati")
+  with col2:
+    analisi =         st.button("3 Analisi dei dati")
+  with col3:
+    interpretazione = st.button("4 Interpretazione dei dati")
+  with col4:
+    archiviazione =   st.button("5 Archiviazione e gestione dei dati")
+  with col5:
+    visualizzazione = st.button("6 Visualizzazione dei dati")                            
                             
 if preelaborazione:
                 st.subheader("2 Preelaborazione dati")
