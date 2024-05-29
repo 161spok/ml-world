@@ -20,7 +20,7 @@ def click_button():
 
 #st.button("Preelaborazione dati", on_click=click_button)
 if st.button("Page 1"):
-    st.switch_page("pages/preelaborazione.py.py")
+    st.switch_page("pages/preelaborazione.py")
 # in container
 with st.container(border=True):
       col1, col2, col3, col4, col5 = st.columns(5)
