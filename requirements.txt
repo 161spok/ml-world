@@ -2,3 +2,4 @@ streamlit_option_menu
 streamlit==1.30.0
 pandas
 st-pages
+mathplotlib
