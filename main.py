@@ -12,6 +12,7 @@ plt.show()
 
 #st.set_page_config(layout="wide")
 
+'''
 from st_pages import Page, Section, show_pages, add_page_title
 
 # Optional -- adds the title and icon to the current page
@@ -42,4 +43,4 @@ show_pages(
     ]
 )    
 
-           
+'''           
