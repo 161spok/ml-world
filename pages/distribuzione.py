@@ -11,5 +11,5 @@ else:
   data.boxplot()
   data.hist()
 
-  tips = sns.load_dataset('data')
-  tips.plot()
+  #tips = sns.load_dataset('data')
+  #tips.plot()
