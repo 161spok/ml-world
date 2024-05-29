@@ -41,18 +41,18 @@ if preelaborazione:
 
                 col1, col2, col3, col4, col5, col6, col7, col8  = st.columns([1,1,1,1,1,1,1,1])
                 with col1:
-                    raccolta = st.button("Rimozione di osservazioni indesiderate")
+                    rimozione = st.button("Rimozione di osservazioni indesiderate")
                 with col2:
-                    preelaborazione = st.button("Correzione degli errori di struttura")
+                    correzione = st.button("Correzione degli errori di struttura")
                 with col3:
-                    analisi = st.button("Gestione dei valori anomali indesiderati")
+                    anomali = st.button("Gestione dei valori anomali indesiderati")
                 with col4:
-                    interpretazione = st.button("Gestione dei dati mancanti")
+                    mancanti = st.button("Gestione dei dati mancanti")
                 with col5:
                     archiviazione = st.button("Trasformazione dei dati")
                 with col6:
-                    visualizzazione = st.button("Standardizzazione dei dati")
+                    standardizzazione = st.button("Standardizzazione dei dati")
                 with col7:
-                    archiviazione = st.button("Formattazione dei dati")
+                    formattazione = st.button("Formattazione dei dati")
                 with col8:
-                    visualizzazione = st.button("Codifica delle etichette")
+                    codifica = st.button("Codifica delle etichette")
