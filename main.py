@@ -11,6 +11,6 @@ st.write(df.head())
 df.plot()
 plt.show()
 #Two  lines to make our compiler able to draw:
-plt.savefig(sys.stdout.buffer)
-sys.stdout.flush()
+#plt.savefig(sys.stdout.buffer)
+#sys.stdout.flush()
 
