@@ -26,7 +26,7 @@ with st.container(border=True):
       with col1:
         #preelaborazione = st.button("Preelaborazione dati")
         
-        st.button("Preelaborazione dati", on_click=click_button)
+        #st.button("Preelaborazione dati", on_click=click_button)
       with col2:
         analisi =         st.button("Analisi dei dati")
       with col3:
