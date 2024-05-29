@@ -18,8 +18,9 @@ if st.button("Submit & Process", type="primary", key="process_button") :
 def click_button():
     st.switch_page("pages/preelaborazione.py")
 
-st.button("Preelaborazione dati", on_click=click_button)
-
+#st.button("Preelaborazione dati", on_click=click_button)
+if st.button("Page 1"):
+    st.switch_page("pages/preelaborazione.py.py")
 # in container
 with st.container(border=True):
       col1, col2, col3, col4, col5 = st.columns(5)
