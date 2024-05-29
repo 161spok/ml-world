@@ -11,7 +11,7 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'Esempio: Una immagine può essere convertita in una matrice di dimensioni NXN, il valore di ciascuna cella indicherà il pixel dell\' immagine.')
 
 #---------------#                
-                with st.container(border=True):
+with st.container(border=True):
                               col1, col2, col3, col4, col5, col6, col7, col8, col9  = st.columns([1,1,1,1,1,1,1,1,1])
                               with col1:
                                   duplicati = st.button("Rimozione dei duplicati")                                 
@@ -32,11 +32,4 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
                               with col9:
                                   codifica = st.button("Codifica delle etichette")
 #---------------# 
-                if duplicati:
-                    # Check for duplicate rows
-                    duplicates = data.duplicated().sum()
-                    st.write("Number of duplicate rows:", duplicates)
-                                      
-                    # Removing duplicate rows
-                    data.drop_duplicates(inplace=True)
-                    st.write(data)
+
