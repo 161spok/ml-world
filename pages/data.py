@@ -3,7 +3,7 @@ import pandas as pd
 
 st.header(":blue[2 Data]")
              
-st.subheader("1 Raccolta dati")
+st.subheader("Raccolta dati")
 dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
@@ -17,15 +17,15 @@ if st.button("Submit & Process", key="process_button") :
 with st.container():
   col1, col2, col3, col4, col5 = st.columns(5)
   with col1:
-    preelaborazione = st.button("2 Preelaborazione dati")
+    preelaborazione = st.button("Preelaborazione dati")
   with col2:
-    analisi =         st.button("3 Analisi dei dati")
+    analisi =         st.button("Analisi dei dati")
   with col3:
-    interpretazione = st.button("4 Interpretazione dei dati")
+    interpretazione = st.button("Interpretazione dei dati")
   with col4:
-    archiviazione =   st.button("5 Archiviazione e gestione dei dati")
+    archiviazione =   st.button("Archiviazione e gestione dei dati")
   with col5:
-    visualizzazione = st.button("6 Visualizzazione dei dati")                            
+    visualizzazione = st.button("Visualizzazione dei dati")                            
                             
 if preelaborazione:
                 st.subheader("2 Preelaborazione dati")
