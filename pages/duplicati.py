@@ -7,8 +7,8 @@ if 'dati' not in st.session_state:
   pass
 else:  
   st.write(st.session_state.dati)
-  tmpdati = st.session_state.dati
-  data = pd.dataframe(tmpdati)
+  data = st.session_state.df
+  #data = pd.dataframe(tmpdati)
 
   # Check for duplicate rows
   duplicates = data.duplicated().sum()
