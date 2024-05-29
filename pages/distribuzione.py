@@ -4,6 +4,12 @@ import seaborn as sns
 import pandas as pd
 
 st.subheader("Distribuzione dati")
+df = pd.read_csv('data.csv')
+df.plot()
+plt.show()
+
+
+'''
 dati = st.text_area('DESCRIZIONE', 'Questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
@@ -19,6 +25,7 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             plt.show()
                                             #plt.hist(df)
                                             #plt.show()
+  '''                                          
 
 '''
 if 'dati' not in st.session_state:
