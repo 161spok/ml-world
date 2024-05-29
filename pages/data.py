@@ -59,11 +59,12 @@ if preelaborazione:
                                   formattazione = st.button("Formattazione dei dati")
                               with col9:
                                   codifica = st.button("Codifica delle etichette")
-#---------------#                              
-                # Check for duplicate rows
-                duplicates = data.duplicated().sum()
-                st.write("Number of duplicate rows:", duplicates)
-                                  
-                # Removing duplicate rows
-                data.drop_duplicates(inplace=True)
-                st.write(data)
+#---------------# 
+                if duplicati:
+                    # Check for duplicate rows
+                    duplicates = data.duplicated().sum()
+                    st.write("Number of duplicate rows:", duplicates)
+                                      
+                    # Removing duplicate rows
+                    data.drop_duplicates(inplace=True)
+                    st.write(data)
