@@ -27,10 +27,10 @@ show_pages(
         Page("pages/preelaborazione.py", "2.1 Preelaborazione", icon=":globe_with_meridians:"),
         # Unless you explicitly say in_section=False
         
-        Page("pages/analisi.py",         "3 Analisi dei dati", ":globe_with_meridians:", in_section=False),  
-        Page("pages/interpretazione.py", "4 Interpretazione dei dati", ":globe_with_meridians:", in_section=False),
-        Page("pages/archiviazione.py",   "5 Archiviazione e gestione dei dati", ":globe_with_meridians:", in_section=False),
-        Page("pages/visualizzazione.py", "6 Visualizzazione dei dati", ":globe_with_meridians:", in_section=False),
+        Page("pages/analisi.py",         "2.2 Analisi dei dati", ":globe_with_meridians:", in_section=False),  
+        Page("pages/interpretazione.py", "2.3 Interpretazione dei dati", ":globe_with_meridians:", in_section=False),
+        Page("pages/archiviazione.py",   "2.4 Archiviazione e gestione dei dati", ":globe_with_meridians:", in_section=False),
+        Page("pages/visualizzazione.py", "2.5 Visualizzazione dei dati", ":globe_with_meridians:", in_section=False),
         
     ]
 )    
