@@ -10,26 +10,24 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'numeriche che velocizzerebbero l\' apprendimento del modello. ' 
 'Esempio: Una immagine può essere convertita in una matrice di dimensioni NXN, il valore di ciascuna cella indicherà il pixel dell\' immagine.')
 
-#---------------#                
-with st.container(border=True):
-                              col1, col2, col3, col4, col5, col6, col7, col8, col9  = st.columns([1,1,1,1,1,1,1,1,1])
-                              with col1:
-                                  duplicati = st.button("Rimozione dei duplicati")                                 
-                              with col2:
-                                  rimozione = st.button("Rimozione di osservazioni indesiderate")
-                              with col3:
-                                  correzione = st.button("Correzione degli errori di struttura")
-                              with col4:
-                                  anomali = st.button("Gestione dei valori anomali indesiderati")
-                              with col5:
-                                  mancanti = st.button("Gestione dei dati mancanti")
-                              with col6:
-                                  archiviazione = st.button("Trasformazione dei dati")
-                              with col7:
-                                  standardizzazione = st.button("Standardizzazione dei dati")
-                              with col8:
-                                  formattazione = st.button("Formattazione dei dati")
-                              with col9:
-                                  codifica = st.button("Codifica delle etichette")
+st.write("La preelaborazione dei dati prevede i seguenti passi:")              
+
+st.write("Rimozione dei duplicati")                                 
+                             
+st.write("Rimozione di osservazioni indesiderate")
+                             
+st.write("Correzione degli errori di struttura")
+                             
+st.write("Gestione dei valori anomali indesiderati")
+                             
+st.write("Gestione dei dati mancanti")
+                             
+st.write("Trasformazione dei dati")
+                              
+st.write("Standardizzazione dei dati")
+                             
+st.write("Formattazione dei dati")
+                              
+st.write("Codifica delle etichette")
 #---------------# 
 
