@@ -13,7 +13,9 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 
 
 
-st.write("La preelaborazione dei dati prevede i seguenti passi:")              
+#st.write("La preelaborazione dei dati prevede i seguenti passi:")
+st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
+st.write("Verifica distribuzione dati")  
 
 st.write("Rimozione dei duplicati")                                 
                              
