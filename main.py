@@ -7,6 +7,7 @@ import sys
 
 st.subheader("Distribuzione dati")
 df = pd.read_csv('data.csv')
+st.write(df.head())
 df.plot()
 plt.show()
 #Two  lines to make our compiler able to draw:
