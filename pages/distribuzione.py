@@ -12,12 +12,12 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                         st.success("Caricamento effettuato !") 
                                         if uploaded_file is not None:
                                             dati_caricati = True
-                                            data = pd.read_csv(uploaded_file) #path folder of the data file
-                                            st.write(data)
-                                            data.plot()
-                                            #plt.boxplot(data)
+                                            df = pd.read_csv(uploaded_file) #path folder of the data file
+                                            #st.write(df)
+                                            df.plot()
+                                            #plt.boxplot(df)
                                             plt.show()
-                                            #plt.hist(data)
+                                            #plt.hist(df)
                                             #plt.show()
 
 '''
