@@ -8,7 +8,7 @@ st.subheader("Raccolta dati")
 dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
-if st.button("Submit & Process", key="process_button") :
+if st.button("Submit & Process", type="primary", key="process_button") :
             with st.spinner("Processing ..."):
                                         st.success("Done !") 
                                         if uploaded_file is not None:
