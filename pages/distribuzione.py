@@ -12,6 +12,7 @@ else:
   st.write(st.session_state.dati)
   data = st.session_state.df
   st.write(data)
+  st.dataframe(data)
   st.area_chart(data)
   
   
