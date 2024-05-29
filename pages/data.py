@@ -39,7 +39,7 @@ if preelaborazione:
                 'numeriche che velocizzerebbero l\' apprendimento del modello. ' 
                 'Esempio: Una immagine può essere convertita in una matrice di dimensioni NXN, il valore di ciascuna cella indicherà il pixel dell\' immagine.')
 #---------------#                
-                with st.container(border=True)
+                with st.container(border=True):
                               col1, col2, col3, col4, col5, col6, col7, col8  = st.columns([1,1,1,1,1,1,1,1])
                               with col1:
                                   duplicati = st.button("Rimozione dei duplicati")                                 
