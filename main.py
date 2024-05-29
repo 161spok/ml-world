@@ -8,6 +8,7 @@ import sys
 st.subheader("Distribuzione dati")
 df = pd.read_csv('data.csv')
 st.write(df.head())
+plt.figure()
 df.plot(figsize=(9,6))
 plt.show()
 #Two  lines to make our compiler able to draw:
