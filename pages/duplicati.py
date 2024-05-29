@@ -3,7 +3,7 @@ import pandas as pd
 
 st.subheader("Rimozione dei duplicati")
 
-if 'dati' not in st.session_state:
+if 'caricati' not in st.session_state:
   pass
 else:  
   st.write(st.session_state.dati)
