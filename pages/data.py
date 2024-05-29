@@ -29,7 +29,7 @@ with st.container(border=True):
     visualizzazione = st.button("Visualizzazione dei dati")                            
                             
 if preelaborazione:
-                st.subheader("2 Preelaborazione dati")
+                st.subheader("Preelaborazione dati")
                 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
                 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
                 st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza che non può essere alimentata direttamente alla macchina. ' 
@@ -41,18 +41,18 @@ if preelaborazione:
 
                 col1, col2, col3, col4, col5, col6, col7, col8  = st.columns([1,1,1,1,1,1,1,1])
                 with col1:
-                    raccolta = st.button("1 Rimozione di osservazioni indesiderate")
+                    raccolta = st.button("Rimozione di osservazioni indesiderate")
                 with col2:
-                    preelaborazione = st.button("2 Correzione degli errori di struttura")
+                    preelaborazione = st.button("Correzione degli errori di struttura")
                 with col3:
-                    analisi = st.button("3 Gestione dei valori anomali indesiderati")
+                    analisi = st.button("Gestione dei valori anomali indesiderati")
                 with col4:
-                    interpretazione = st.button("4 Gestione dei dati mancanti")
+                    interpretazione = st.button("Gestione dei dati mancanti")
                 with col5:
-                    archiviazione = st.button("5 Trasformazione dei dati")
+                    archiviazione = st.button("Trasformazione dei dati")
                 with col6:
-                    visualizzazione = st.button("6 Standardizzazione dei dati")
+                    visualizzazione = st.button("Standardizzazione dei dati")
                 with col7:
-                    archiviazione = st.button("7 Formattazione dei dati")
+                    archiviazione = st.button("Formattazione dei dati")
                 with col8:
-                    visualizzazione = st.button("8 Codifica delle etichette")
+                    visualizzazione = st.button("Codifica delle etichette")
