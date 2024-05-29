@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.write("Duplicati")
+st.subheader("Rimozione dei duplicati")
 
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
