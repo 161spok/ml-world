@@ -23,7 +23,7 @@ with st.container(border=True):
       col1, col2, col3, col4, col5 = st.columns(5)
       with col1:
         #preelaborazione = st.button("Preelaborazione dati")
-        st.page_link("pages/preelaborazione.py", label="Page 1", icon="1️⃣")
+        st.switch_page("pages/preelaborazione.py")
         #st.button("Preelaborazione dati", on_click=click_button)
       with col2:
         analisi =         st.button("Analisi dei dati")
