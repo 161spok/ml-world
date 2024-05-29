@@ -22,7 +22,7 @@ show_pages(
         Page("pages/home.py",            "Home", ":books:"),
         Page("pages/problemdef.py",      "1 Problem definition", ":department_store:"),
         #Page("pages/data.py",            "2 Data", ":globe_with_meridians:"), 
-        Section("SEZIONE  Data", icon="🎈️"),
+        Section(name="SEZIONE  Data", icon="🎈️"),
         # Pages after a section will be indented
             Page("pages/data.py", "2 Data", icon="💪", in_section=True),
         # Unless you explicitly say in_section=False
