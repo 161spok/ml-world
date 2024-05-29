@@ -5,3 +5,4 @@ st-pages
 matplotlib
 seaborn
 plotly
+plotly-express
