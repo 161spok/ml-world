@@ -26,6 +26,7 @@ show_pages(
         Page("pages/data.py", "[2] Data", icon=":globe_with_meridians:"),
         Page("pages/preelaborazione.py", "[2.1] Preelaborazione", icon=":globe_with_meridians:"),
         # Unless you explicitly say in_section=False
+        Page("pages/distribuzione.py", "[2.1.0] Distribuzione dei dati", icon=":globe_with_meridians:"),
         Page("pages/duplicati.py", "[2.1.1] Rimozione dei duplicati", icon=":globe_with_meridians:"),
         Page("pages/indesiderate.py", "[2.1.2] Rimozione dei dati indesiderati", icon=":globe_with_meridians:"),
         Page("pages/mancanti.py", "[2.1.3] Rimozione dei dati mancanti", icon=":globe_with_meridians:"),
