@@ -11,7 +11,7 @@ if 'dati' not in st.session_state:
 else:  
   st.write(st.session_state.dati)
   data = st.session_state.df
-  #st.write(data)
+  st.write(data)
   st.area_chart(data)
   
   
