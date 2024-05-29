@@ -5,7 +5,7 @@ st.set_page_config(layout="wide")
 st.header(":blue[2 Data]")
              
 st.subheader("Raccolta dati")
-dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
+dati = st.text_area('DESCRIZIONE', 'Questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
                 
 if st.button("Submit & Process", type="primary", key="process_button") :
