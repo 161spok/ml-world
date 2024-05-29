@@ -2,11 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.header(":blue[2 Data]")
-            
-#col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1])
-            
-#with col1:
-raccolta = st.button("1 Raccolta dati") 
+             
 st.subheader("1 Raccolta dati")
 dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
@@ -18,29 +14,16 @@ if st.button("Submit & Process", key="process_button") :
                                             dati_caricati = True
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
-#with col2:
+
 preelaborazione = st.button("2 Preelaborazione dati")
-#with col3:
-analisi = st.button("3 Analisi dei dati")
-#with col4:
+
+analisi =         st.button("3 Analisi dei dati")
+
 interpretazione = st.button("4 Interpretazione dei dati")
- #with col5:
-archiviazione = st.button("5 Archiviazione e gestione dei dati")
-#with col6:
-visualizzazione = st.button("6 Visualizzazione dei dati")
-                            
-if raccolta:
-                    st.subheader("1 Raccolta dati")
-                    dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
-                    uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-                
-                    if st.button("Submit & Process", key="process_button") :
-                                with st.spinner("Processing ..."):
-                                        st.success("Done !") 
-                                        if uploaded_file is not None:
-                                            dati_caricati = True
-                                            data = pd.read_csv(uploaded_file) #path folder of the data file
-                                            st.write(data)
+
+archiviazione =   st.button("5 Archiviazione e gestione dei dati")
+
+visualizzazione = st.button("6 Visualizzazione dei dati")                            
                             
 if preelaborazione:
                 st.subheader("2 Preelaborazione dati")
