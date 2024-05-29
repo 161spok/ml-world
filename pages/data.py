@@ -31,7 +31,7 @@ if raccolta:
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
                             
-            if preelaborazione:
+if preelaborazione:
                 st.subheader("2 Preelaborazione dati")
                 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
                 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
