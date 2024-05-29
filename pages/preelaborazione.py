@@ -1,4 +1,4 @@
-import stramlite as st
+import streamlite as st
 
 st.subheader("Preelaborazione dati")
 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
