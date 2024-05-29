@@ -41,18 +41,27 @@ if preelaborazione:
 
                 col1, col2, col3, col4, col5, col6, col7, col8  = st.columns([1,1,1,1,1,1,1,1])
                 with col1:
-                    rimozione = st.button("Rimozione di osservazioni indesiderate")
+                    duplicati = st.button("Rimozione dei duplicati")
+                  # Check for duplicate rows
+                    duplicates = data.duplicated().sum()
+                    st.write("Number of duplicate rows:", duplicates)
+                    
+                    # Removing duplicate rows
+                    data.drop_duplicates(inplace=True)
+                    st.write(data)
                 with col2:
-                    correzione = st.button("Correzione degli errori di struttura")
+                    rimozione = st.button("Rimozione di osservazioni indesiderate")
                 with col3:
-                    anomali = st.button("Gestione dei valori anomali indesiderati")
+                    correzione = st.button("Correzione degli errori di struttura")
                 with col4:
-                    mancanti = st.button("Gestione dei dati mancanti")
+                    anomali = st.button("Gestione dei valori anomali indesiderati")
                 with col5:
-                    archiviazione = st.button("Trasformazione dei dati")
+                    mancanti = st.button("Gestione dei dati mancanti")
                 with col6:
-                    standardizzazione = st.button("Standardizzazione dei dati")
+                    archiviazione = st.button("Trasformazione dei dati")
                 with col7:
-                    formattazione = st.button("Formattazione dei dati")
+                    standardizzazione = st.button("Standardizzazione dei dati")
                 with col8:
+                    formattazione = st.button("Formattazione dei dati")
+                with col9:
                     codifica = st.button("Codifica delle etichette")
