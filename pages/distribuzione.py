@@ -13,7 +13,7 @@ else:
   df = st.session_state.df
   st.write(df)
   st.dataframe(df)
-  #st.area_chart(df)
-  
-  st.line_chart(data=df)
+  #  st.area_chart(df)
+  st.bar_chart(data)
+  #  st.line_chart(data=df)
 
