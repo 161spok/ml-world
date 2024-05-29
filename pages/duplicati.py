@@ -6,7 +6,7 @@ st.subheader("Rimozione dei duplicati")
 if 'dati' not in st.session_state:
   pass
 else:  
-  data = st.write(st.session_state.dati)
+  data = pd.dataframe(st.session_state.dati)
 
   # Check for duplicate rows
   duplicates = data.duplicated().sum()
