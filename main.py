@@ -10,12 +10,7 @@ df = pd.read_csv('data.csv')
 df.plot()
 plt.show()
 
-st.set_page_config(layout="wide")
-dati_caricati = False
-
-#caricato = st.button('Home', key="primo")
-#if caricato:
-#         st.switch_page("pages/home.py")
+#st.set_page_config(layout="wide")
 
 from st_pages import Page, Section, show_pages, add_page_title
 
