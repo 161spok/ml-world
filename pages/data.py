@@ -36,8 +36,8 @@ with st.container(border=True):
 
 
 # out container
-sospeso = False
-if sospeso:
+
+if preelaborazione:
                 st.subheader("Preelaborazione dati")
                 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
                 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
