@@ -21,7 +21,7 @@ st.write("Rimozione di osservazioni indesiderate")
                              
 st.write("Correzione degli errori di struttura")
                              
-st.write("Gestione dei valori anomali indesiderati")
+st.write("Gestione dei valori anomali")
                              
 st.write("Gestione dei dati mancanti")
                              
