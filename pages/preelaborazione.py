@@ -10,7 +10,7 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'numeriche che velocizzerebbero l\' apprendimento del modello. ' 
 'Esempio: Una immagine può essere convertita in una matrice di dimensioni NXN, il valore di ciascuna cella indicherà il pixel dell\' immagine.')
 
-st.write(st.session_state.dati)
+
 
 st.write("La preelaborazione dei dati prevede i seguenti passi:")              
 
