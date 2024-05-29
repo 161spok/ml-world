@@ -26,6 +26,8 @@ st.write("Gestione dei valori anomali indesiderati")
 st.write("Gestione dei dati mancanti")
                              
 st.write("Trasformazione dei dati")
+
+st.write("Pulizia dei dati di testo")
                               
 st.write("Standardizzazione dei dati")
                              
