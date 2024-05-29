@@ -21,24 +21,6 @@ def click_button():
     st.switch_page("pages/preelaborazione.py")
 
 #st.button("Preelaborazione dati", on_click=click_button)
-# in container
-with st.container(border=True):
-      col1, col2, col3, col4, col5 = st.columns(5)
-      with col1:
-        #preelaborazione = st.button("Preelaborazione dati")
-        pass
-        #st.button("Preelaborazione dati", on_click=click_button)
-      with col2:
-        analisi =         st.button("Analisi dei dati")
-      with col3:
-        interpretazione = st.button("Interpretazione dei dati")
-      with col4:
-        archiviazione =   st.button("Archiviazione e gestione dei dati")
-      with col5:
-        visualizzazione = st.button("Visualizzazione dei dati")       
-
-
-
-# out container
+     
 
 
