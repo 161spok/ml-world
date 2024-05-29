@@ -13,7 +13,7 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                         if uploaded_file is not None:
                                             dati_caricati = True
                                             df = pd.read_csv(uploaded_file) #path folder of the data file
-                                            #st.write(df)
+                                            st.write(df)
                                             df.plot()
                                             #plt.boxplot(df)
                                             plt.show()
