@@ -9,8 +9,8 @@ else:
   st.write(st.session_state.dati)
   data = st.session_state.df
   st.write(data)
-  data.boxplot()
-  data.hist()
+  plt.boxplot(data)
+  plt.hist(data)
 
   #tips = sns.load_dataset('data')
   #tips.plot()
