@@ -16,15 +16,15 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
 def click_button():
-    st.write("preelaborazione")
+    st.switch_page("pages/preelaborazione.py")
 
 # in container
 with st.container(border=True):
       col1, col2, col3, col4, col5 = st.columns(5)
       with col1:
         #preelaborazione = st.button("Preelaborazione dati")
-        st.switch_page("pages/preelaborazione.py")
-        #st.button("Preelaborazione dati", on_click=click_button)
+        
+        st.button("Preelaborazione dati", on_click=click_button)
       with col2:
         analisi =         st.button("Analisi dei dati")
       with col3:
