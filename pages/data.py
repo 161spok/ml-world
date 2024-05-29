@@ -15,7 +15,7 @@ if st.button("Submit & Process", key="process_button") :
                                             dati_caricati = True
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
-with st.container():
+with st.container(border=True):
   col1, col2, col3, col4, col5 = st.columns(5)
   with col1:
     preelaborazione = st.button("Preelaborazione dati")
