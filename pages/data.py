@@ -6,7 +6,18 @@ st.header(":blue[2 Data]")
 #col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1])
             
 #with col1:
-raccolta = st.button("1 Raccolta dati")                
+raccolta = st.button("1 Raccolta dati") 
+st.subheader("1 Raccolta dati")
+                    dati = st.text_area('DESCRIZIONE', 'questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
+                    uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
+                
+                    if st.button("Submit & Process", key="process_button") :
+                                with st.spinner("Processing ..."):
+                                        st.success("Done !") 
+                                        if uploaded_file is not None:
+                                            dati_caricati = True
+                                            data = pd.read_csv(uploaded_file) #path folder of the data file
+                                            st.write(data)
 #with col2:
 preelaborazione = st.button("2 Preelaborazione dati")
 #with col3:
