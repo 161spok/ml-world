@@ -10,10 +10,10 @@ if 'dati' not in st.session_state:
   pass
 else:  
   st.write(st.session_state.dati)
-  data = st.session_state.df
-  st.write(data)
-  st.dataframe(data)
-  st.area_chart(data)
+  df = st.session_state.df
+  st.write(df)
+  st.dataframe(df)
+  #st.area_chart(df)
   
-  
+  st.line_chart(data=df)
 
