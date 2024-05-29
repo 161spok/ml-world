@@ -15,11 +15,15 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             dati_caricati = True
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
+def click_button():
+    st.write("preelaborazione")
+
 # in container
 with st.container(border=True):
       col1, col2, col3, col4, col5 = st.columns(5)
       with col1:
-        preelaborazione = st.button("Preelaborazione dati")
+        #preelaborazione = st.button("Preelaborazione dati")
+        st.button("Preelaborazione dati", on_click=click_button)
       with col2:
         analisi =         st.button("Analisi dei dati")
       with col3:
@@ -28,9 +32,12 @@ with st.container(border=True):
         archiviazione =   st.button("Archiviazione e gestione dei dati")
       with col5:
         visualizzazione = st.button("Visualizzazione dei dati")       
-        
-# out container                            
-if preelaborazione:
+
+
+
+# out container
+sospeso = False
+if sospeso:
                 st.subheader("Preelaborazione dati")
                 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
                 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
