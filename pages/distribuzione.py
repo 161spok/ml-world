@@ -8,6 +8,7 @@ if 'dati' not in st.session_state:
 else:  
   st.write(st.session_state.dati)
   data = st.session_state.df
+  st.write(data)
   data.boxplot()
   data.hist()
 
