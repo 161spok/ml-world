@@ -4,3 +4,4 @@ pandas
 st-pages
 matplotlib
 seaborn
+plotly
