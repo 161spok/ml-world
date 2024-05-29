@@ -12,7 +12,7 @@ if st.button("Submit & Process", type="primary", key="process_button") :
             with st.spinner("Elaborazione ..."):
                                         st.success("Caricamento effettuato !") 
                                         if uploaded_file is not None:
-                                            del st.session_state['dati']
+                                            #del st.session_state['dati']
                                             dati_caricati = True
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
