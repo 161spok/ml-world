@@ -29,7 +29,7 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                         st.success("Caricamento effettuato !") 
                                         if uploaded_file is not None:                                           
                                             dati_caricati = True
-                                            df = load_data(uploaded_file)
+                                            data = load_data(uploaded_file)
                                             #data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
                                             if 'dati' not in st.session_state:
