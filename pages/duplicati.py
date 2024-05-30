@@ -15,5 +15,6 @@ else:
   st.write("Number of duplicate rows:", duplicates)
                                       
   # Removing duplicate rows
-  data.drop_duplicates(inplace=True)
-                                            
+  data = data.drop_duplicates(inplace=True)
+  st.session_state.df = data # il nuovo dataset viene salvato in sessione                                          
+  st.write(data.shape())
