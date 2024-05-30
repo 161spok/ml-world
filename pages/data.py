@@ -22,7 +22,7 @@ def load_data(uploaded_file):
     st.cache_data.clear()
     mess("A")
   
-    st.cache_resource.clear()
+    #st.cache_resource.clear()
     df=""
     df = pd.read_csv(uploaded_file) #path folder of the data file
     if 'dati' not in st.session_state:
