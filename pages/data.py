@@ -11,6 +11,10 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 @st.cache
 def load_data(uploaded_file):
     df = pd.read_csv(uploaded_file) #path folder of the data file
+    if 'dati' not in st.session_state:
+                                                    st.session_state['dati'] = 'caricati'
+                                                    st.session_state.df = data
+                                                    st.write(st.session_state.df.shape[0])
     return df
 
 #d1 = load_data(DATA_URL_1)
@@ -32,8 +36,8 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             data = load_data(uploaded_file)
                                             #data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
-                                            if 'dati' not in st.session_state:
-                                                    st.session_state['dati'] = 'caricati'
-                                                    st.session_state.df = data
-                                                    st.write(st.session_state.df.shape[0])
+                                            #if 'dati' not in st.session_state:
+                                            #        st.session_state['dati'] = 'caricati'
+                                            #        st.session_state.df = data
+                                            #        st.write(st.session_state.df.shape[0])
 
