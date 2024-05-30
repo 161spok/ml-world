@@ -1,15 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-#st.write("AAAAA")
-# Create a sample dataframe
-#data = pd.DataFrame({
-#  'Year': [2018, 2019, 2020, 2021],
-#  'Sales': [350, 480, 550, 680]
-#})
- 
-# Create a line chart
-#st.line_chart(data)
 #from streamlit_option_menu import option_menu
 
 #st.set_page_config(layout="wide")
@@ -26,7 +17,7 @@ show_pages(
         Page("main.py", "Main", "🏠"),
         Page("pages/home.py",            "Home", ":books:"),
         Page("pages/problemdef.py",      "[1] Problem definition", ":department_store:"),
-        #Section(name="SEZIONE  Data", icon=":globe_with_meridians:"),
+        Section(name="SEZIONE  Data", icon=":globe_with_meridians:"),
         # Pages after a section will be indented
         Page("pages/data.py", "[2] Data", icon=":globe_with_meridians:"),
         Page("pages/preelaborazione.py", "[2.1] Preelaborazione", icon=":globe_with_meridians:"),
