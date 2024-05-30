@@ -8,8 +8,14 @@ st.subheader("Raccolta dati")
 dati = st.text_area('DESCRIZIONE', 'Questo è il processo di raccolta di dati da varie fonti, come sensori, database o altri sistemi. I dati possono essere strutturati o non strutturati e possono presentarsi in vari formati come testo, immagini o audio.')
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 
+
+
 @st.cache
 def load_data(uploaded_file):
+    st.cache_data.clear()
+
+  
+    st.cache_resource.clear()
     df=""
     df = pd.read_csv(uploaded_file) #path folder of the data file
     if 'dati' not in st.session_state:
