@@ -14,7 +14,7 @@ def load_data(uploaded_file):
     df = pd.read_csv(uploaded_file) #path folder of the data file
     if 'dati' not in st.session_state:
                                                     st.session_state['dati'] = 'caricati'
-                                                    st.session_state.df = data
+                                                    st.session_state.df = df
                                                     st.write(st.session_state.df.shape[0])
     return df
 
