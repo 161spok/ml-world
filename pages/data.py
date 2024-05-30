@@ -10,7 +10,7 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 
 @st.cache
 def load_data(uploaded_file):
-    data = pd.read_csv(uploaded_file) #path folder of the data file
+    df = pd.read_csv(uploaded_file) #path folder of the data file
     return df
 
 #d1 = load_data(DATA_URL_1)
