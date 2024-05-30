@@ -11,6 +11,7 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 
 #----------------------------------------------------------------------------------
 import streamlit.components.v1 as components
+from streamlit_modal import Modal
 
 modal = Modal(
     "Demo Modal", 
