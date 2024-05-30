@@ -20,7 +20,7 @@ def mess(item):
 @st.cache
 def load_data(uploaded_file):
     st.cache_data.clear()
-    mess("A")
+    #mess("A")
   
     #st.cache_resource.clear()
     df=""
