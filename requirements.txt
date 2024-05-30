@@ -5,4 +5,3 @@ pandas
 st-pages
 matplotlib
 seaborn
-streamlit-modal
