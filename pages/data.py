@@ -13,7 +13,7 @@ def load_data(uploaded_file):
     data = pd.read_csv(uploaded_file) #path folder of the data file
     return df
 
-#df = load_data(DATA_URL_1)
+#d1 = load_data(DATA_URL_1)
 # Actually executes the function, since this is the first time it was
 # encountered.
 
