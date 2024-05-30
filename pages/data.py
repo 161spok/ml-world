@@ -37,7 +37,7 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             dati_caricati = True
                                             data = load_data(uploaded_file)
                                             #data = pd.read_csv(uploaded_file) #path folder of the data file
-                                            #st.write(data)
+                                            st.write(data)
                                             
                                             #if 'dati' not in st.session_state:
                                             #        st.session_state['dati'] = 'caricati'
