@@ -36,6 +36,6 @@ st.header("Info")
 #st.text(s) 
 
 df["Failure Type"].value_counts()
-df.index.name = "Failure Type"
-df.columns = ['count']
+#df.index.name = "Failure Type"
+#df.columns = ['count']
 st.text(df)
