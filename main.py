@@ -10,6 +10,14 @@ from st_pages import Page, Section, show_pages, add_page_title
 # Optional -- adds the title and icon to the current page
 add_page_title()
 
+@st.experimental_dialog("Cache")
+def mess(item):
+    st.write(f"Cache empty !")
+    
+    if st.button("Ok"):        
+        st.rerun()
+
+
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
 show_pages(
