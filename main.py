@@ -22,7 +22,7 @@ def mess(item):
 
 mess("A")
   
-    
+st.write(st.session_state['dati'])    
 
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
