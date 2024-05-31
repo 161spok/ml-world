@@ -21,8 +21,10 @@ def mess(item):
 
 
 mess("A")
-  
-st.write(st.session_state['dati'])    
+
+if 'dati' not in st.session_state:   
+    st.write("Sessione vuota")
+ 
 
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
