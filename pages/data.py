@@ -10,12 +10,7 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 
 #---------------------------------------------------------------------------------
 
-@st.experimental_dialog("Cache")
-def mess(item):
-    st.write(f"Cache empty !")
-    
-    if st.button("Ok"):        
-        st.rerun()
+
 #----------------------------------------------------------------------------------
 @st.cache
 def load_data(uploaded_file):
