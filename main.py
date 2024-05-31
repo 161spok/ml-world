@@ -16,8 +16,8 @@ def mess(item):
     #st.cache_resource.clear()
     st.write(f"Cache empty !")
     
-    if st.button("Ok"):        
-        st.rerun()
+    #if st.button("Ok"):        
+        #st.rerun()
 
 
 mess("A")
