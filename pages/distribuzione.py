@@ -35,7 +35,7 @@ conteggio = df["Failure Type"].value_counts()
 st.text(conteggio)
 
 st.header("Valori univoci ")
-st.write("#:blue[df[\"Failure Type\"].sort_values().unique().tolist()]")#:blue[2 Data]
+st.write(":blue[df[\"Failure Type\"].sort_values().unique().tolist()]")#:blue[2 Data]
 #univoci = df["Failure Type"].unique()
 list_sub_category = df["Failure Type"].sort_values().unique().tolist()
 #st.text(list_sub_category)
