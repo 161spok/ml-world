@@ -10,7 +10,8 @@ st.write("5 - Quale tipo di modello dovremmo utilizzare ?")
 st.write("6 - Cosa abbiamo sperimentato / cosa altro dobbiamo fare ?")
 st.write("----------------------------------------------------------------------------")
 
-https://www.geeksforgeeks.org/machine-learning/?ref=shm
+
+st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Machine Learning", icon="🌎")
 
 st.write("I passi del processo sono quindi i seguenti:")
 st.write("1 - Problem definition")
