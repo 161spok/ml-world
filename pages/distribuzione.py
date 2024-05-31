@@ -35,5 +35,5 @@ st.text(df)
 
 st.header("Valori univoci")
 df["Failure Type"].unique()
-
+st.text(df)
 
