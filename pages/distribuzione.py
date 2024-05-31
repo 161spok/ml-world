@@ -34,6 +34,6 @@ df["Failure Type"].value_counts()
 st.text(df)
 
 st.header("Valori univoci")
-df["genre"].unique()
+df["Failure Type"].unique()
 
 
