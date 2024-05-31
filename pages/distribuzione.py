@@ -19,22 +19,21 @@ else:
   #  st.line_chart(data=df)
 
   col1, col2 = st.columns(2)
-
-with col1:
-  st.header("A cat")
-  st.write(df.head())
-
-with col2:
-  st.header("A dog")
-  buffer = io.StringIO()
-  df.info(buf=buffer)
-  s = buffer.getvalue()
-  st.text(s)
+  with col1:
+    st.header("Head")
+    st.write(df.head())
   
-  #st.write(df.head())
-  #------------------------
-  #buffer = io.StringIO()
-  #df.info(buf=buffer)
-  #s = buffer.getvalue()
-
-  #st.text(s)
+  with col2:
+    st.header("Info")
+    buffer = io.StringIO()
+    df.info(buf=buffer)
+    s = buffer.getvalue()
+    st.text(s)
+    
+    #st.write(df.head())
+    #------------------------
+    #buffer = io.StringIO()
+    #df.info(buf=buffer)
+    #s = buffer.getvalue()
+  
+    #st.text(s)
