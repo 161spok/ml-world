@@ -30,7 +30,12 @@ else:
     st.text(s)
     
 st.header("Info")
-buffer = io.StringIO()
-df["Failure Type"].value_counts(buf=buffer)
-s = buffer.getvalue()
-st.text(s)    
+#buffer = io.StringIO()
+#df["Failure Type"].value_counts(buf=buffer)
+#s = buffer.getvalue()
+#st.text(s) 
+
+df["Failure Type"].value_counts())
+df.index.name = "Failure Type"
+df.columns = ['count']
+st.text(df)
