@@ -39,6 +39,8 @@ show_pages(
         Page("pages/preelaborazione.py", "[2.1] Preelaborazione", icon=":globe_with_meridians:"),
         # Unless you explicitly say in_section=False
         Page("pages/distribuzione.py", "[2.1.0] Distribuzione dei dati", icon=":chart_with_upwards_trend:"),
+        Page("pages/datacleaning.py", "[2.1.0.1] Data cleaning", icon=":chart_with_upwards_trend:"),
+        
         Page("pages/duplicati.py", "[2.1.1] Rimozione dei duplicati", icon=":chart_with_downwards_trend:"),
         Page("pages/indesiderate.py", "[2.1.2] Rimozione dei dati indesiderati", icon=":memo:"),
         Page("pages/mancanti.py", "[2.1.3] Rimozione dei dati mancanti", icon=":signal_strength:"),
