@@ -29,13 +29,11 @@ else:
     s = buffer.getvalue()
     st.text(s)
     
-st.header("Info")
-#buffer = io.StringIO()
-#df["Failure Type"].value_counts(buf=buffer)
-#s = buffer.getvalue()
-#st.text(s) 
-
+st.header("Conteggio") 
 df["Failure Type"].value_counts()
-#df.index.name = "Failure Type"
-#df.columns = ['count']
 st.text(df)
+
+st.header("Valori univoci")
+data["genre"].unique()
+
+
