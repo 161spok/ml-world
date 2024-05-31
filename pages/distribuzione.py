@@ -34,6 +34,7 @@ st.header("Conteggio")
 #st.text(df)
 
 st.header("Valori univoci")
-df["Failure Type"].unique()
+#df["Failure Type"].unique()
+list_sub_category = df["Failure Type"].sort_values().unique().tolist()
 st.text(df)
 
