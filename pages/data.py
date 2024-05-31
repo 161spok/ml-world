@@ -14,10 +14,7 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 #----------------------------------------------------------------------------------
 @st.cache
 def load_data(uploaded_file):
-    st.cache_data.clear()
-    #mess("A")
-  
-    #st.cache_resource.clear()
+    
     df=""
     df = pd.read_csv(uploaded_file) #path folder of the data file
     if 'dati' not in st.session_state:
