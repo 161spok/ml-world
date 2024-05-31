@@ -12,11 +12,17 @@ add_page_title()
 
 @st.experimental_dialog("Cache")
 def mess(item):
+    st.cache_data.clear()
+    #st.cache_resource.clear()
     st.write(f"Cache empty !")
     
     if st.button("Ok"):        
         st.rerun()
 
+
+mess("A")
+  
+    
 
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
