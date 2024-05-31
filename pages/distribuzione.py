@@ -30,7 +30,7 @@ else:
     st.text(s)
     
 st.header("Conteggio ") 
-st.write("df[\"Failure Type\"].value_counts()")
+st.write(":blue[df[\"Failure Type\"].value_counts()]")
 conteggio = df["Failure Type"].value_counts()
 st.text(conteggio)
 
