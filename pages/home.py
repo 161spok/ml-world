@@ -9,6 +9,9 @@ st.write("4 - Quali caratteristiche dobbiamo modellare ?")
 st.write("5 - Quale tipo di modello dovremmo utilizzare ?")
 st.write("6 - Cosa abbiamo sperimentato / cosa altro dobbiamo fare ?")
 st.write("----------------------------------------------------------------------------")
+
+https://www.geeksforgeeks.org/machine-learning/?ref=shm
+
 st.write("I passi del processo sono quindi i seguenti:")
 st.write("1 - Problem definition")
 st.write("2 - Data")
