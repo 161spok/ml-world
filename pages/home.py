@@ -17,5 +17,20 @@ st.write("4 - Features")
 st.write("5 - Modelling")
 st.write("6 - Experiments")
 
+# Custom CSS to inject
+custom_css = """
+<style>
+.my-container {
+ background-color: #f0f2f6;
+ padding: 10px;
+ border-radius: 5px;
+}
+</style>
+"""
 
+# Inject custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
+
+# Use the custom class in a container
+st.markdown('<div class="my-container">This is a custom-styled container</div>', unsafe_allow_html=True)
 
