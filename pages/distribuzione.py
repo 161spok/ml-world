@@ -45,7 +45,7 @@ st.write("df.groupby(\"Failure Type\")[\"Type\"].count()")
 gruppo = df.groupby("Failure Type")["Type"].count()
 st.text(gruppo)
 
-st.header("Raggruppamento ")
+st.header("Raggruppamento con media valori")
 st.write("df.groupby('Failure Type').agg({'Air temperature [K]':'median', 'Process temperature [K]':'median'})")
 gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
 st.write(gruppo2)
