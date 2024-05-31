@@ -29,4 +29,8 @@ else:
     s = buffer.getvalue()
     st.text(s)
     
-    
+st.header("Info")
+buffer = io.StringIO()
+df["Failure Type"].value_counts((buf=buffer)
+s = buffer.getvalue()
+st.text(s)    
