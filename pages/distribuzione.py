@@ -17,4 +17,4 @@ else:
   #  st.bar_chart(df)
   #  st.line_chart(data=df)
   st.write(df.head())
-  st.write(df.info())
+  df.info()
