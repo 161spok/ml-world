@@ -32,7 +32,7 @@ st.write("Trasformazione dei dati")
 
 st.write("Pulizia dei dati di testo")
                               
-st.write("Standardizzazione dei dati")
+st.write("Standardizzazione dei dati - Feature Scaling")
                              
 st.write("Formattazione dei dati")
                               
