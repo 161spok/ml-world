@@ -30,8 +30,8 @@ else:
     st.text(s)
     
 st.header("Conteggio") 
-df["Failure Type"].value_counts()
-st.text(df)
+#df["Failure Type"].value_counts()
+#st.text(df)
 
 st.header("Valori univoci")
 df["Failure Type"].unique()
