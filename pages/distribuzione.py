@@ -2,6 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import io
 
 st.subheader("Distribuzione dati")                                 
 
@@ -17,4 +18,9 @@ else:
   #  st.bar_chart(df)
   #  st.line_chart(data=df)
   st.write(df.head())
-  df.info()
+  #------------------------
+  buffer = io.StringIO()
+  df.info(buf=buffer)
+  s = buffer.getvalue()
+
+  st.text(s)
