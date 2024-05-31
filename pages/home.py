@@ -21,7 +21,7 @@ st.write("6 - Experiments")
 custom_css = """
 <style>
 .my-container {
- background-color: #f0f2f6;
+ background-color: #AED6F1;
  padding: 10px;
  border-radius: 5px;
 }
