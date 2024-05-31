@@ -29,20 +29,20 @@ else:
     s = buffer.getvalue()
     st.text(s)
     
-st.header("Conteggio df["Failure Type"].value_counts()") 
+st.header("Conteggio df[\"Failure Type\"].value_counts()") 
 conteggio = df["Failure Type"].value_counts()
 st.text(conteggio)
 
-st.header("Valori univoci df["Failure Type"].sort_values().unique().tolist()")
+st.header("Valori univoci df[\"Failure Type\"].sort_values().unique().tolist()")
 #univoci = df["Failure Type"].unique()
 list_sub_category = df["Failure Type"].sort_values().unique().tolist()
 st.text(list_sub_category)
 
-st.header("Raggruppamento df.groupby("Failure Type")["Type"].count()")
+st.header("Raggruppamento df.groupby(\"Failure Type\")[\"Type\"].count()")
 #gruppo = df.groupby('Failure Type').agg({"duration":"median", "star_rating":"median"})
 gruppo = df.groupby("Failure Type")["Type"].count()
 st.text(gruppo)
 
-st.header("Raggruppamento df.groupby("Failure Type")["Type"].count()")
+st.header("Raggruppamento df.groupby(\"Failure Type\")[\"Type\"].count()")
 gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
 st.write(gruppo2)
