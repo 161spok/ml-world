@@ -38,3 +38,7 @@ st.header("Valori univoci")
 list_sub_category = df["Failure Type"].sort_values().unique().tolist()
 st.text(list_sub_category)
 
+st.header("Raggruppamento")
+#gruppo = df.groupby('Failure Type').agg({"duration":"median", "star_rating":"median"})
+gruppo = df.groupby("Failure Type")["Type"].count()
+st.text(gruppo)
