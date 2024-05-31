@@ -31,6 +31,6 @@ else:
     
 st.header("Info")
 buffer = io.StringIO()
-df["Failure Type"].value_counts((buf=buffer)
+df["Failure Type"].value_counts((buf=buffer))
 s = buffer.getvalue()
 st.text(s)    
