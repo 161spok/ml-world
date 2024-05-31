@@ -35,7 +35,7 @@ st.header("Info")
 #s = buffer.getvalue()
 #st.text(s) 
 
-df["Failure Type"].value_counts())
+df["Failure Type"].value_counts()
 df.index.name = "Failure Type"
 df.columns = ['count']
 st.text(df)
