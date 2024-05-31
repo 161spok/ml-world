@@ -52,5 +52,5 @@ show_pages(
         Page("pages/evaluation.py", "[3] Evaluation", ":hourglass_flowing_sand:", in_section=False),
     ]
 )    
-         
+file = st.sidebar.file_uploader('Upload',type=["pdf","txt"])         
 
