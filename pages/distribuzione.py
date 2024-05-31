@@ -6,9 +6,8 @@ import io
 
 st.subheader("Distribuzione dati")                                 
 
-
 if 'dati' not in st.session_state:
-  pass
+  st.write("Session vuota")
 else:  
   st.write(st.session_state.dati)
   df = st.session_state.df
@@ -30,10 +29,4 @@ else:
     s = buffer.getvalue()
     st.text(s)
     
-    #st.write(df.head())
-    #------------------------
-    #buffer = io.StringIO()
-    #df.info(buf=buffer)
-    #s = buffer.getvalue()
-  
-    #st.text(s)
+    
