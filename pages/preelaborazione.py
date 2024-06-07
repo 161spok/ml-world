@@ -34,13 +34,16 @@ st.markdown(
     ''',
     unsafe_allow_html=True
 ) 
-components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
+
+#components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
 
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
         In generale, la forma di una distribuzione descrive come i dati si distribuiscono intorno ai valori centrali. 
         Distinguiamo tra distribuzioni simmetriche e asimmetriche, e tra distribuzioni unimodali o multimodali.
     ''')
+    components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
+
     st.page_link("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", label="Reference", icon="🏠")
   
                              
