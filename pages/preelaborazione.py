@@ -19,13 +19,13 @@ st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
  
-with st.expander("**Distribuzione dati**"):
+with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
     ''')
-    st.image("https://static.streamlit.io/examples/dice.jpg")
+    st.page_link("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", label="Reference", icon="🏠")
   
                              
 with st.expander("**Rimozione dei duplicati**"):
