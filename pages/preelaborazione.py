@@ -18,7 +18,21 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
- 
+st.markdown(
+    '''
+    <style>
+    .streamlit-expanderHeader {
+        background-color: white;
+        color: black; # Adjust this for expander header color
+    }
+    .streamlit-expanderContent {
+        background-color: white;
+        color: black; # Expander content color
+    }
+    </style>
+    ''',
+    unsafe_allow_html=True
+) 
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
         In generale, la forma di una distribuzione descrive come i dati si distribuiscono intorno ai valori centrali. 
