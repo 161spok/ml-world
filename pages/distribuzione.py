@@ -6,7 +6,7 @@ import io
 
 st.subheader("Distribuzione dati")                                 
 
-if 'dati' not in st.session_state:
+if 'data' not in st.session_state:
   st.write("Session vuota")
 else:  
   st.write(st.session_state.dati)
