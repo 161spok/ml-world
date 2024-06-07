@@ -51,13 +51,14 @@ with st.expander("Correzione degli errori di struttura"):
         be random.
     ''')                       
   
-#st.write("Gestione dei valori anomali")
+#st.write("Gestione dei valori anomali") # https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/
 with st.expander("Gestione dei valori anomali"):
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
-    ''')  
+    ''') 
+    st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Home", icon="🏠")
   
 #st.write("Gestione dei dati mancanti")
 with st.expander("Gestione dei dati mancanti"):
