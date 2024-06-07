@@ -21,9 +21,8 @@ st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
  
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        In generale, la forma di una distribuzione descrive come i dati si distribuiscono intorno ai valori centrali. 
+        Distinguiamo tra distribuzioni simmetriche e asimmetriche, e tra distribuzioni unimodali o multimodali.
     ''')
     st.page_link("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", label="Reference", icon="🏠")
   
