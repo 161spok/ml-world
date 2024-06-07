@@ -19,7 +19,7 @@ st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 #st.write("Distribuzione dati")  
-with st.expander("Distribuzione dati"):
+with st.expander("*Distribuzione dati*"):
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
