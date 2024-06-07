@@ -58,7 +58,7 @@ with st.expander("Gestione dei valori anomali"):
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
     ''') 
-    st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Home", icon="🏠")
+    st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Reference", icon="🏠")
   
 #st.write("Gestione dei dati mancanti")
 with st.expander("Gestione dei dati mancanti"):
