@@ -47,7 +47,7 @@ else:
   #st.text(gruppo)
   st.write(gruppo)
 
-st.header("Raggruppamento con media valori")
-st.write(":blue[df.groupby('Failure Type').agg({'Air temperature [K]':'median', 'Process temperature [K]':'median'})]")
-gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
-st.write(gruppo2)
+  st.header("Raggruppamento con media valori")
+  st.write(":blue[df.groupby('Failure Type').agg({'Air temperature [K]':'median', 'Process temperature [K]':'median'})]")
+  gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
+  st.write(gruppo2)
