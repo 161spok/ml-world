@@ -29,23 +29,23 @@ else:
     s = buffer.getvalue()
     st.text(s)
     
-st.header("Conteggio ") 
-st.write(":blue[df[\"Failure Type\"].value_counts()]")
-conteggio = df["Failure Type"].value_counts()
-st.text(conteggio)
-
-st.header("Valori univoci ")
-st.write(":blue[df[\"Failure Type\"].sort_values().unique().tolist()]")#:blue[2 Data]
-#univoci = df["Failure Type"].unique()
-list_sub_category = df["Failure Type"].sort_values().unique().tolist()
-#st.text(list_sub_category)
-st.write(list_sub_category)
-
-st.header("Raggruppamento ")
-st.write(":blue[df.groupby(\"Failure Type\")[\"Type\"].count()]")
-gruppo = df.groupby("Failure Type")["Type"].count()
-#st.text(gruppo)
-st.write(gruppo)
+  st.header("Conteggio ") 
+  st.write(":blue[df[\"Failure Type\"].value_counts()]")
+  conteggio = df["Failure Type"].value_counts()
+  st.text(conteggio)
+  
+  st.header("Valori univoci ")
+  st.write(":blue[df[\"Failure Type\"].sort_values().unique().tolist()]")#:blue[2 Data]
+  #univoci = df["Failure Type"].unique()
+  list_sub_category = df["Failure Type"].sort_values().unique().tolist()
+  #st.text(list_sub_category)
+  st.write(list_sub_category)
+  
+  st.header("Raggruppamento ")
+  st.write(":blue[df.groupby(\"Failure Type\")[\"Type\"].count()]")
+  gruppo = df.groupby("Failure Type")["Type"].count()
+  #st.text(gruppo)
+  st.write(gruppo)
 
 st.header("Raggruppamento con media valori")
 st.write(":blue[df.groupby('Failure Type').agg({'Air temperature [K]':'median', 'Process temperature [K]':'median'})]")
