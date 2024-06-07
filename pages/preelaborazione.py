@@ -22,7 +22,7 @@ st.markdown(
     '''
     <style>
     .streamlit-expanderHeader {
-        background-color: white;
+        background-color: grey;
         color: black; # Adjust this for expander header color
     }
     .streamlit-expanderContent {
