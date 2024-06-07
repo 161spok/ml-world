@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.header(":blue[2 Data]")
 st.subheader("2.1 Preelaborazione dati")
@@ -33,6 +34,8 @@ st.markdown(
     ''',
     unsafe_allow_html=True
 ) 
+components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height=500)
+
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
         In generale, la forma di una distribuzione descrive come i dati si distribuiscono intorno ai valori centrali. 
