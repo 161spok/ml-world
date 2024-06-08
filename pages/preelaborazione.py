@@ -63,12 +63,13 @@ metti in gruppi separati per colore
                              
 with st.expander("**Rimozione dei duplicati**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        Rimuovere i duplicati è un'abilità essenziale 
+        per ottenere conteggi accurati perché spesso non si desidera contare la stessa cosa più volte. In Python, ciò potrebbe essere ottenuto 
+        utilizzando il modulo Pandas , che ha un metodo noto come drop_duplicates.
     ''')
       
-
+    st.page_link("https://www.geeksforgeeks.org/python-pandas-dataframe-drop_duplicates/", label="1 -Reference", icon="🏠")
+    
 with st.expander("**Rimozione di osservazioni indesiderate**"):
     st.write('''
         The chart above shows some numbers I picked for you.
