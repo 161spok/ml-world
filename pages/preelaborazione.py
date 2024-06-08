@@ -58,7 +58,7 @@ metti in gruppi separati per colore
     components.iframe("https://paolapozzolo.it/distribuzione-normale/", height = 500, scrolling = True)
 
     st.page_link("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", label="Reference", icon="🏠")
-  
+    st.page_link("https://community.sisense.com/t5/knowledge/test-for-normal-distribution-of-data-with-python/ta-p/9434", label="Test con Pandas", icon="🏠")
                              
 with st.expander("**Rimozione dei duplicati**"):
     st.write('''
