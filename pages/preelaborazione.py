@@ -17,13 +17,8 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 
 #st.write("La preelaborazione dei dati prevede i seguenti passi:")
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
-components.iframe("Guida Completa alla Pulizia dei Dati CSV
+st.markdown("Guida Completa alla Pulizia dei Dati CSV
 
-Leonardo A.Leonardo A.
-Leonardo A.
-Data Scientist | Data Analyst | Technical Author | Business Manager Excel, Python, R, SAS, SQL, and Power BI
-Data pubblicazione: 12 gen 2024
-+ Segui
 La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati, e in questo progetto lavoreremo nel contesto del marketing digitale. I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.
 
 
@@ -309,7 +304,7 @@ In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il lor
 
 Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.
 
-Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.", height = 500, scrolling = True)
+Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.")
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 st.markdown(
