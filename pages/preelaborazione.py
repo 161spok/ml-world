@@ -39,8 +39,21 @@ st.markdown(
 
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
     st.write('''
-        In generale, la forma di una distribuzione descrive come i dati si distribuiscono intorno ai valori centrali. 
-        Distinguiamo tra distribuzioni simmetriche e asimmetriche, e tra distribuzioni unimodali o multimodali.
+        Immagina che tu abbia una grande ciotola di caramelle di diversi colori e vuoi sapere quale colore c’è di più. Allora inizi a separare 
+        le caramelle per colore: rosse, blu, verdi, ecc. Dopo averle separate, conti quante caramelle ci sono di ogni colore. Magari scopri che hai 
+        molte caramelle rosse, alcune blu e poche verdi.
+
+La “distribuzione dei dati” è un po’ come separare e contare le caramelle. In statistica, invece di caramelle, abbiamo numeri o informazioni che vogliamo 
+organizzare. Ad esempio, se stiamo guardando i voti di una classe in matematica, potremmo vedere quanti studenti hanno preso un 6, un 7, un 8, ecc. Questo 
+ci aiuta a capire rapidamente come sono distribuiti i voti: se molti studenti hanno voti alti, bassi o se sono distribuiti in modo uniforme.
+
+A volte, quando mettiamo questi numeri in un grafico, possiamo vedere una forma speciale che assomiglia a una campana. Questa forma ci dice che la maggior 
+parte dei dati si trova vicino al centro e meno dati si trovano ai lati, proprio come la maggior parte delle caramelle potrebbe essere rossa e solo alcune 
+blu o verdi1.
+
+Quindi, la distribuzione dei dati ci aiuta a vedere come sono organizzate le informazioni, proprio come quando organizzi le tue caramelle per colore per 
+capire quale colore hai di più! È un modo per rendere le informazioni facili da capire, proprio come è più facile sapere quanti tipi di caramelle hai se le 
+metti in gruppi separati per colore
     ''')
     components.iframe("https://paolapozzolo.it/distribuzione-normale/", height = 500, scrolling = True)
 
