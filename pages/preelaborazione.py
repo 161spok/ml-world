@@ -19,20 +19,27 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 stringa = """
 
-La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati, e in questo progetto lavoreremo nel contesto del marketing digitale. I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.
+La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati, e in questo progetto lavoreremo nel contesto del marketing digitale. 
+I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, 
+le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.
 
 
+Il processo di pulizia coinvolgerà diverse fasi critiche, incluse l’identificazione di dati mancanti, la correzione o l’eliminazione di tali record, se appropriato. 
+Affronteremo anche gli outlier, assicurando che i dati estremi non distorcano le nostre analisi. Inoltre, affronteremo la sfida di gestire dati ambigui o mal etichettati, 
+come valori sconosciuti nella nostra fonte di traffico. Tali dati saranno esaminati e trattati in modo appropriato, sia completandoli con l’informazione corretta, se disponibile, 
+oppure categorizzandoli separatamente per un’analisi successiva.
 
-Il processo di pulizia coinvolgerà diverse fasi critiche, incluse l’identificazione di dati mancanti, la correzione o l’eliminazione di tali record, se appropriato. Affronteremo anche gli outlier, assicurando che i dati estremi non distorcano le nostre analisi. Inoltre, affronteremo la sfida di gestire dati ambigui o mal etichettati, come valori sconosciuti nella nostra fonte di traffico. Tali dati saranno esaminati e trattati in modo appropriato, sia completandoli con l’informazione corretta, se disponibile, oppure categorizzandoli separatamente per un’analisi successiva.
-
-La pulizia di questi dati prepara il terreno per un’analisi più precisa ed efficace delle campagne di marketing digitale. Con dati puliti e di alta qualità, siamo in grado di ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.
+La pulizia di questi dati prepara il terreno per un’analisi più precisa ed efficace delle campagne di marketing digitale. Con dati puliti e di alta qualità, siamo in grado di 
+ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video 
+affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.
 
 Il dataset presenta i seguenti problemi:
 
-Righe duplicate
-ID duplicati
-Valori mancanti
-Valori anomali (Outliers)
+-Righe duplicate
+-ID duplicati
+-Valori mancanti
+-Valori anomali (Outliers)
+
 import pandas as pd
 
 # Caricamento del file CSV
