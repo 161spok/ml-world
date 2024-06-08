@@ -17,6 +17,7 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 
 #st.write("La preelaborazione dei dati prevede i seguenti passi:")
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
+components.iframe("https://it.linkedin.com/pulse/guida-completa-alla-pulizia-dei-dati-csv-leonardo-anello-btj2f", height = 500, scrolling = True)
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 st.markdown(
