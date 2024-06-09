@@ -95,6 +95,19 @@ duplicati = data2[data2.duplicated(keep=False)]\n
 
 duplicati \n       
 
+traduzioni_originali = {\n
+    1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
+
+2. Affidabilità Compromessa: La presenza di duplicati mette in dubbio l’affidabilità dei dati. Analisi come correlazioni, regressioni, e altre inferenze statistiche possono essere influenzate negativamente, portando a risultati non accurati.
+
+3. Efficienza Ridotta: I record duplicati aumentano inutilmente la dimensione del dataset, portando a un utilizzo inefficiente della memoria e a tempi di elaborazione più lunghi, specialmente in grandi set di dati.
+
+4. Decisioni Inaccurate: In ambito aziendale e decisionale, i dati duplicati possono portare a prendere decisioni basate su informazioni errate, influenzando negativamente le strategie e i risultati aziendali.
+
+5. Complicazioni nella Modellazione dei Dati: Nel machine learning e in altre forme di modellazione dei dati, i duplicati possono portare a un addestramento scorretto dei modelli, causando overfitting o bias nei risultati.
+}\n
+
+
 :green[Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:]
 
 1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
