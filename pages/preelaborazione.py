@@ -24,6 +24,9 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'La pulizia di questi dati prepara il terreno per un’analisi più precisa ed efficace delle campagne di marketing digitale. Con dati puliti e di alta qualità, siamo in grado di' 
 'ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video '
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
+
+st.image('Immagine1.png', caption='Sunrise by the mountains')
+
 with st.expander("**Esempio 1**"): 
      st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
      components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
