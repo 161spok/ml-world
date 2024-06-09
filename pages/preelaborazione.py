@@ -196,7 +196,7 @@ I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative di
 - Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.\n
 - Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.\n
 
-La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.
+La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.\n
 
 :green[Calcolo della mediana]\n
 mediana_budget = clean_data['budget_della_campagna_r'].median()\n
@@ -225,96 +225,100 @@ Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicit
 valori_unici = clean_data.nunique()\n
 print(valori_unici) \n
 
-Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.
+Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.\n
 
-Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:
+Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:\n
 
-# Visualizzazione dei valori unici per ogni colonna in "clean_data"
-for colonna in clean_data.columns:
-    print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}\n")        
-Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.
+Visualizzazione dei valori unici per ogni colonna in "clean_data"\n
+for colonna in clean_data.columns:\n
+    print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}\n")\n
+    
+Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
 
-Identificazione degli Outliers
-Ora passeremo alla fase di rilevamento degli outliers nel nostro dataset. Gli outliers sono valori estremamente alti o bassi che si discostano significativamente dalla maggior parte degli altri dati.
+:green[Identificazione degli Outliers]\n
+Ora passeremo alla fase di rilevamento degli outliers nel nostro dataset. Gli outliers sono valori estremamente alti o bassi che si discostano significativamente dalla maggior parte degli altri dati.\n
 
-Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.
+Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.\n
 
-# Selezione delle colonne numeriche
-colonne_numeriche = clean_data.select_dtypes(include=['float64', 'int64'])
+Selezione delle colonne numeriche\n
+colonne_numeriche = clean_data.select_dtypes(include=['float64', 'int64'])\n
 
-# Calcolo dell'IQR (Intervallo Interquartile) per identificare gli outliers
-Q1 = colonne_numeriche.quantile(0.25)
-Q3 = colonne_numeriche.quantile(0.75)
-IQR = Q3 - Q1
+Calcolo dell'IQR (Intervallo Interquartile) per identificare gli outliers\n
+Q1 = colonne_numeriche.quantile(0.25)\n
+Q3 = colonne_numeriche.quantile(0.75)\n
+IQR = Q3 - Q1\n
 
-# Definizione dei limiti per considerare un valore come outlier
-limite_inferiore = Q1 - 1.5 * IQR
-limite_superiore = Q3 + 1.5 * IQR
+Definizione dei limiti per considerare un valore come outlier\n
+limite_inferiore = Q1 - 1.5 * IQR\n
+limite_superiore = Q3 + 1.5 * IQR\n
 
-# Identificazione degli outliers
-outliers = (colonne_numeriche < limite_inferiore) | (colonne_numeriche > limite_superiore)
+Identificazione degli outliers\n
+outliers = (colonne_numeriche < limite_inferiore) | (colonne_numeriche > limite_superiore)\n
 
-outliers.sum()        
-Abbiamo eseguito un’analisi per identificare gli outliers nelle colonne numeriche del dataset. Utilizzando il metodo dell’Intervallo Interquartile (IQR), abbiamo definito limiti inferiore e superiore per ciascuna colonna numerica.
+outliers.sum()\n
 
-Gli outliers sono stati individuati come valori che si trovano al di fuori di questi limiti. Dai risultati, abbiamo scoperto che la colonna Impressioni contiene 38 outliers, mentre nelle altre colonne numeriche non sono stati rilevati outliers. Questo passaggio è fondamentale per garantire la correttezza delle nostre analisi, poiché gli outliers possono influenzare significativamente i risultati statistici e i modelli predittivi.
+Abbiamo eseguito un’analisi per identificare gli outliers nelle colonne numeriche del dataset. Utilizzando il metodo dell’Intervallo Interquartile (IQR), abbiamo definito limiti inferiore e superiore per ciascuna colonna numerica.\n
 
-# Calcolo di media, mediana, valore massimo e minimo per la colonna "Impressões" in "clean_data"
+Gli outliers sono stati individuati come valori che si trovano al di fuori di questi limiti. Dai risultati, abbiamo scoperto che la colonna Impressioni contiene 38 outliers, mentre nelle altre colonne numeriche non sono stati rilevati outliers. Questo passaggio è fondamentale per garantire la correttezza delle nostre analisi, poiché gli outliers possono influenzare significativamente i risultati statistici e i modelli predittivi.\n
 
-media = clean_data['impressioni'].mean()
-mediana = clean_data['impressioni'].median()
-max = clean_data['impressioni'].max()
-min = clean_data['impressioni'].min()
+:green[Calcolo di media, mediana, valore massimo e minimo per la colonna "Impressões" in "clean_data"]\n
 
-(media, mediana, max, min)
-# (62555.754245754244, 5667.0, 1975723, 1001)        
-Ecco le statistiche per la colonna Impressioni nel dataset:
+media = clean_data['impressioni'].mean()\n
+mediana = clean_data['impressioni'].median()\n
+max = clean_data['impressioni'].max()\n
+min = clean_data['impressioni'].min()\n
+
+(media, mediana, max, min)\n
+# (62555.754245754244, 5667.0, 1975723, 1001)   \n
+
+Ecco le statistiche per la colonna Impressioni nel dataset:\n
 
 
-Media delle Impressioni: 62.384,08
-Mediana delle Impressioni: 5.668,5
-Valore Massimo delle Impressioni: 1.975.723
-Valore Minimo delle Impressioni: 1.001
-La Scelta tra Rimozione e Imputazione di Outliers nel Dataset
-Il valore massimo nella colonna Impressioni è chiaramente un outlier, in quanto si discosta significativamente dal modello generale dei dati. La media risulta essere elevata a causa dell’impatto degli outliers, mentre la mediana, essendo il valore centrale in un insieme di dati ordinato, non è influenzata in egual misura. Queste osservazioni dimostrano come l’utilizzo della media possa essere ingannevole in presenza di outliers.
+Media delle Impressioni: 62.384,08\n
+Mediana delle Impressioni: 5.668,5\n
+Valore Massimo delle Impressioni: 1.975.723\n
+Valore Minimo delle Impressioni: 1.001\n
 
-Se la media è distorta dagli outliers, sostituire i valori mancanti con questa media distorta potrebbe causare problemi nel dataset. In questo caso, i valori sono estremamente diversi, rendendo la rimozione degli outliers una scelta più prudente. Qualsiasi altro metodo di imputazione potrebbe rappresentare un rischio per l’integrità dell’analisi.
+:green[La Scelta tra Rimozione e Imputazione di Outliers nel Dataset]\n
+Il valore massimo nella colonna Impressioni è chiaramente un outlier, in quanto si discosta significativamente dal modello generale dei dati. La media risulta essere elevata a causa dell’impatto degli outliers, mentre la mediana, essendo il valore centrale in un insieme di dati ordinato, non è influenzata in egual misura. Queste osservazioni dimostrano come l’utilizzo della media possa essere ingannevole in presenza di outliers.\n
 
-Considerando che il numero di record da rimuovere è minimo, procederemo con la rimozione dei 38 outliers identificati, preservando così la qualità e l’affidabilità del nostro dataset per le analisi successive.
+Se la media è distorta dagli outliers, sostituire i valori mancanti con questa media distorta potrebbe causare problemi nel dataset. In questo caso, i valori sono estremamente diversi, rendendo la rimozione degli outliers una scelta più prudente. Qualsiasi altro metodo di imputazione potrebbe rappresentare un rischio per l’integrità dell’analisi.\n
 
-# Rimozione dei record con valori outlier nella colonna Impressioni nel dataset "clean_data"
+Considerando che il numero di record da rimuovere è minimo, procederemo con la rimozione dei 38 outliers identificati, preservando così la qualità e l’affidabilità del nostro dataset per le analisi successive.\n
 
-# Identificazione degli outliers
-outliers_impressioni = (clean_data['impressioni'] < limite_inferiore['impressioni']) | (clean_data['impressioni'] > limite_superiore['impressioni'])
+:green[Rimozione dei record con valori outlier nella colonna Impressioni nel dataset "clean_data"]\n
 
-# Rimozione degli outliers
-clean_data_senza_outliers = clean_data[~outliers_impressioni]
+:green[Identificazione degli outliers]\n
+outliers_impressioni = (clean_data['impressioni'] < limite_inferiore['impressioni']) | (clean_data['impressioni'] > limite_superiore['impressioni'])\n
 
-clean_data_senza_outliers.shape, clean_data.shape        
-Salvataggio della Versione Finale del Dataset Dopo la Pulizia
-Abbiamo completato il processo di pulizia del dataset “clean_data”, rimuovendo sia le righe duplicate sia gli outliers nella colonna Impressioni.
+:green[Rimozione degli outliers]\n
+clean_data_senza_outliers = clean_data[~outliers_impressioni]\n
 
-La versione finale del dataset, ora denominata “clean_data_senza_outliers”, è stata salvata in formato CSV.
+clean_data_senza_outliers.shape, clean_data.shape\n      
 
-Questa versione pulita del dataset è pronta per essere utilizzata in analisi successive, garantendo una maggiore affidabilità e precisione dei risultati.
+:green[Salvataggio della Versione Finale del Dataset Dopo la Pulizia]\n
+Abbiamo completato il processo di pulizia del dataset “clean_data”, rimuovendo sia le righe duplicate sia gli outliers nella colonna Impressioni.\n
 
-# Rimozione degli outliers
-clean_data_senza_outliers = clean_data[~outliers_impressioni]
+La versione finale del dataset, ora denominata “clean_data_senza_outliers”, è stata salvata in formato CSV.\n
 
-# Salvataggio della versione finale del dataset in formato CSV
-output_file_path = 'clean_data_versione_finale.csv'
-clean_data_senza_outliers.to_csv(output_file_path, index=False)
+Questa versione pulita del dataset è pronta per essere utilizzata in analisi successive, garantendo una maggiore affidabilità e precisione dei risultati.\n
 
-output_file_path        
-Conclusione
-Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.
-Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.
 
-In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il loro impatto e decidendo le strategie più adatte per gestirli. In particolare, abbiamo optato per l’imputazione dei valori mancanti nella colonna “budget_della_campagna_r” utilizzando la mediana, una scelta dettata dalla necessità di evitare distorsioni causate da valori estremi.
+:green[Salvataggio della versione finale del dataset in formato CSV]\n
+output_file_path = 'clean_data_versione_finale.csv'\n
+clean_data_senza_outliers.to_csv(output_file_path, index=False)\n
 
-Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.
+output_file_path 
 
-Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.")
+:green[Conclusione]\n
+Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.\n
+Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.\n
+
+In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il loro impatto e decidendo le strategie più adatte per gestirli. In particolare, abbiamo optato per l’imputazione dei valori mancanti nella colonna “budget_della_campagna_r” utilizzando la mediana, una scelta dettata dalla necessità di evitare distorsioni causate da valori estremi.\n
+
+Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.\n
+
+Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.
     
     ''')
 
