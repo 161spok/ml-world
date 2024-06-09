@@ -11,8 +11,7 @@ with st.expander("**Preparazione**"):
      st.write('''I dati raccolti possono essere in una forma grezza che non può essere alimentata direttamente alla macchina.  
      Quindi, questo è un processo di raccolta di set di dati da diverse fonti, l\'analisi di questi set di dati e  
      quindi la costruzione di un nuovo set di dati per ulteriore elaborazione ed esplorazione. Questa preparazione 
-     può essere eseguita manualmente o dall\' approccio automatico. I dati possono anche essere preparati in forme  
-     numeriche che velocizzerebbero l\' apprendimento del modello.  
+     può essere eseguita manualmente o dall\' approccio automatico. I dati possono anche essere preparati in forme numeriche che velocizzerebbero l\' apprendimento del modello.  
      La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati. 
      I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, 
      le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.
