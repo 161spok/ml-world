@@ -41,17 +41,17 @@ import pandas as pd\n
 file_path = 'data.csv'\n
 data = pd.read_csv(file_path)\n
 
-[Ottenimento delle dimensioni del dataset]\n
+:green[Ottenimento delle dimensioni del dataset]\n
 dimensioni = data.shape\n
 
-[Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati]\n
+:green[Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati]\n
 prime_righe = data.head()\n
 
 dimensioni\n
 #(1004, 12) \n
 
-[Traduzione delle etichette del dataset originale in italiano]\n
-[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
+:green[Traduzione delle etichette del dataset originale in italiano]\n
+:green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
 
 traduzioni_originali = {\n
     'ID da Campanha': 'id_della_campagna',\n
@@ -68,33 +68,34 @@ traduzioni_originali = {\n
     'Bounce Rate': 'tasso_di_rimbalzo'\n
 }\n
 
-[Applicazione delle traduzioni con underscore case al dataset originale]\n
+:green[Applicazione delle traduzioni con underscore case al dataset originale]\n
 data2 = data.rename(columns=traduzioni_originali)\n        
 
-[Dettaglio dei Dati]\n
-describe = data2.describe(include='all')
-describe        
+:green[Dettaglio dei Dati]\n
+describe = data2.describe(include='all')\n
+describe\n        
 
-id_della_campagna: ID numerico delle campagne, varia da 1 a 1000.
-nome_della_campagna: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.
-data_di_inizio e data_di_fine: Date di inizio e fine delle campagne. Presentano diverse date uniche.
-budget_della_campagna_r: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.
-canale: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.
-impressioni: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.
-click: Numero di click, con una media di 554 e un range da 101 a 998.
-conversioni: Numero di conversioni, con una media di 103 e un range da 10 a 200.
-visualizzazioni_pagina: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.
-fonte_del_traffico: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.
-tasso_di_rimbalzo: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.
-Record Duplicati
+id_della_campagna: ID numerico delle campagne, varia da 1 a 1000.\n
+nome_della_campagna: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
+data_di_inizio e data_di_fine: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
+budget_della_campagna_r: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
+canale: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.\n
+impressioni: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.\n
+click: Numero di click, con una media di 554 e un range da 101 a 998.\n
+conversioni: Numero di conversioni, con una media di 103 e un range da 10 a 200.\n
+visualizzazioni_pagina: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
+fonte_del_traffico: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
+tasso_di_rimbalzo: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
 
-# Utilizzo di duplicated() per trovare i record duplicati
-# keep=False segnala tutte le occorrenze dei record duplicati
-duplicati = data2[data2.duplicated(keep=False)]
+:green[Record Duplicati]\n
 
-duplicati        
+:green[Utilizzo di duplicated() per trovare i record duplicati]\n
+keep=False :green [segnala tutte le occorrenze dei record duplicati]\n
+duplicati = data2[data2.duplicated(keep=False)]\n
 
-Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
+duplicati \n       
+
+:green[Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
 
 1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
 
