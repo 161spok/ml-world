@@ -309,9 +309,6 @@ Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset,
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
-
-
-st.markdown(stringa)
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 st.markdown(
     '''
