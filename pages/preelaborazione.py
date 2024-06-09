@@ -76,7 +76,7 @@ data2 = data.rename(columns=traduzioni_originali)\n
 describe = data2.describe(include='all')\n
 describe\n        
 
-*id_della_campagna:* ID numerico delle campagne, varia da 1 a 1000.\n
+**id_della_campagna:** ID numerico delle campagne, varia da 1 a 1000.\n
 nome_della_campagna: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
 data_di_inizio e data_di_fine: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
 budget_della_campagna_r: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
