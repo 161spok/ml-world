@@ -376,15 +376,8 @@ with st.expander("**Rimozione dei duplicati**"):
     ''')
       
     st.page_link("https://www.geeksforgeeks.org/python-pandas-dataframe-drop_duplicates/", label="1 -Reference", icon="🏠")
-    
-with st.expander("**Rimozione di osservazioni indesiderate**"):
-    st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    ''')          
+              
   
-
 with st.expander("**Correzione degli errori di struttura**"):
     st.write('''
         The chart above shows some numbers I picked for you.
@@ -395,12 +388,44 @@ with st.expander("**Correzione degli errori di struttura**"):
  # https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/
 with st.expander("**Gestione dei valori anomali**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        Metodo della Deviazione Standard:
+Questo metodo identifica i valori anomali basandosi sulla deviazione standard dei dati.
+Calcola la media e la deviazione standard per ciascuna variabile.
+Considera come valori anomali quelli che si discostano da questa media di più di una certa soglia (ad esempio, 2 o 3 volte la deviazione standard).
+
+Esempio in Python:
+
+import numpy as np
+threshold = 2  # Soglia per considerare un valore come anomalo
+mean, std = np.mean(dataset), np.std(dataset)
+outliers = dataset[(dataset - mean) > threshold * std]
+Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
+Metodo dell’Intervallo Interquartile (IQR):
+L’IQR è la differenza tra il terzo quartile (75%) e il primo quartile (25%).
+I valori al di fuori di questo intervallo sono considerati anomali.
+
+Esempio in Python:
+
+Q1 = dataset.quantile(0.25)
+Q3 = dataset.quantile(0.75)
+IQR = Q3 - Q1
+outliers = dataset[(dataset < (Q1 - 1.5 * IQR)) | (dataset > (Q3 + 1.5 * IQR))]
+Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
+Rilevamento automatico dei valori anomali:
+Utilizza modelli di machine learning specifici per identificare valori anomali.
+Ad esempio, puoi utilizzare Isolation Forest o One-Class SVM.
+
+Esempio in Python:
+
+from sklearn.ensemble import IsolationForest
+model = IsolationForest(contamination=0.05)  # Contaminazione = percentuale di valori anomali
+model.fit(dataset)
+outliers = model.predict(dataset) == -1
+Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
+Ricorda che la scelta del metodo dipende dal contesto e dalla natura dei dati. Inoltre, è importante esaminare attentamente i valori identificati come anomali per evitare di rimuovere informazioni preziose.
     ''') 
     st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Reference", icon="🏠")
-  
+    st.page_link("https://www.intelligenzaartificialeitalia.net/post/come-rimuovere-e-gestire-i-valori-anomali-con-python-nel-machine-learning", label="Reference", icon="🏠")
 
 with st.expander("**Gestione dei dati mancanti**"):
     st.write('''
