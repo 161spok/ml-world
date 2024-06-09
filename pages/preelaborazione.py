@@ -34,7 +34,7 @@ with st.expander("**Esempio**"):
 - Valori mancanti
 - Valori anomali (Outliers)
 
-[CODICE]\n
+:green[CODICE]\n
 import pandas as pd\n
 
 
