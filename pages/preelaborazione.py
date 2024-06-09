@@ -25,7 +25,8 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video '
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
 
-with st.expander("'<span style="font-size: 24px;'">**Esempio**</span>"): 
+#with st.expander("**Esempio**"): 
+with st.expander('<span style="font-size: 24px;">Larger text</span>'):
     st.write('''
     Il dataset presenta i seguenti problemi:
 
