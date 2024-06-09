@@ -26,7 +26,8 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
 with st.expander("**Esempio 1**"): 
      st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
-    
+     components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
+     
 with st.expander("**Esempio 2**"): 
 #https://it.linkedin.com/pulse/guida-completa-alla-pulizia-dei-dati-csv-leonardo-anello-btj2f
     st.write('''
