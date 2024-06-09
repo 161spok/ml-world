@@ -8,23 +8,23 @@ predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtra
 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
 
 with st.expander("**Preparazione**"): 
-     st.write('''I dati raccolti possono essere in una forma grezza che non può essere alimentata direttamente alla macchina. ' 
-     'Quindi, questo è un processo di raccolta di set di dati da diverse fonti, l\'analisi di questi set di dati e ' 
-     'quindi la costruzione di un nuovo set di dati per ulteriore elaborazione ed esplorazione. Questa preparazione ' 
-     'può essere eseguita manualmente o dall\' approccio automatico. I dati possono anche essere preparati in forme ' 
-     'numeriche che velocizzerebbero l\' apprendimento del modello. ' 
-     'La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati. '
-     'I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, '
-     'le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.'
+     st.write('''I dati raccolti possono essere in una forma grezza che non può essere alimentata direttamente alla macchina.  
+     Quindi, questo è un processo di raccolta di set di dati da diverse fonti, l\'analisi di questi set di dati e  
+     quindi la costruzione di un nuovo set di dati per ulteriore elaborazione ed esplorazione. Questa preparazione 
+     può essere eseguita manualmente o dall\' approccio automatico. I dati possono anche essere preparati in forme  
+     numeriche che velocizzerebbero l\' apprendimento del modello.  
+     La pulizia e la qualità dei dati sono estremamente importanti in qualsiasi progetto di analisi dei dati. 
+     I set di dati del mondo reale spesso presentano problemi, come dati mancanti, inconsistenti o errati, che possono compromettere l’accuratezza delle analisi e, di conseguenza, 
+     le decisioni aziendali risultanti. Questo progetto, quindi, mira a realizzare una pulizia completa dei nostri dati di marketing digitale.
      
-     'Il processo di pulizia coinvolgerà diverse fasi critiche, incluse l’identificazione di dati mancanti, la correzione o l’eliminazione di tali record, se appropriato. '
-     'Affronteremo anche gli outlier, assicurando che i dati estremi non distorcano le nostre analisi. Inoltre, affronteremo la sfida di gestire dati ambigui o mal etichettati, '
-     'come valori sconosciuti nella nostra fonte di traffico. Tali dati saranno esaminati e trattati in modo appropriato, sia completandoli con l’informazione corretta, se disponibile, '
-     'oppure categorizzandoli separatamente per un’analisi successiva.'
+     Il processo di pulizia coinvolgerà diverse fasi critiche, incluse l’identificazione di dati mancanti, la correzione o l’eliminazione di tali record, se appropriato. 
+     Affronteremo anche gli outlier, assicurando che i dati estremi non distorcano le nostre analisi. Inoltre, affronteremo la sfida di gestire dati ambigui o mal etichettati, 
+     come valori sconosciuti nella nostra fonte di traffico. Tali dati saranno esaminati e trattati in modo appropriato, sia completandoli con l’informazione corretta, se disponibile, 
+     oppure categorizzandoli separatamente per un’analisi successiva.
      
-     'La pulizia di questi dati prepara il terreno per un’analisi più precisa ed efficace delle campagne di marketing digitale. Con dati puliti e di alta qualità, siamo in grado di' 
-     'ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video '
-     'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.''')
+     La pulizia di questi dati prepara il terreno per un’analisi più precisa ed efficace delle campagne di marketing digitale. Con dati puliti e di alta qualità, siamo in grado di 
+     ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video 
+     affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.''')
      
      st.image('Immagine1.png', caption='Processo analisi esplorativa dei dati')
 
