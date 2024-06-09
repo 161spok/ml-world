@@ -29,14 +29,14 @@ with st.expander("**Esempio**"):
     st.write('''
     Il dataset presenta i seguenti problemi:
 
--Righe duplicate
--ID duplicati
--Valori mancanti
--Valori anomali (Outliers)
+- Righe duplicate
+- ID duplicati
+- Valori mancanti
+- Valori anomali (Outliers)
 
 import pandas as pd
 
-# Caricamento del file CSV
+[Caricamento del file CSV]
 file_path = 'data.csv'
 data = pd.read_csv(file_path)
 
