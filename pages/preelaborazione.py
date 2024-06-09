@@ -465,13 +465,10 @@ La standardizzazione scala i dati in modo che abbiano una media di 0 e una devia
 È comunemente utilizzata per algoritmi di classificazione.
 Formula: x′=σx−μ​
 
-Esempio in Python utilizzando StandardScaler da scikit-learn:from sklearn.preprocessing import StandardScaler
+Esempio in Python utilizzando StandardScaler da scikit-learn:
+from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(dataset)
-
-
-
-
 
 Normalizzazione (Min-Max scaling):
 
@@ -479,13 +476,10 @@ La normalizzazione scala i dati nell’intervallo [0, 1].
 È più utile per algoritmi di regressione.
 Formula: x′=xmax​−xmin​x−xmin​​
 
-Esempio in Python utilizzando MinMaxScaler:from sklearn.preprocessing import MinMaxScaler
+Esempio in Python utilizzando MinMaxScaler:
+from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 normalized_data = scaler.fit_transform(dataset)
-
-
-
-
 
 Ricorda che la scelta tra standardizzazione e normalizzazione dipende dal contesto e dal tipo di modello che stai utilizzando.
     ''')                               
