@@ -404,24 +404,24 @@ Metodo dell’Intervallo Interquartile (IQR):\n
 L’IQR è la differenza tra il terzo quartile (75%) e il primo quartile (25%).\n
 I valori al di fuori di questo intervallo sono considerati anomali.\n
 
-Esempio in Python:
+Esempio in Python:\n
 
-Q1 = dataset.quantile(0.25)
-Q3 = dataset.quantile(0.75)
-IQR = Q3 - Q1
-outliers = dataset[(dataset < (Q1 - 1.5 * IQR)) | (dataset > (Q3 + 1.5 * IQR))]
-Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
-Rilevamento automatico dei valori anomali:
-Utilizza modelli di machine learning specifici per identificare valori anomali.
-Ad esempio, puoi utilizzare Isolation Forest o One-Class SVM.
+Q1 = dataset.quantile(0.25)\n
+Q3 = dataset.quantile(0.75)\n
+IQR = Q3 - Q1\n
+outliers = dataset[(dataset < (Q1 - 1.5 * IQR)) | (dataset > (Q3 + 1.5 * IQR))]\n
 
-Esempio in Python:
+Rilevamento automatico dei valori anomali:\n
+Utilizza modelli di machine learning specifici per identificare valori anomali.\n
+Ad esempio, puoi utilizzare Isolation Forest o One-Class SVM.\n
 
-from sklearn.ensemble import IsolationForest
-model = IsolationForest(contamination=0.05)  # Contaminazione = percentuale di valori anomali
-model.fit(dataset)
-outliers = model.predict(dataset) == -1
-Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
+Esempio in Python:\n
+
+from sklearn.ensemble import IsolationForest\n
+model = IsolationForest(contamination=0.05)  # Contaminazione = percentuale di valori anomali\n
+model.fit(dataset)\n
+outliers = model.predict(dataset) == -1\n
+
 Ricorda che la scelta del metodo dipende dal contesto e dalla natura dei dati. Inoltre, è importante esaminare attentamente i valori identificati come anomali per evitare di rimuovere informazioni preziose.
     ''') 
     st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Reference", icon="🏠")
