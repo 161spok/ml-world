@@ -37,40 +37,41 @@ with st.expander("**Esempio**"):
 [Codice]\n
 import pandas as pd\n
 
-[Caricamento del file CSV]
+[Caricamento del file CSV]\n
 file_path = 'data.csv'\n
 data = pd.read_csv(file_path)\n
 
-[Ottenimento delle dimensioni del dataset]
-dimensioni = data.shape
+[Ottenimento delle dimensioni del dataset]\n
+dimensioni = data.shape\n
 
-# Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
-prime_righe = data.head()
+[Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati]\n
+prime_righe = data.head()\n
 
-dimensioni
-#(1004, 12)        
-Traduzione delle etichette del dataset originale in italiano
-# Traduzione delle etichette del dataset originale in italiano con underscore case
+dimensioni\n
+#(1004, 12) \n
 
-traduzioni_originali = {
-    'ID da Campanha': 'id_della_campagna',
-    'Nome da Campanha': 'nome_della_campagna',
-    'Data de Início': 'data_di_inizio',
-    'Data de Término': 'data_di_fine',
-    'Orçamento da Campanha (R$)': 'budget_della_campagna_r',
-    'Canal': 'canale',
-    'Impressões': 'impressioni',
-    'Cliques': 'click',
-    'Conversões': 'conversioni',
-    'Pageviews': 'visualizzazioni_pagina',
-    'Fonte do Tráfego': 'fonte_del_traffico',
-    'Bounce Rate': 'tasso_di_rimbalzo'
-}
+[Traduzione delle etichette del dataset originale in italiano]\n
+[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
 
-# Applicazione delle traduzioni con underscore case al dataset originale
-data2 = data.rename(columns=traduzioni_originali)        
+traduzioni_originali = {\n
+    'ID da Campanha': 'id_della_campagna',\n
+    'Nome da Campanha': 'nome_della_campagna',\n
+    'Data de Início': 'data_di_inizio',\n
+    'Data de Término': 'data_di_fine',\n
+    'Orçamento da Campanha (R$)': 'budget_della_campagna_r',\n
+    'Canal': 'canale',\n
+    'Impressões': 'impressioni',\n
+    'Cliques': 'click',\n
+    'Conversões': 'conversioni',\n
+    'Pageviews': 'visualizzazioni_pagina',\n
+    'Fonte do Tráfego': 'fonte_del_traffico',\n
+    'Bounce Rate': 'tasso_di_rimbalzo'\n
+}\n
 
-Dettaglio dei Dati
+[Applicazione delle traduzioni con underscore case al dataset originale]\n
+data2 = data.rename(columns=traduzioni_originali)\n        
+
+[Dettaglio dei Dati]\n
 describe = data2.describe(include='all')
 describe        
 
