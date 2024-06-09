@@ -25,7 +25,7 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video '
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
 
-st.image('Immagine1.png', caption='Sunrise by the mountains')
+st.image('Immagine1.png', caption='Processo analisi esplorativa dei dati')
 
 with st.expander("**Esempio 1**"): 
      st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
