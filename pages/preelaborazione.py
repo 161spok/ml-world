@@ -26,7 +26,7 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
 
 with st.expander("**Esempio**"): 
-#with st.expander('<span style="font-size: 20px;">This is a larger text</span>'):
+#https://it.linkedin.com/pulse/guida-completa-alla-pulizia-dei-dati-csv-leonardo-anello-btj2f
     st.write('''
     Il dataset presenta i seguenti problemi:
 
