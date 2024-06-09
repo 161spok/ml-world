@@ -76,17 +76,17 @@ data2 = data.rename(columns=traduzioni_originali)\n
 describe = data2.describe(include='all')\n
 describe\n        
 
-**id_della_campagna:** ID numerico delle campagne, varia da 1 a 1000.\n
-nome_della_campagna: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
-data_di_inizio e data_di_fine: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
-budget_della_campagna_r: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
-canale: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.\n
-impressioni: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.\n
-click: Numero di click, con una media di 554 e un range da 101 a 998.\n
-conversioni: Numero di conversioni, con una media di 103 e un range da 10 a 200.\n
-visualizzazioni_pagina: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
-fonte_del_traffico: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
-tasso_di_rimbalzo: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
+**id_della_campagna**: ID numerico delle campagne, varia da 1 a 1000.\n
+**nome_della_campagna**: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
+**data_di_inizio e data_di_fine**: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
+**budget_della_campagna_r**: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
+**canale**: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.\n
+**impressioni**: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.\n
+**click**: Numero di click, con una media di 554 e un range da 101 a 998.\n
+**conversioni**: Numero di conversioni, con una media di 103 e un range da 10 a 200.\n
+**visualizzazioni_pagina**: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
+**fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
+**tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
 
 :green[Record Duplicati]\n
 
