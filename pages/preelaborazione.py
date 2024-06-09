@@ -120,15 +120,15 @@ clean_data.shape\n
 data2.shape\n
 (1004, 12)\n        
 
-:green[Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.]\n
+Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
 
 :green[ID duplicato]\n
 :green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
 
-:green[Identificazione degli ID duplicati nel dataset "cap3"]\n
+Identificazione degli ID duplicati nel dataset "cap3"\n
 ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]\n
 
-:green[Visualizzazione dei record con gli ID duplicati]\n
+Visualizzazione dei record con gli ID duplicati\n
 print(ids_duplicati)\n        
 
 :green[Questo codice assegnerà alla riga 518 un nuovo ID, che sarà il valore massimo corrente degli ID incrementato di 1, assicurando che sia unico all’interno del dataset.]\n
@@ -188,41 +188,43 @@ Minimo: 1042.12  \n
 
 :green[I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative discrepanze. La media e la mediana sono molto vicine tra loro, il che suggerisce una distribuzione relativamente uniforme dei valori. Pertanto, possiamo procedere con un certo grado di sicurezza nell’utilizzare la media o la mediana per interpolare i valori mancanti.]\n
 
-Strategie Efficaci per la Gestione dei Valori Mancanti
-Per trattare i valori mancanti nella colonna ‘budget_della_campagna_r’ del dataset “clean_data”, ci sono diverse opzioni:
+:green[Strategie Efficaci per la Gestione dei Valori Mancanti]\n
+:green[Per trattare i valori mancanti nella colonna ‘budget_della_campagna_r’ del dataset “clean_data”, ci sono diverse opzioni:]\n
 
+- Interpolazione con la Media o la Mediana: Se la distribuzione dei dati è relativamente uniforme, potresti usare la media o la mediana per riempire i valori mancanti. Questo è un approccio comune quando i dati non mostrano estreme variazioni o outlier significativi.\n
+- Interpolazione Lineare: Se ci sono tendenze o modelli nei dati, l’interpolazione lineare può essere utilizzata per stimare i valori mancanti basandosi sui valori adiacenti.\n
+- Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.\n
+- Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.\n
 
-Interpolazione con la Media o la Mediana: Se la distribuzione dei dati è relativamente uniforme, potresti usare la media o la mediana per riempire i valori mancanti. Questo è un approccio comune quando i dati non mostrano estreme variazioni o outlier significativi.
-Interpolazione Lineare: Se ci sono tendenze o modelli nei dati, l’interpolazione lineare può essere utilizzata per stimare i valori mancanti basandosi sui valori adiacenti.
-Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.
-Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.
 La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.
 
-# Calcolo della mediana
-mediana_budget = clean_data['budget_della_campagna_r'].median()
+:green[Calcolo della mediana]\n
+mediana_budget = clean_data['budget_della_campagna_r'].median()\n
 
-# Preenchimento dei valori mancanti con la mediana
+:green[Preenchimento dei valori mancanti con la mediana]\n
 clean_data['budget_della_campagna_r'].fillna(mediana_budget, inplace=True)
 
-# Verifica se tutti i valori mancanti sono stati riempiti
+:green[Verifica se tutti i valori mancanti sono stati riempiti]\n
 valori_mancanti_dopo = clean_data['budget_della_campagna_r'].isnull().sum()
 valori_mancanti_dopo
 
-# 0         
-Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati
-Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.
+0         
 
-Il primo passo è verificare la presenza di duplicati per evitare sorprese durante l’analisi. Controlliamo anche la fonte dei dati, se necessario, e esaminiamo ciascuna colonna per assicurarci che non contenga duplicati inappropriati.
+:green[Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati]\n
+Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.\n
 
-Successivamente, ci concentriamo sui dati mancanti, calcolando il loro percentuale per valutare l’impatto delle nostre decisioni. Se una colonna presenta un’elevata quantità di dati mancanti, può essere più opportuno eliminarla poiché potrebbe non essere viabile per l’analisi. Altrimenti, applichiamo metodi statistici adatti per gestire questi valori mancanti.
+Il primo passo è verificare la presenza di duplicati per evitare sorprese durante l’analisi. Controlliamo anche la fonte dei dati, se necessario, e esaminiamo ciascuna colonna per assicurarci che non contenga duplicati inappropriati.\n
 
-Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.
+Successivamente, ci concentriamo sui dati mancanti, calcolando il loro percentuale per valutare l’impatto delle nostre decisioni. Se una colonna presenta un’elevata quantità di dati mancanti, può essere più opportuno eliminarla poiché potrebbe non essere viabile per l’analisi. Altrimenti, applichiamo metodi statistici adatti per gestire questi valori mancanti.\n
 
-Analisi dei Valori Unici
-Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.
+Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.\n
 
-valori_unici = clean_data.nunique()
-print(valori_unici)        
+:green[Analisi dei Valori Unici]\n
+Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.\n
+
+valori_unici = clean_data.nunique()\n
+print(valori_unici) \n
+
 Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.
 
 Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:
