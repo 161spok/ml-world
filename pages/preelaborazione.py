@@ -456,9 +456,38 @@ with st.expander("**Pulizia dei dati di testo**"):
 
 with st.expander("**Standardizzazione dei dati - Feature Scaling**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        Il feature scaling è una tecnica utilizzata per standardizzare le variabili indipendenti o le feature di un dataset in un intervallo comune. Ciò è utile per normalizzare i dati e renderli comparabili. Vediamo due tecniche comuni di feature scaling:
+
+
+Standardizzazione (Z-score normalization):
+
+La standardizzazione scala i dati in modo che abbiano una media di 0 e una deviazione standard di 1.
+È comunemente utilizzata per algoritmi di classificazione.
+Formula: x′=σx−μ​
+
+Esempio in Python utilizzando StandardScaler da scikit-learn:from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(dataset)
+
+
+
+
+
+Normalizzazione (Min-Max scaling):
+
+La normalizzazione scala i dati nell’intervallo [0, 1].
+È più utile per algoritmi di regressione.
+Formula: x′=xmax​−xmin​x−xmin​​
+
+Esempio in Python utilizzando MinMaxScaler:from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+normalized_data = scaler.fit_transform(dataset)
+
+
+
+
+
+Ricorda che la scelta tra standardizzazione e normalizzazione dipende dal contesto e dal tipo di modello che stai utilizzando.
     ''')                               
 
 with st.expander("**Formattazione dei dati**"):
