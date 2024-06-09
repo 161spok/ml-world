@@ -48,7 +48,7 @@ dimensioni = data.shape\n
 prime_righe = data.head()\n
 
 dimensioni\n
-#(1004, 12) \n
+(1004, 12) \n
 
 :green[Traduzione delle etichette del dataset originale in italiano]\n
 :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
@@ -90,7 +90,7 @@ tasso_di_rimbalzo: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1
 :green[Record Duplicati]\n
 
 :green[Utilizzo di duplicated() per trovare i record duplicati]\n
-keep=False :green [segnala tutte le occorrenze dei record duplicati]\n
+keep=False :green[segnala tutte le occorrenze dei record duplicati]\n
 duplicati = data2[data2.duplicated(keep=False)]\n
 
 duplicati \n       
