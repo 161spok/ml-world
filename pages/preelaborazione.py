@@ -393,16 +393,16 @@ Questo metodo identifica i valori anomali basandosi sulla deviazione standard de
 Calcola la media e la deviazione standard per ciascuna variabile.
 Considera come valori anomali quelli che si discostano da questa media di più di una certa soglia (ad esempio, 2 o 3 volte la deviazione standard).
 
-Esempio in Python:
+Esempio in Python:\n
 
-import numpy as np
-threshold = 2  # Soglia per considerare un valore come anomalo
-mean, std = np.mean(dataset), np.std(dataset)
-outliers = dataset[(dataset - mean) > threshold * std]
-Contenuto generato dall'intelligenza artificiale. Rivedi e usa con attenzione. Ulteriori informazioni su FAQ.
-Metodo dell’Intervallo Interquartile (IQR):
-L’IQR è la differenza tra il terzo quartile (75%) e il primo quartile (25%).
-I valori al di fuori di questo intervallo sono considerati anomali.
+import numpy as np\n
+threshold = 2  # Soglia per considerare un valore come anomalo\n
+mean, std = np.mean(dataset), np.std(dataset)\n
+outliers = dataset[(dataset - mean) > threshold * std]\n
+
+Metodo dell’Intervallo Interquartile (IQR):\n
+L’IQR è la differenza tra il terzo quartile (75%) e il primo quartile (25%).\n
+I valori al di fuori di questo intervallo sono considerati anomali.\n
 
 Esempio in Python:
 
