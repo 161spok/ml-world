@@ -25,11 +25,9 @@ st.text_area('Preparazione', 'I dati raccolti possono essere in una forma grezza
 'ottenere insight più affidabili e prendere decisioni più informate. Durante la registrazione delle lezioni, il ChatGPT ha presentato errori, i quali sono stati mantenuti nei video '
 'affinché possiate imparare anche cosa può andare storto, come identificarlo e correggerlo.')
 
-
-st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
-stringa = """
-
-Il dataset presenta i seguenti problemi:
+with st.expander("**Esempio**"): 
+    st.write('''
+    Il dataset presenta i seguenti problemi:
 
 -Righe duplicate
 -ID duplicati
@@ -139,7 +137,6 @@ clean_data.loc[clean_data.index == 518, 'id_della_campagna'] = nuovo_id
 modifica_applicata = clean_data.loc[clean_data.index == 518]
 print(modifica_applicata)        
 Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.
-
 
 Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.
 
@@ -300,7 +297,6 @@ clean_data_senza_outliers.to_csv(output_file_path, index=False)
 output_file_path        
 Conclusione
 Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.
-
 Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.
 
 In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il loro impatto e decidendo le strategie più adatte per gestirli. In particolare, abbiamo optato per l’imputazione dei valori mancanti nella colonna “budget_della_campagna_r” utilizzando la mediana, una scelta dettata dalla necessità di evitare distorsioni causate da valori estremi.
@@ -308,7 +304,13 @@ In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il lor
 Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.
 
 Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.")
-"""
+    
+    ''')
+
+st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
+
+
+
 st.markdown(stringa)
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 st.markdown(
