@@ -34,13 +34,14 @@ with st.expander("**Esempio**"):
 - Valori mancanti
 - Valori anomali (Outliers)
 
-import pandas as pd
+[Codice]\n
+import pandas as pd\n
 
 [Caricamento del file CSV]
-file_path = 'data.csv'
-data = pd.read_csv(file_path)
+file_path = 'data.csv'\n
+data = pd.read_csv(file_path)\n
 
-# Ottenimento delle dimensioni del dataset
+[Ottenimento delle dimensioni del dataset]
 dimensioni = data.shape
 
 # Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
