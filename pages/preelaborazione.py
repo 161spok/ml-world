@@ -34,10 +34,10 @@ with st.expander("**Esempio**"):
 - Valori mancanti
 - Valori anomali (Outliers)
 
-[Codice]\n
+[CODICE]\n
 import pandas as pd\n
 
-[Caricamento del file CSV]\n
+
 file_path = 'data.csv'\n
 data = pd.read_csv(file_path)\n
 
