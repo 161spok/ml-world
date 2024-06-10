@@ -274,7 +274,7 @@ max = clean_data['impressioni'].max()\n
 min = clean_data['impressioni'].min()\n
 
 (media, mediana, max, min)\n
-# (62555.754245754244, 5667.0, 1975723, 1001)   \n
+(62555.754245754244, 5667.0, 1975723, 1001)   \n
 
 Ecco le statistiche per la colonna Impressioni nel dataset:\n
 
