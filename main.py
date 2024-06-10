@@ -48,7 +48,7 @@ show_pages(
         Page("pages/trasformazione.py",    "[2.1.0.6] Trasformazione dei dati", icon=":signal_strength:"),
         Page("pages/puliziadatitesto.py",  "[2.1.0.7] Pulizia dei dati di testo", icon=":signal_strength:"),
         Page("pages/standardizzazione.py", "[2.1.0.8] Standardizzazione dei dati - feature scaling", icon=":signal_strength:"),
-        Page("pages/mancanti.py",          "[2.1.0.9] Codifica delle etichette", icon=":signal_strength:"),
+        Page("pages/codificaetichette.py", "[2.1.0.9] Codifica delle etichette", icon=":signal_strength:"),
         Page("pages/mancanti.py",          "[2.1.0.10] One-hot encoding", icon=":signal_strength:"),
         Page("pages/mancanti.py",          "[2.1.0.11] Gestione dei dati sbilanciati", icon=":signal_strength:"),
         Page("pages/mancanti.py",          "[2.1.0.12] Trappola delle variabili fittizie nei modelli di regressione", icon=":signal_strength:"),
