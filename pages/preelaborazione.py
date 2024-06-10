@@ -456,33 +456,12 @@ with st.expander("**Pulizia dei dati di testo**"):
 
 with st.expander("**Standardizzazione dei dati - Feature Scaling**"):
     st.write('''
-        Il feature scaling è una tecnica utilizzata per standardizzare le variabili indipendenti o le feature di un dataset in un intervallo comune. Ciò è utile per normalizzare i dati e renderli comparabili. Vediamo due tecniche comuni di feature scaling:
+        Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
-
-Standardizzazione (Z-score normalization):
-
-La standardizzazione scala i dati in modo che abbiano una media di 0 e una deviazione standard di 1.
-È comunemente utilizzata per algoritmi di classificazione.
-Formula: x′=σx−μ​
-
-Esempio in Python utilizzando StandardScaler da scikit-learn:
-from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-scaled_data = scaler.fit_transform(dataset)
-
-Normalizzazione (Min-Max scaling):
-
-La normalizzazione scala i dati nell’intervallo [0, 1].
-È più utile per algoritmi di regressione.
-Formula: x′=xmax​−xmin​x−xmin​​
-
-Esempio in Python utilizzando MinMaxScaler:
-from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
-normalized_data = scaler.fit_transform(dataset)
-
-Ricorda che la scelta tra standardizzazione e normalizzazione dipende dal contesto e dal tipo di modello che stai utilizzando.
-    ''')                               
+Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
+        
+    ''')
+     st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")
 
 with st.expander("**Formattazione dei dati**"):
     st.write('''
