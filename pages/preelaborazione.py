@@ -366,7 +366,8 @@ Quindi, la distribuzione dei dati ci aiuta a vedere come sono organizzate le inf
 capire quale colore hai di più! È un modo per rendere le informazioni facili da capire, proprio come è più facile sapere quanti tipi di caramelle hai se le 
 metti in gruppi separati per colore
 ''')    
-                             
+     st.page_link("pages/distribuzione.py", label="1 -Reference", icon="🏠") 
+
 with st.expander("**Rimozione dei duplicati**"):
     st.write('''
         Rimuovere i duplicati è un'abilità essenziale 
