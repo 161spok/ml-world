@@ -11,7 +11,7 @@ st.write("6 - Cosa abbiamo sperimentato / cosa altro dobbiamo fare ?")
 st.write("----------------------------------------------------------------------------")
 
 
-st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Machine Learning", icon="🌎")
+st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Vai a Machine Learning", icon="🌎")
 
 st.write("I passi del processo sono quindi i seguenti:")
 st.write("1 - Problem definition")
