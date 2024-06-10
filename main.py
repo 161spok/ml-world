@@ -43,7 +43,7 @@ show_pages(
         
         Page("pages/duplicati.py",       "[2.1.0.2] Rimozione dei duplicati", icon=":chart_with_downwards_trend:"),
         Page("pages/indesiderate.py",    "[2.1.0.3] Correzione degli errori di struttura", icon=":memo:"),
-        Page("pages/anomali.py",        "[2.1.0.4] Gestione dei valori anomali", icon=":signal_strength:"),
+        Page("pages/anomali.py",         "[2.1.0.4] Gestione dei valori anomali", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.5] Gestione dei mancanti", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.6] Trasformazione dei dati", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.7] Pulizia dei dati di testo", icon=":signal_strength:"),
