@@ -115,7 +115,7 @@ def field_counter():
 	
     	campi_dataset = load_column_data() # ritorna i nomi dei campi
     	drop_down_column = food_dataset["Food_Name"]
-	food_type          = st.selectbox("Select column:", campi_dataset, key=f"uno")	
+	food_type = st.selectbox("Select column:", campi_dataset, key=f"uno")	
 	ft = []
 	fpw = []
 	tpd = []
