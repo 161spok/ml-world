@@ -365,7 +365,7 @@ blu o verdi1.
 Quindi, la distribuzione dei dati ci aiuta a vedere come sono organizzate le informazioni, proprio come quando organizzi le tue caramelle per colore per 
 capire quale colore hai di più! È un modo per rendere le informazioni facili da capire, proprio come è più facile sapere quanti tipi di caramelle hai se le 
 metti in gruppi separati per colore
-    
+''')    
                              
 with st.expander("**Rimozione dei duplicati**"):
     st.write('''
