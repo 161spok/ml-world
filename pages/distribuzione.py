@@ -10,6 +10,7 @@ if 'dati' not in st.session_state:
   st.write("Session vuota")
 else:  
   st.write(st.session_state.dati)
+  
   df = st.session_state.df
   #st.write(df)
   st.dataframe(df)
