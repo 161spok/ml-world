@@ -22,7 +22,7 @@ if 'dati' not in st.session_state:
 				#for col in df.columns:
 				st.write(campi[1])	
 				
-				food_type          = food_type_widget.selectbox("Select column:", campi, key=f"uno")
+				food_type          = st.selectbox("Select column:", campi, key=f"uno")
 				
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
