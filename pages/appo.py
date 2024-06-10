@@ -26,10 +26,6 @@ def load_food_data():
 
 def load_column_data():
 	
-	if 'dati' not in st.session_state:
-		column_dataset = ""
-		
-	else:
 		df = ""
 		uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 		if st.button("Submit & Process", type="primary", key="process_button") :
@@ -123,10 +119,8 @@ def field_counter():
     #gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
     #st.write(gruppo2)
 	
-	campi_dataset = load_column_data() # ritorna i nomi dei campi
-	if campi_dataset =="":
-		pass
-	else:
+		campi_dataset = load_column_data() # ritorna i nomi dei campi
+	
 		drop_down_column = food_dataset["Food_Name"]
 		food_type = st.selectbox("Select column:", campi_dataset, key=f"uno")	
 		ft = []
@@ -173,4 +167,7 @@ def field_counter():
 			st.write(st.session_state.food_items)
 
 #calorie_counter()
-field_counter()
+if 'dati' not in st.session_state:
+	pass
+else:
+	field_counter()
