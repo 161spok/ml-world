@@ -374,7 +374,7 @@ with st.expander("**Rimozione dei duplicati**"):
         utilizzando il modulo Pandas , che ha un metodo noto come drop_duplicates.
     ''')
       
-    st.page_link("https://www.geeksforgeeks.org/python-pandas-dataframe-drop_duplicates/", label="1 -Reference", icon="🏠")
+    
               
   
 with st.expander("**Correzione degli errori di struttura**"):
