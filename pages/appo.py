@@ -27,7 +27,7 @@ def load_food_data():
 def load_column_data():
 	df = ""
 	uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-	    if 'dati' not in st.session_state:
+	if 'dati' not in st.session_state:
 		if st.button("Submit & Process", type="primary", key="process_button") :
 			with st.spinner("Elaborazione ..."):
 				st.success("Caricamento effettuato !") 
