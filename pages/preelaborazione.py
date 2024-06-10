@@ -455,7 +455,7 @@ with st.expander("**Pulizia dei dati di testo**"):
     ''')                                
 
 with st.expander("**Standardizzazione dei dati - Feature Scaling**"):
-    st.write('''
+     st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
 Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
