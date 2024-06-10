@@ -22,7 +22,7 @@ def load_data(uploaded_file):
                                                     st.session_state['dati'] = 'caricati'
                                                     st.session_state.df = df
                                                     #st.write(st.session_state.df.shape[0])
-                                                    st.write(st.session_state['dati'])
+                                                    #st.write(st.session_state['dati'])
     return df
 
 #d1 = load_data(DATA_URL_1)
