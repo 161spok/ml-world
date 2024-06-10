@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import io
+import streamlit.components.v1 as components
 
 st.subheader("Distribuzione dati")                                 
 
