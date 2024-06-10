@@ -224,7 +224,7 @@ Successivamente, ci concentriamo sui dati mancanti, calcolando il loro percentua
 
 Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.\n
 
-:green[Analisi dei Valori Unici]\n
+:green[**Analisi dei Valori Unici**]\n
 Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.\n
 
 valori_unici = clean_data.nunique()\n
@@ -240,7 +240,7 @@ for colonna in clean_data.columns:\n
     
 Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
 
-:green[Identificazione degli Outliers]\n
+:green[**Identificazione degli Outliers**]\n
 Ora passeremo alla fase di rilevamento degli outliers nel nostro dataset. Gli outliers sono valori estremamente alti o bassi che si discostano significativamente dalla maggior parte degli altri dati.\n
 
 Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.\n
@@ -284,7 +284,7 @@ Mediana delle Impressioni: 5.668,5\n
 Valore Massimo delle Impressioni: 1.975.723\n
 Valore Minimo delle Impressioni: 1.001\n
 
-:green[La Scelta tra Rimozione e Imputazione di Outliers nel Dataset]\n
+:green[**La Scelta tra Rimozione e Imputazione di Outliers nel Dataset**]\n
 Il valore massimo nella colonna Impressioni è chiaramente un outlier, in quanto si discosta significativamente dal modello generale dei dati. La media risulta essere elevata a causa dell’impatto degli outliers, mentre la mediana, essendo il valore centrale in un insieme di dati ordinato, non è influenzata in egual misura. Queste osservazioni dimostrano come l’utilizzo della media possa essere ingannevole in presenza di outliers.\n
 
 Se la media è distorta dagli outliers, sostituire i valori mancanti con questa media distorta potrebbe causare problemi nel dataset. In questo caso, i valori sono estremamente diversi, rendendo la rimozione degli outliers una scelta più prudente. Qualsiasi altro metodo di imputazione potrebbe rappresentare un rischio per l’integrità dell’analisi.\n
@@ -301,7 +301,7 @@ clean_data_senza_outliers = clean_data[~outliers_impressioni]\n
 
 clean_data_senza_outliers.shape, clean_data.shape\n      
 
-:green[Salvataggio della Versione Finale del Dataset Dopo la Pulizia]\n
+:green[**Salvataggio della Versione Finale del Dataset Dopo la Pulizia**]\n
 Abbiamo completato il processo di pulizia del dataset “clean_data”, rimuovendo sia le righe duplicate sia gli outliers nella colonna Impressioni.\n
 
 La versione finale del dataset, ora denominata “clean_data_senza_outliers”, è stata salvata in formato CSV.\n
@@ -315,7 +315,7 @@ clean_data_senza_outliers.to_csv(output_file_path, index=False)\n
 
 output_file_path 
 
-:green[Conclusione]\n
+:green[**Conclusione**]\n
 Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.\n
 Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.\n
 
