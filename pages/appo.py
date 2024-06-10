@@ -1,27 +1,27 @@
 import streamlit as st
-from IPython.display import HTML
+#from IPython.display import HTML
 import pandas as pd
 
 df = ""
-df = pd.read_csv(uploaded_file) #path folder of the data file
+uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
+#df = pd.read_csv(uploaded_file) 
 if 'dati' not in st.session_state:
 	if st.button("Submit & Process", type="primary", key="process_button") :
             with st.spinner("Elaborazione ..."):
                                         st.success("Caricamento effettuato !") 
                                         if uploaded_file is not None:                                           
-                                            dati_caricati = True
-                                            data = load_data(uploaded_file)
-                                            #data = pd.read_csv(uploaded_file) #path folder of the data file
-                                            st.write(data)
+                                            dati_caricati = True                                            
+                                            df = pd.read_csv(uploaded_file) #path folder of the data file
+                                            st.write(df)
 	
-# making data frame
-data = pd.read_csv("data.csv")
+		# making data frame
+		#data = pd.read_csv("data.csv")
  
-# iterating the columns
-for col in data.columns:
-    print(col)
-	
-campi = list(data.columns.values)
+		# iterating the columns
+		for col in df.columns:
+		    st.write(col)
+			
+		campi = list(df.columns.values)
 
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
