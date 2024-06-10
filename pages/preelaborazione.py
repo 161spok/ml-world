@@ -46,16 +46,16 @@ import pandas as pd\n
 file_path = 'data.csv'\n
 data = pd.read_csv(file_path)\n
 
-:green[Ottenimento delle dimensioni del dataset]\n
+:green[**Ottenimento delle dimensioni del dataset**]\n
 dimensioni = data.shape\n
 
-:green[Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati]\n
+:green[**Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati**]\n
 prime_righe = data.head()\n
 
 dimensioni\n
 (1004, 12) \n
 
-:green[Traduzione delle etichette del dataset originale in italiano]\n
+:green[**Traduzione delle etichette del dataset originale in italiano**]\n
 :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
 
 traduzioni_originali = {\n
@@ -73,10 +73,10 @@ traduzioni_originali = {\n
     'Bounce Rate': 'tasso_di_rimbalzo'\n
 }\n
 
-:green[Applicazione delle traduzioni con underscore case al dataset originale]\n
+:green[**Applicazione delle traduzioni con underscore case al dataset originale**]\n
 data2 = data.rename(columns=traduzioni_originali)\n        
 
-:green[Dettaglio dei Dati]\n
+:green[**Dettaglio dei Dati**]\n
 describe = data2.describe(include='all')\n
 describe\n        
 
@@ -92,9 +92,9 @@ describe\n
 **fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
 **tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
 
-:green[Record Duplicati]\n
+:green[**Record Duplicati**]\n
 
-:green[Utilizzo di duplicated() per trovare i record duplicati]\n
+:green[**Utilizzo di duplicated() per trovare i record duplicati**]\n
 keep=False :green[segnala tutte le occorrenze dei record duplicati]\n
 duplicati = data2[data2.duplicated(keep=False)]\n
 
@@ -115,7 +115,7 @@ Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull
 
 Per questi motivi, è cruciale identificare e rimuovere i record duplicati prima di procedere con ulteriori analisi.
 
-:green[Rimozione delle duplicate]\n
+:green[**Rimozione delle duplicate**]\n
 :green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
 
 clean_data = data2.drop_duplicates()\n
@@ -128,7 +128,7 @@ data2.shape\n
 
 Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
 
-:green[ID duplicato]\n
+:green[**ID duplicato**]\n
 :green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
 
 Identificazione degli ID duplicati nel dataset "cap3"\n
@@ -152,7 +152,7 @@ print(modifica_applicata)\n
 Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.\n
 Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.\n
 
-:green[Valori Mancanti]\n
+:green[**Valori Mancanti**]\n
 Finora, abbiamo risolto con successo due problemi chiave nel nostro dataset: la presenza di righe duplicate e di ID duplicati. Il prossimo passo sarà affrontare il problema dei valori mancanti. È fondamentale riconoscere che i valori mancanti possono avere un impatto significativo sulla qualità e l’accuratezza delle nostre analisi.\n
 
 :green[Verifica dei valori mancanti in "clean_data"]\n
@@ -174,7 +174,7 @@ print(percentuale_mancanti)\n
 
 5.49%  \n
 
-:green[Statistiche della colonna]\n
+:green[**Statistiche della colonna**]\n
 :green[Statistiche della colonna 'budget_della_campagna_r']\n
 media = clean_data['budget_della_campagna_r'].mean()\n
 mediana = clean_data['budget_della_campagna_r'].median()\n
@@ -193,7 +193,7 @@ Minimo: 1042.12  \n
 
 I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative discrepanze. La media e la mediana sono molto vicine tra loro, il che suggerisce una distribuzione relativamente uniforme dei valori. Pertanto, possiamo procedere con un certo grado di sicurezza nell’utilizzare la media o la mediana per interpolare i valori mancanti.\n
 
-:green[Strategie Efficaci per la Gestione dei Valori Mancanti]\n
+:green[**Strategie Efficaci per la Gestione dei Valori Mancanti**]\n
 :green[Per trattare i valori mancanti nella colonna ‘budget_della_campagna_r’ del dataset “clean_data”, ci sono diverse opzioni:]\n
 
 - Interpolazione con la Media o la Mediana: Se la distribuzione dei dati è relativamente uniforme, potresti usare la media o la mediana per riempire i valori mancanti. Questo è un approccio comune quando i dati non mostrano estreme variazioni o outlier significativi.\n
@@ -215,7 +215,7 @@ valori_mancanti_dopo
 
 0         
 
-:green[Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati]\n
+:green[**Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati**]\n
 Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.\n
 
 Il primo passo è verificare la presenza di duplicati per evitare sorprese durante l’analisi. Controlliamo anche la fonte dei dati, se necessario, e esaminiamo ciascuna colonna per assicurarci che non contenga duplicati inappropriati.\n
