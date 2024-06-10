@@ -465,24 +465,22 @@ Ad esempio, considera un set di dati contenente due caratteristiche, età e redd
 
 with st.expander("**Formattazione dei dati**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        
     ''')                                
 
 with st.expander("**Codifica delle etichette**"):
-    st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+     st.write('''
+        La codifica delle etichette è una tecnica utilizzata per convertire le colonne categoriche in colonne numeriche in modo che possano essere adattate da modelli di apprendimento automatico che accettano solo dati numerici. Si tratta di un importante passaggio di pre-elaborazione in un progetto di machine learning.
     ''')  
+     st.page_link("https://www.geeksforgeeks.org/ml-label-encoding-of-datasets-in-python/", label="Reference", icon="🏠")
 
 with st.expander("**One-hot encoding**"):
-    st.write('''
+     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
-    ''')  
+    ''')       
+     st.page_link("https://www.geeksforgeeks.org/ml-one-hot-encoding/?ref=header_search", label="Reference", icon="🏠")
 
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
      st.write('''
