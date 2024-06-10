@@ -485,11 +485,11 @@ with st.expander("**One-hot encoding**"):
     ''')  
 
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
-    st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    ''')  
+     st.write('''
+        La Synthetic Minority Over-sampling TEchnique, o SMOTE in breve, è una tecnica di preelaborazione utilizzata per affrontare uno squilibrio di classi in un set di dati.
+    ''') 
+     st.page_link("https://medium.com/@corymaklin/synthetic-minority-over-sampling-technique-smote-7d419696b88c", label="Reference", icon="🏠")
+     
 
 with st.expander("**Trappola delle variabili fittizie nei modelli di regressione**"):
     st.write('''
