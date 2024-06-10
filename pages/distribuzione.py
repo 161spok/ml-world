@@ -42,14 +42,15 @@ else:
     st.text(s)
     
   st.header("Conteggio ") 
-  st.write("Su quale colonna occorre effettuare il conteggio ?")
+  
   colonna = st.text_input("Su quale colonna occorre effettuare il conteggio ?")
   
-  st.write(":blue[df[\"colonna\"].value_counts()]")
+  st.write(":blue[df["colonna"].value_counts()]")
   
   #conteggio = df["Failure Type"].value_counts()
-  conteggio = df[colonna].value_counts()
-  st.text(conteggio)
+  if colonna:
+    conteggio = df[colonna].value_counts()
+    st.text(conteggio)
   
   st.header("Valori univoci ")
   st.write(":blue[df[\"Failure Type\"].sort_values().unique().tolist()]")#:blue[2 Data]
