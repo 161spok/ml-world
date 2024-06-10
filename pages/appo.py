@@ -17,6 +17,7 @@ if 'dati' not in st.session_state:
 				for col in df.columns:
 					st.write(col)						
 					campi = list(df.columns.values)
+					st.write(campi)
 
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
