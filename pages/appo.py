@@ -7,16 +7,16 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 #df = pd.read_csv(uploaded_file) 
 if 'dati' not in st.session_state:
 	if st.button("Submit & Process", type="primary", key="process_button") :
-            with st.spinner("Elaborazione ..."):
-                                st.success("Caricamento effettuato !") 
-                                if uploaded_file is not None:                                           
-                                        dati_caricati = True                                            
-                                        df = pd.read_csv(uploaded_file) #path folder of the data file
-                                        st.write(df)											
+		with st.spinner("Elaborazione ..."):
+			st.success("Caricamento effettuato !") 
+			if uploaded_file is not None:                                           
+				dati_caricati = True                                            
+				df = pd.read_csv(uploaded_file) #path folder of the data file
+				st.write(df)											
 				 					
-					for col in df.columns:
-						st.write(col)						
-						campi = list(df.columns.values)
+				for col in df.columns:
+					st.write(col)						
+					campi = list(df.columns.values)
 
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
