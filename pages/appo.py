@@ -113,25 +113,25 @@ def field_counter():
     #gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
     #st.write(gruppo2)
 	
-campi_dataset = load_column_data() # ritorna i nomi dei campi
-drop_down_column = food_dataset["Food_Name"]
-food_type = st.selectbox("Select column:", campi_dataset, key=f"uno")	
-ft = []
-fpw = []
-tpd = []
-quan = []
-	
-num_food_items = st.number_input("Enter the number of food items: ", step = 1)
-	
-	    # Create widgets outside the loop
-food_type_widget = st.empty()
-frequency_per_week_widget = st.empty()
-times_per_day_widget = st.empty()
-quantity_widget = st.empty()
-	
-counter = 0
+	campi_dataset = load_column_data() # ritorna i nomi dei campi
+	drop_down_column = food_dataset["Food_Name"]
+	food_type = st.selectbox("Select column:", campi_dataset, key=f"uno")	
+	ft = []
+	fpw = []
+	tpd = []
+	quan = []
 		
-if st.session_state["num_entered"] < num_food_items:
+	num_food_items = st.number_input("Enter the number of food items: ", step = 1)
+		
+		    # Create widgets outside the loop
+	food_type_widget = st.empty()
+	frequency_per_week_widget = st.empty()
+	times_per_day_widget = st.empty()
+	quantity_widget = st.empty()
+		
+	counter = 0
+		
+	if st.session_state["num_entered"] < num_food_items:
 		food_type = food_type_widget.selectbox("Select the type of food:", drop_down_column, key=f"food_type_input_{len(ft)}")
 		frequency_per_week = frequency_per_week_widget.number_input("Enter the frequency per week for food:", key=f"frequency_per_week_input_{len(fpw)}", step=1)
 		times_per_day      = times_per_day_widget.number_input("Enter how many times per day for food:", key=f"times_per_day_input_{len(tpd)}", step=1)
