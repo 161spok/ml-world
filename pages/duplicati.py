@@ -8,6 +8,9 @@ if 'dati' not in st.session_state:
 else:  
   st.write(st.session_state.dati)
   data = st.session_state.df
+
+  st.page_link("https://www.geeksforgeeks.org/python-pandas-dataframe-drop_duplicates/", label="1 -Reference", icon="🏠")
+  
   #data = pd.dataframe(tmpdati)
 
   # Check for duplicate rows
