@@ -349,7 +349,7 @@ st.markdown(
 #components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
 
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
-    st.write('''
+     st.write('''
         Immagina che tu abbia una grande ciotola di caramelle di diversi colori e vuoi sapere quale colore c’è di più. Allora inizi a separare 
         le caramelle per colore: rosse, blu, verdi, ecc. Dopo averle separate, conti quante caramelle ci sono di ogni colore. Magari scopri che hai 
         molte caramelle rosse, alcune blu e poche verdi.
