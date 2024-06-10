@@ -4,7 +4,7 @@ import pandas as pd
 
 df = ""
 uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-#df = pd.read_csv(uploaded_file) 
+
 if 'dati' not in st.session_state:
 	if st.button("Submit & Process", type="primary", key="process_button") :
 		with st.spinner("Elaborazione ..."):
