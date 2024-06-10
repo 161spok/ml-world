@@ -1,6 +1,15 @@
 import streamlit as st
-
-
+from IPython.display import HTML
+import pandas as pd
+     
+# making data frame
+data = pd.read_csv("data.csv")
+ 
+# iterating the columns
+for col in data.columns:
+    print(col)
+	
+campi = list(data.columns.values)
 
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
@@ -10,6 +19,17 @@ if "food_items" not in st.session_state:
 
 def load_food_data():
     food_dataset = {
+        "Food_Name":     ["Apple", "Banana", "Orange", "Mango", "Pineapple"],
+        "Carbohydrates": [25, 27, 21, 30, 22],
+        "Protein":       [1, 1, 1, 1, 1],
+        "Fat":           [0, 0, 0, 0, 0],
+        "Fiber":         [4, 3, 3, 4, 2],
+    }
+
+    return food_dataset
+
+def load_column_data():
+    food_dataset = {
         "Food_Name": ["Apple", "Banana", "Orange", "Mango", "Pineapple"],
         "Carbohydrates": [25, 27, 21, 30, 22],
         "Protein": [1, 1, 1, 1, 1],
@@ -17,12 +37,21 @@ def load_food_data():
         "Fiber": [4, 3, 3, 4, 2],
     }
 
-    return food_dataset
+    return data_dataset
 	
+  #st.header("Raggruppamento con media valori")
+  #raggruppamedia = st.text_input("Su quale colonna occorre effettuare in raggruppamento con media valori ?")
+  #if raggruppamedia:
+    
+    #st.write(":blue[df.groupby('colonna').agg({'Air temperature [K]':'median', 'Process temperature [K]':'median'})]")
+  
+    #gruppo2 = df.groupby('Failure Type').agg({"Air temperature [K]":"median", "Process temperature [K]":"median"})
+    #st.write(gruppo2)
 	
 def calorie_counter():
 
     food_dataset = load_food_data()
+	#	dal dataset leggere i nomi delle colonne ed inserirli in vettore
     drop_down_column = food_dataset["Food_Name"]
 
     ft = []
