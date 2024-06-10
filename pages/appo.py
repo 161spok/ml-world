@@ -1,7 +1,12 @@
 import streamlit as st
 from IPython.display import HTML
 import pandas as pd
-     
+
+df=""
+df = pd.read_csv(uploaded_file) #path folder of the data file
+if 'dati' not in st.session_state:
+
+	
 # making data frame
 data = pd.read_csv("data.csv")
  
