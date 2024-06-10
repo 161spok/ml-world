@@ -1,10 +1,6 @@
 import streamlit as st
 #from IPython.display import HTML
 import pandas as pd
-
-
-
-
 				
 if "num_entered" not in st.session_state:
     st.session_state.num_entered = 0
