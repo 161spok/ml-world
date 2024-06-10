@@ -94,7 +94,7 @@ describe\n
 
 :green[**Record Duplicati**]\n
 
-:green[**Utilizzo di duplicated() per trovare i record duplicati**]\n
+:green[Utilizzo di duplicated() per trovare i record duplicati]\n
 keep=False :green[segnala tutte le occorrenze dei record duplicati]\n
 duplicati = data2[data2.duplicated(keep=False)]\n
 
@@ -115,7 +115,7 @@ Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull
 
 Per questi motivi, è cruciale identificare e rimuovere i record duplicati prima di procedere con ulteriori analisi.
 
-:green[**Rimozione delle duplicate**]\n
+:green[**Rimozione delle righe duplicate**]\n
 :green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
 
 clean_data = data2.drop_duplicates()\n
@@ -160,7 +160,7 @@ valori_mancanti = clean_data.isnull().sum()\n
 print(valori_mancanti) \n
 
 Ci sono 55 valori mancanti nella colonna budget_della_campagna_r. Tutte le altre colonne del dataset non presentano valori mancanti.\n
-Adesso vedremo il percentuale dei valori mancanti nella colonna ‘budget_della_campagna_r’, che è un passaggio cruciale per decidere come gestire questi valori mancanti.\n
+Adesso vedremo la percentuale dei valori mancanti nella colonna ‘budget_della_campagna_r’, che è un passaggio cruciale per decidere come gestire questi valori mancanti.\n
 
 Numero totale di righe in 'budget_della_campagna_r'\n
 totale_righe = clean_data.shape[0]\n
