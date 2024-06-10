@@ -201,7 +201,7 @@ I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative di
 - Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.\n
 - Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.\n
 
-**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.\n**
+:red[**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.**]\n
 
 :green[**Calcolo della mediana**]\n
 mediana_budget = clean_data['budget_della_campagna_r'].median()\n
