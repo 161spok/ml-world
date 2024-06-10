@@ -46,7 +46,7 @@ show_pages(
         Page("pages/anomali.py",         "[2.1.0.4] Gestione dei valori anomali", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.5] Gestione dei mancanti", icon=":signal_strength:"),
         Page("pages/trasformazione.py",  "[2.1.0.6] Trasformazione dei dati", icon=":signal_strength:"),
-        Page("pages/mancanti.py",        "[2.1.0.7] Pulizia dei dati di testo", icon=":signal_strength:"),
+        Page("pages/puliziadatitesto.py","[2.1.0.7] Pulizia dei dati di testo", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.8] Standardizzazione dei dati - feature scaling", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.9] Codifica delle etichette", icon=":signal_strength:"),
         Page("pages/mancanti.py",        "[2.1.0.10] One-hot encoding", icon=":signal_strength:"),
