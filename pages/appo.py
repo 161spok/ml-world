@@ -45,11 +45,17 @@ def load_column_data():
 						st.write(column_dataset[1])	
 						
 						food_type = st.selectbox("Select column:", column_dataset, key=f"uno")
+						#options = st.multiselect(
+						#	"Select column:",
+						#	["Green", "Yellow", "Red", "Blue"],
+						#	["Yellow", "Red"])
+						#st.write("You selected:", options)
 						options = st.multiselect(
-							"What are your favorite colors",
-							["Green", "Yellow", "Red", "Blue"],
+							"Select column:",
+							column_dataset,
 							["Yellow", "Red"])
 						st.write("You selected:", options)
+	
 	return column_dataset
 	
   
