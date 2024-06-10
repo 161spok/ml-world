@@ -25,31 +25,31 @@ def load_food_data():
     return food_dataset # ritorna il dataset
 
 def load_column_data():
-df = ""
-uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-if 'dati' not in st.session_state:
-		if st.button("Submit & Process", type="primary", key="process_button") :
-			with st.spinner("Elaborazione ..."):
-				st.success("Caricamento effettuato !") 
-				
-				if uploaded_file is not None:                                           
-					dati_caricati = True                                            
-					df = pd.read_csv(uploaded_file) #path folder of the data file
-					st.write(df)											
-					 					
-					for col in df.columns:
-						st.write(col)						
-					column_dataset = list(df.columns.values)
-					st.write(campi)
-					#for col in df.columns:
-					st.write(campi[1])	
+	df = ""
+	uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
+	if 'dati' not in st.session_state:
+			if st.button("Submit & Process", type="primary", key="process_button") :
+				with st.spinner("Elaborazione ..."):
+					st.success("Caricamento effettuato !") 
 					
-					food_type = st.selectbox("Select column:", column_dataset, key=f"uno")
-					options = st.multiselect(
-						"What are your favorite colors",
-						["Green", "Yellow", "Red", "Blue"],
-						["Yellow", "Red"])
-					st.write("You selected:", options)
+					if uploaded_file is not None:                                           
+						dati_caricati = True                                            
+						df = pd.read_csv(uploaded_file) #path folder of the data file
+						st.write(df)											
+						 					
+						for col in df.columns:
+							st.write(col)						
+						column_dataset = list(df.columns.values)
+						st.write(campi)
+						#for col in df.columns:
+						st.write(campi[1])	
+						
+						food_type = st.selectbox("Select column:", column_dataset, key=f"uno")
+						options = st.multiselect(
+							"What are your favorite colors",
+							["Green", "Yellow", "Red", "Blue"],
+							["Yellow", "Red"])
+						st.write("You selected:", options)
     return column_dataset
 	
   
