@@ -9,6 +9,7 @@ if 'dati' not in st.session_state:
 	if st.button("Submit & Process", type="primary", key="process_button") :
 		with st.spinner("Elaborazione ..."):
 			st.success("Caricamento effettuato !") 
+			st.info("Caricamento effettuato !")
 			if uploaded_file is not None:                                           
 				dati_caricati = True                                            
 				df = pd.read_csv(uploaded_file) #path folder of the data file
