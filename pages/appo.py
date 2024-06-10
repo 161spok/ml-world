@@ -53,7 +53,7 @@ def load_column_data():
 						options = st.multiselect(
 							"Select column:",
 							column_dataset,
-							["Yellow", "Red"])
+							[column_dataset[0], column_dataset[1]])
 						st.write("You selected:", options)
 	
 	return column_dataset
