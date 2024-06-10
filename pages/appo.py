@@ -40,9 +40,9 @@ def load_column_data():
 						for col in df.columns:
 							st.write(col)						
 						column_dataset = list(df.columns.values)
-						st.write(campi)
+						st.write(column_dataset)
 						#for col in df.columns:
-						st.write(campi[1])	
+						st.write(column_dataset[1])	
 						
 						food_type = st.selectbox("Select column:", column_dataset, key=f"uno")
 						options = st.multiselect(
