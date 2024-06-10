@@ -137,8 +137,7 @@ def field_counter():
 		times_per_day      = times_per_day_widget.number_input("Enter how many times per day for food:", key=f"times_per_day_input_{len(tpd)}", step=1)
 		quantity           = quantity_widget.number_input("Enter the quantity in grams for food:", key=f"quantity_input_{len(quan)}", step=1)
 	
-	        if st.button("Submit"):
-	
+		if st.button("Submit"):
 	            st.session_state.food_items.append({
 	                'food_type': food_type,
 	                'frequency_per_week': frequency_per_week,
