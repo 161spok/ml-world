@@ -27,7 +27,8 @@ def load_food_data():
 def load_column_data():
 	
 	if 'dati' not in st.session_state:
-		pass
+		column_dataset = ""
+		
 	else:
 		df = ""
 		uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
