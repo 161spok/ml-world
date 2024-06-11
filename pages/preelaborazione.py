@@ -103,17 +103,17 @@ with st.expander("**Esempio 2**"):
         'Fonte do Tráfego': 'fonte_del_traffico',
         'Bounce Rate': 'tasso_di_rimbalzo'
     }
+    ''')
     
+    st.code(f"""
     # Applicazione delle traduzioni con underscore case al dataset originale
     data2 = data.rename(columns=traduzioni_originali)       
     
     # Dettaglio dei Dati
     describe = data2.describe(include='all')
-    ''')
+    describe
+    """)
     
-    st.write(
-        describe        
-    )
     st.write('''
         
     **id_della_campagna**: ID numerico delle campagne, varia da 1 a 1000.\n
@@ -128,17 +128,16 @@ with st.expander("**Esempio 2**"):
     **fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
     **tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
     ''')
+    
     st.code(f"""
     # Record Duplicati
     
     # Utilizzo di duplicated() per trovare i record duplicati
     keep=False #segnala tutte le occorrenze dei record duplicati
     duplicati = data2[data2.duplicated(keep=False)]
+    duplicati
     """)
 
-    st.write(
-        duplicati   
-    )
     st.write('''
     Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
     
@@ -167,6 +166,7 @@ with st.expander("**Esempio 2**"):
     data2.shape
     (1004, 12)       
     """)
+    
     st.write('''
     Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
     
@@ -175,10 +175,10 @@ with st.expander("**Esempio 2**"):
     ''')
 
     st.code(f"""
-    #Identificazione degli ID duplicati nel dataset "cap3"
+    # Identificazione degli ID duplicati nel dataset "cap3"
     ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]
     
-    #Visualizzazione dei record con gli ID duplicati
+    # Visualizzazione dei record con gli ID duplicati
     print(ids_duplicati)      
     """)
 
@@ -197,6 +197,7 @@ with st.expander("**Esempio 2**"):
     modifica_applicata = clean_data.loc[clean_data.index == 518]
     print(modifica_applicata)
     """)
+    
     st.write('''
     Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.\n
     Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.\n
