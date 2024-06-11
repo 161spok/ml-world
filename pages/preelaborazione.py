@@ -81,16 +81,16 @@ with st.expander("**Esempio 2**"):
         
         # Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
         prime_righe = data.head()
-         dimensioni
+        dimensioni
         (1004, 12) 
         """)
     
-    st.write('''
-        :green[**Traduzione delle etichette del dataset originale in italiano**]\n
-        :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
-        ''')
-    
-    st.write('''    
+    st.write('''   
+    :green[**Traduzione delle etichette del dataset originale in italiano**]\n
+    :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
+    ''')
+
+    st.code(f"""
     traduzioni_originali = {
         'ID da Campanha': 'id_della_campagna',
         'Nome da Campanha': 'nome_della_campagna',
@@ -105,7 +105,7 @@ with st.expander("**Esempio 2**"):
         'Fonte do Tráfego': 'fonte_del_traffico',
         'Bounce Rate': 'tasso_di_rimbalzo'
     }
-    ''')
+    """)
     
     st.code(f"""
     # Applicazione delle traduzioni con underscore case al dataset originale
