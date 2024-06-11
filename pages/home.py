@@ -2,8 +2,7 @@ import streamlit as st
 
 st.title("Metodologia da seguire")
 
-st.markdown('''
-    :blue-background[E' un processo iterativo] ''')
+st.markdown(''':blue-background[E' un processo iterativo] ''')
 
 st.write("1 - Quale problema stiamo tentando di risolvere ?")
 st.write("2 - Quali dati abbiamo ?")
@@ -16,7 +15,9 @@ st.write("----------------------------------------------------------------------
 
 st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Vai a Machine Learning", icon="🌎")
 
-st.write("I passi del processo sono quindi i seguenti:")
+
+st.markdown(''':blue-background[I passi del processo sono quindi i seguenti:] ''')
+
 st.write("1 - Problem definition")
 st.write("2 - Data")
 st.write("3 - Evaluation")
