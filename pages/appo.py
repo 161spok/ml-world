@@ -4,8 +4,8 @@ import pandas as pd
 				
 
 def load_column_data():
-		df = ""
-		uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
+	df = ""
+	uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 	return column_dataset
 	
   
