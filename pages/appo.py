@@ -13,7 +13,7 @@ if "food_items" not in st.session_state:
 def load_column_data():
 		df = ""
 		uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-return column_dataset
+	return column_dataset
 	
   
 	
