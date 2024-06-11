@@ -174,7 +174,7 @@ with st.expander("**Esempio 2**"):
     :green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
     ''')
 
-     st.code(f"""
+    st.code(f"""
     #Identificazione degli ID duplicati nel dataset "cap3"
     ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]
     
@@ -296,38 +296,45 @@ with st.expander("**Esempio 2**"):
     print(valori_unici) 
     """)
 
-
-Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.\n
-
-Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:\n
-
-Visualizzazione dei valori unici per ogni colonna in "clean_data"\n
-for colonna in clean_data.columns:\n
-    print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}\n")\n
+    st.write('''
+    Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.\n
     
-Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
+    Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:\n
+    ''')
+    st.code(f"""
+    # QUESTA SEZIONE E' COMMENTATA MA ATTIVA
+    # Visualizzazione dei valori unici per ogni colonna in "clean_data"
+    # for colonna in clean_data.columns:
+    #    print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}")
+    """)
 
-:green[**Identificazione degli Outliers**]\n
-Ora passeremo alla fase di rilevamento degli outliers nel nostro dataset. Gli outliers sono valori estremamente alti o bassi che si discostano significativamente dalla maggior parte degli altri dati.\n
+    st.write('''
+    Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
+    
+    :green[**Identificazione degli Outliers**]\n
+    Ora passeremo alla fase di rilevamento degli outliers nel nostro dataset. Gli outliers sono valori estremamente alti o bassi che si discostano significativamente dalla maggior parte degli altri dati.\n
+    
+    Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.\n
+    ''')
 
-Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.\n
-
-Selezione delle colonne numeriche\n
-colonne_numeriche = clean_data.select_dtypes(include=['float64', 'int64'])\n
-
-Calcolo dell'IQR (Intervallo Interquartile) per identificare gli outliers\n
-Q1 = colonne_numeriche.quantile(0.25)\n
-Q3 = colonne_numeriche.quantile(0.75)\n
-IQR = Q3 - Q1\n
-
-Definizione dei limiti per considerare un valore come outlier\n
-limite_inferiore = Q1 - 1.5 * IQR\n
-limite_superiore = Q3 + 1.5 * IQR\n
-
-Identificazione degli outliers\n
-outliers = (colonne_numeriche < limite_inferiore) | (colonne_numeriche > limite_superiore)\n
-
-outliers.sum()\n
+    st.code(f"""
+    Selezione delle colonne numeriche
+    colonne_numeriche = clean_data.select_dtypes(include=['float64', 'int64'])
+    
+    Calcolo dell'IQR (Intervallo Interquartile) per identificare gli outliers
+    Q1 = colonne_numeriche.quantile(0.25)
+    Q3 = colonne_numeriche.quantile(0.75)
+    IQR = Q3 - Q1
+    
+    Definizione dei limiti per considerare un valore come outlier
+    limite_inferiore = Q1 - 1.5 * IQR
+    limite_superiore = Q3 + 1.5 * IQR
+    
+    Identificazione degli outliers
+    outliers = (colonne_numeriche < limite_inferiore) | (colonne_numeriche > limite_superiore)
+    
+    outliers.sum()
+    """)
 
 Abbiamo eseguito un’analisi per identificare gli outliers nelle colonne numeriche del dataset. Utilizzando il metodo dell’Intervallo Interquartile (IQR), abbiamo definito limiti inferiore e superiore per ciascuna colonna numerica.\n
 
