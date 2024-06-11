@@ -41,7 +41,7 @@ show_pages(
         # Unless you explicitly say in_section=False
         Page("pages/datacleaning.py",      "[2.1.0] Data cleaning ", icon=":chart_with_upwards_trend:"),
         Page("pages/distribuzione.py",     "[2.1.0.1] Distribuzione dei dati", icon=":chart_with_upwards_trend:"),
-        Page("pages/categoriche.py",       "[2.1.0.2] Distribuzione dei dati", icon=":chart_with_upwards_trend:"),
+        Page("pages/categoriche.py",       "[2.1.0.2] Verifica di colonne categoriche e numeriche", icon=":chart_with_upwards_trend:"),
         Page("pages/duplicati.py",         "[2.1.0.3] Rimozione dei duplicati", icon=":chart_with_downwards_trend:"),
         Page("pages/indesiderate.py",      "[2.1.0.4] Correzione degli errori di struttura", icon=":memo:"),
         Page("pages/anomali.py",           "[2.1.0.5] Gestione dei valori anomali", icon=":signal_strength:"),
