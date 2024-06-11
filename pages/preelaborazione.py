@@ -67,7 +67,8 @@ with st.expander("**Esempio 2**"):
         - Valori mancanti
         - Valori anomali (Outliers)
         
-        :green[**CODICE**]\n''')
+        :green[**CODICE**]
+        ''')
 
     st.code(f"""
         import pandas as pd
@@ -75,19 +76,20 @@ with st.expander("**Esempio 2**"):
         file_path = 'data.csv'
         data = pd.read_csv(file_path)
         
-        #    Ottenimento delle dimensioni del dataset
+        # Ottenimento delle dimensioni del dataset
         dimensioni = data.shape
         
-        #    Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
+        # Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
         prime_righe = data.head()
+         dimensioni
+        (1004, 12) 
         """)
+    
     st.write('''
-        dimensioni\n
-        (1004, 12) \n
-        
         :green[**Traduzione delle etichette del dataset originale in italiano**]\n
         :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
         ''')
+    
     st.write('''    
     traduzioni_originali = {
         'ID da Campanha': 'id_della_campagna',
