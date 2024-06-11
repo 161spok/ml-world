@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Metodologia da seguire")
 
 st.markdown('''
-    :blue-background[highlight] E' un processo iterativo''')
+    :blue-background[E' un processo iterativo] ''')
 
 st.write("1 - Quale problema stiamo tentando di risolvere ?")
 st.write("2 - Quali dati abbiamo ?")
