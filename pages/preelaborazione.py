@@ -12,7 +12,23 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-with st.expander("See details"): 
+st.markdown("""
+  <style>
+     /* Streamlit class name of the div that holds the expander's title*/
+    .css-q8sbsg p {
+      font-size: 32px;
+      color: red;
+      }
+    
+     /* Streamlit class name of the div that holds the expander's text*/
+    .css-nahz7x p {
+      font-family: bariol;
+      font-size: 20px;
+      }
+  </style>
+""", unsafe_allow_html=True)
+
+with st.expander('<p class="small-font">See details.</p>'): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
 
 
