@@ -7,7 +7,7 @@ st.subheader("2.1 Preelaborazione dati")
 st.markdown("""
 <style>
 .small-font {
-    font-size: 12px;
+    font-size: 22px;
 }
 </style>
 """, unsafe_allow_html=True)
