@@ -73,6 +73,7 @@ with st.expander("**Esempio 2**"):
     st.code(f"""
         import pandas as pd
         
+        # Caricamento del file dati
         file_path = 'data.csv'
         data = pd.read_csv(file_path)
         
@@ -86,8 +87,7 @@ with st.expander("**Esempio 2**"):
         """)
     
     st.write('''   
-    :green[**Traduzione delle etichette del dataset originale in italiano**]\n
-    :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
+    :green[**Traduzione delle etichette del dataset originale in italiano con underscore case**]\n
     ''')
 
     st.write('''
