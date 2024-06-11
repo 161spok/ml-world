@@ -61,6 +61,7 @@ show_pages(
         Page("pages/visualizzazione.py", "[2.5] Visualizzazione dei dati", ":red_envelope:", in_section=False),
         Page("pages/evaluation.py",      "[3] Evaluation", ":hourglass_flowing_sand:", in_section=False),
         Page("pages/appo.py",            "[x] Counter", ":hourglass_flowing_sand:", in_section=False),
+        Page("pages/100projects.py",     "[x] 100 projects", ":hourglass_flowing_sand:", in_section=False),
     ]
 )    
 file = st.sidebar.file_uploader('Upload',type=["pdf","txt"])         
