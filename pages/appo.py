@@ -2,13 +2,6 @@ import streamlit as st
 #from IPython.display import HTML
 import pandas as pd
 				
-if "num_entered" not in st.session_state:
-    st.session_state.num_entered = 0
-
-if "food_items" not in st.session_state:
-    st.session_state.food_items = []
-
-
 
 def load_column_data():
 		df = ""
@@ -16,8 +9,6 @@ def load_column_data():
 	return column_dataset
 	
   
-	
-
 def field_counter():
 #st.header("Raggruppamento con media valori")
   #raggruppamedia = st.text_input("Su quale colonna occorre effettuare in raggruppamento con media valori ?")
