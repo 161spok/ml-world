@@ -66,6 +66,6 @@ def field_counter():
 
 #calorie_counter()
 if 'dati' not in st.session_state:
-	pass
+	st.write("Sessione vuota")
 else:
 	field_counter()
