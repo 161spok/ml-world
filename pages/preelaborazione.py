@@ -91,19 +91,19 @@ with st.expander("**Esempio 2**"):
     ''')
 
     st.write('''
-    traduzioni_originali = {
-        'ID da Campanha': 'id_della_campagna',
-        'Nome da Campanha': 'nome_della_campagna',
-        'Data de Início': 'data_di_inizio',
-        'Data de Término': 'data_di_fine',
-        'Orçamento da Campanha (R$)': 'budget_della_campagna_r',
-        'Canal': 'canale',
-        'Impressões': 'impressioni',
-        'Cliques': 'click',
-        'Conversões': 'conversioni',
-        'Pageviews': 'visualizzazioni_pagina',
-        'Fonte do Tráfego': 'fonte_del_traffico',
-        'Bounce Rate': 'tasso_di_rimbalzo'
+    traduzioni_originali = {\n
+        'ID da Campanha': 'id_della_campagna',\n
+        'Nome da Campanha': 'nome_della_campagna',\n
+        'Data de Início': 'data_di_inizio',\n
+        'Data de Término': 'data_di_fine',\n
+        'Orçamento da Campanha (R$)': 'budget_della_campagna_r',\n
+        'Canal': 'canale',\n
+        'Impressões': 'impressioni',\n
+        'Cliques': 'click',\n
+        'Conversões': 'conversioni',\n
+        'Pageviews': 'visualizzazioni_pagina',\n
+        'Fonte do Tráfego': 'fonte_del_traffico',\n
+        'Bounce Rate': 'tasso_di_rimbalzo'\n
     }
     ''')
     
