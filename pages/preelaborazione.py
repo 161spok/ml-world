@@ -263,7 +263,7 @@ with st.expander("**Esempio 2**"):
     :red[**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.**]\n
     ''')
 
-     st.code(f"""
+    st.code(f"""
     #Calcolo della mediana
     mediana_budget = clean_data['budget_della_campagna_r'].median()
     
