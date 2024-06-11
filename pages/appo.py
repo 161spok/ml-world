@@ -8,16 +8,7 @@ if "num_entered" not in st.session_state:
 if "food_items" not in st.session_state:
     st.session_state.food_items = []
 
-def load_food_data():
-	# questo è il dataset	
-    food_dataset = {
-        "Food_Name":     ["Apple", "Banana", "Orange", "Mango", "Pineapple"],
-        "Carbohydrates": [25, 27, 21, 30, 22],
-        "Protein":       [1, 1, 1, 1, 1],
-        "Fat":           [0, 0, 0, 0, 0],
-        "Fiber":         [4, 3, 3, 4, 2],
-    }
-return food_dataset # ritorna il dataset
+
 
 def load_column_data():
 		df = ""
