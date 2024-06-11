@@ -139,136 +139,163 @@ with st.expander("**Esempio 2**"):
     st.write(
         duplicati   
     )
-st.write('''
-Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
+    st.write('''
+    Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
+    
+    1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
+    
+    2. Affidabilità Compromessa: La presenza di duplicati mette in dubbio l’affidabilità dei dati. Analisi come correlazioni, regressioni, e altre inferenze statistiche possono essere influenzate negativamente, portando a risultati non accurati.
+    
+    3. Efficienza Ridotta: I record duplicati aumentano inutilmente la dimensione del dataset, portando a un utilizzo inefficiente della memoria e a tempi di elaborazione più lunghi, specialmente in grandi set di dati.
+    
+    4. Decisioni Inaccurate: In ambito aziendale e decisionale, i dati duplicati possono portare a prendere decisioni basate su informazioni errate, influenzando negativamente le strategie e i risultati aziendali.
+    
+    5. Complicazioni nella Modellazione dei Dati: Nel machine learning e in altre forme di modellazione dei dati, i duplicati possono portare a un addestramento scorretto dei modelli, causando overfitting o bias nei risultati.
+    
+    Per questi motivi, è cruciale identificare e rimuovere i record duplicati prima di procedere con ulteriori analisi.
+    
+    :green[**Rimozione delle righe duplicate**]\n
+    :green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
+    ''')
 
-1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
+    st.code(f"""
+    clean_data = data2.drop_duplicates()
+    
+    clean_data.shape
+    (1001, 12)
+    
+    data2.shape
+    (1004, 12)       
+    """)
+    st.write('''
+    Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
+    
+    :green[**ID duplicato**]\n
+    :green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
+    ''')
 
-2. Affidabilità Compromessa: La presenza di duplicati mette in dubbio l’affidabilità dei dati. Analisi come correlazioni, regressioni, e altre inferenze statistiche possono essere influenzate negativamente, portando a risultati non accurati.
+     st.code(f"""
+    #Identificazione degli ID duplicati nel dataset "cap3"
+    ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]
+    
+    #Visualizzazione dei record con gli ID duplicati
+    print(ids_duplicati)      
+    """)
 
-3. Efficienza Ridotta: I record duplicati aumentano inutilmente la dimensione del dataset, portando a un utilizzo inefficiente della memoria e a tempi di elaborazione più lunghi, specialmente in grandi set di dati.
+    st.write('''
+    Questo codice assegnerà alla riga 518 un nuovo ID, che sarà il valore massimo corrente degli ID incrementato di 1, assicurando che sia unico all’interno del dataset.\n
+    ''')
 
-4. Decisioni Inaccurate: In ambito aziendale e decisionale, i dati duplicati possono portare a prendere decisioni basate su informazioni errate, influenzando negativamente le strategie e i risultati aziendali.
+    st.code(f"""
+    # Calcolo del valore massimo di ID nel dataset e aggiunta di 1
+    nuovo_id = clean_data['id_della_campagna'].max() + 1
+    
+    # Modifica dell'ID della riga 518
+    clean_data.loc[clean_data.index == 518, 'id_della_campagna'] = nuovo_id
+    
+    # Verifica se la modifica è stata applicata correttamente
+    modifica_applicata = clean_data.loc[clean_data.index == 518]
+    print(modifica_applicata)
+    """)
+    st.write('''
+    Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.\n
+    Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.\n
+    
+    :green[**Valori Mancanti**]\n
+    Finora, abbiamo risolto con successo due problemi chiave nel nostro dataset: la presenza di righe duplicate e di ID duplicati. Il prossimo passo sarà affrontare il problema dei valori mancanti. È fondamentale riconoscere che i valori mancanti possono avere un impatto significativo sulla qualità e l’accuratezza delle nostre analisi.\n
+    ''')
 
-5. Complicazioni nella Modellazione dei Dati: Nel machine learning e in altre forme di modellazione dei dati, i duplicati possono portare a un addestramento scorretto dei modelli, causando overfitting o bias nei risultati.
+    st.code(f"""
+    # Verifica dei valori mancanti in "clean_data"
+    valori_mancanti = clean_data.isnull().sum()
+    print(valori_mancanti) 
+    """)
 
-Per questi motivi, è cruciale identificare e rimuovere i record duplicati prima di procedere con ulteriori analisi.
+    st.write('''
+    Ci sono 55 valori mancanti nella colonna budget_della_campagna_r. Tutte le altre colonne del dataset non presentano valori mancanti.\n
+    Adesso vedremo la percentuale dei valori mancanti nella colonna ‘budget_della_campagna_r’, che è un passaggio cruciale per decidere come gestire questi valori mancanti.\n
+    ''')
 
-:green[**Rimozione delle righe duplicate**]\n
-:green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
-''')
+    st.code(f"""
+    # Numero totale di righe in 'budget_della_campagna_r'
+    totale_righe = clean_data.shape[0]
+    
+    # Numero di valori mancanti in 'budget_della_campagna_r'
+    valori_mancanti_budget = clean_data['budget_della_campagna_r'].isnull().sum()
+    
+    # Calcolo del percentuale di valori mancanti
+    percentuale_mancanti = (valori_mancanti_budget / totale_righe) * 100
+    print(percentuale_mancanti)
+    
+    5.49%  
+    """)
 
-clean_data = data2.drop_duplicates()\n
+    st.code(f"""
+    #Statistiche della colonna
+    #Statistiche della colonna 'budget_della_campagna_r'
+    media = clean_data['budget_della_campagna_r'].mean()
+    mediana = clean_data['budget_della_campagna_r'].median()
+    massimo = clean_data['budget_della_campagna_r'].max()
+    minimo = clean_data['budget_della_campagna_r'].min()
+    
+    print("Media:", media)
+    print("Mediana:", mediana)
+    print("Massimo:", massimo)
+    print("Minimo:", minimo)
+    
+    Media: 25062.07
+    Mediana: 24697.08
+    Massimo: 49982.02
+    Minimo: 1042.12  
+    """)
 
-clean_data.shape\n
-(1001, 12)\n
+    st.write('''
+    I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative discrepanze. La media e la mediana sono molto vicine tra loro, il che suggerisce una distribuzione relativamente uniforme dei valori. Pertanto, possiamo procedere con un certo grado di sicurezza nell’utilizzare la media o la mediana per interpolare i valori mancanti.\n
+    
+    :green[**Strategie Efficaci per la Gestione dei Valori Mancanti**]\n
+    :green[Per trattare i valori mancanti nella colonna ‘budget_della_campagna_r’ del dataset “clean_data”, ci sono diverse opzioni:]\n
+    
+    - Interpolazione con la Media o la Mediana: Se la distribuzione dei dati è relativamente uniforme, potresti usare la media o la mediana per riempire i valori mancanti. Questo è un approccio comune quando i dati non mostrano estreme variazioni o outlier significativi.\n
+    - Interpolazione Lineare: Se ci sono tendenze o modelli nei dati, l’interpolazione lineare può essere utilizzata per stimare i valori mancanti basandosi sui valori adiacenti.\n
+    - Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.\n
+    - Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.\n
+    
+    :red[**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.**]\n
+    ''')
 
-data2.shape\n
-(1004, 12)\n        
+     st.code(f"""
+    #Calcolo della mediana
+    mediana_budget = clean_data['budget_della_campagna_r'].median()
+    
+    #Preenchimento dei valori mancanti con la mediana
+    clean_data['budget_della_campagna_r'].fillna(mediana_budget, inplace=True)
+    
+    #Verifica se tutti i valori mancanti sono stati riempiti
+    valori_mancanti_dopo = clean_data['budget_della_campagna_r'].isnull().sum()
+    valori_mancanti_dopo
+    
+    0         
+    """)
 
-Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
+    st.write('''
+    :green[**Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati**]\n
+    Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.\n
+    
+    Il primo passo è verificare la presenza di duplicati per evitare sorprese durante l’analisi. Controlliamo anche la fonte dei dati, se necessario, e esaminiamo ciascuna colonna per assicurarci che non contenga duplicati inappropriati.\n
+    
+    Successivamente, ci concentriamo sui dati mancanti, calcolando il loro percentuale per valutare l’impatto delle nostre decisioni. Se una colonna presenta un’elevata quantità di dati mancanti, può essere più opportuno eliminarla poiché potrebbe non essere viabile per l’analisi. Altrimenti, applichiamo metodi statistici adatti per gestire questi valori mancanti.\n
+    
+    Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.\n
+    ''')
+    
+    st.code(f"""
+    #Analisi dei Valori Unici
+    #Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.\n
+    
+    valori_unici = clean_data.nunique()
+    print(valori_unici) 
+    """)
 
-:green[**ID duplicato**]\n
-:green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
-
-Identificazione degli ID duplicati nel dataset "cap3"\n
-ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]\n
-
-Visualizzazione dei record con gli ID duplicati\n
-print(ids_duplicati)\n        
-
-Questo codice assegnerà alla riga 518 un nuovo ID, che sarà il valore massimo corrente degli ID incrementato di 1, assicurando che sia unico all’interno del dataset.\n
-
-:green[Calcolo del valore massimo di ID nel dataset e aggiunta di 1]\n
-nuovo_id = clean_data['id_della_campagna'].max() + 1\n
-
-Modifica dell'ID della riga 518\n
-clean_data.loc[clean_data.index == 518, 'id_della_campagna'] = nuovo_id\n
-
-Verifica se la modifica è stata applicata correttamente\n
-modifica_applicata = clean_data.loc[clean_data.index == 518]\n
-print(modifica_applicata)\n
-
-Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.\n
-Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.\n
-
-:green[**Valori Mancanti**]\n
-Finora, abbiamo risolto con successo due problemi chiave nel nostro dataset: la presenza di righe duplicate e di ID duplicati. Il prossimo passo sarà affrontare il problema dei valori mancanti. È fondamentale riconoscere che i valori mancanti possono avere un impatto significativo sulla qualità e l’accuratezza delle nostre analisi.\n
-
-:green[Verifica dei valori mancanti in "clean_data"]\n
-valori_mancanti = clean_data.isnull().sum()\n
-print(valori_mancanti) \n
-
-Ci sono 55 valori mancanti nella colonna budget_della_campagna_r. Tutte le altre colonne del dataset non presentano valori mancanti.\n
-Adesso vedremo la percentuale dei valori mancanti nella colonna ‘budget_della_campagna_r’, che è un passaggio cruciale per decidere come gestire questi valori mancanti.\n
-
-Numero totale di righe in 'budget_della_campagna_r'\n
-totale_righe = clean_data.shape[0]\n
-
-Numero di valori mancanti in 'budget_della_campagna_r'\n
-valori_mancanti_budget = clean_data['budget_della_campagna_r'].isnull().sum()\n
-
-Calcolo del percentuale di valori mancanti\n
-percentuale_mancanti = (valori_mancanti_budget / totale_righe) * 100\n
-print(percentuale_mancanti)\n
-
-5.49%  \n
-
-:green[**Statistiche della colonna**]\n
-:green[Statistiche della colonna 'budget_della_campagna_r']\n
-media = clean_data['budget_della_campagna_r'].mean()\n
-mediana = clean_data['budget_della_campagna_r'].median()\n
-massimo = clean_data['budget_della_campagna_r'].max()\n
-minimo = clean_data['budget_della_campagna_r'].min()\n
-
-print("Media:", media)\n
-print("Mediana:", mediana)\n
-print("Massimo:", massimo)\n
-print("Minimo:", minimo)\n
-
-Media: 25062.07\n
-Mediana: 24697.08\n
-Massimo: 49982.02\n
-Minimo: 1042.12  \n
-
-I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative discrepanze. La media e la mediana sono molto vicine tra loro, il che suggerisce una distribuzione relativamente uniforme dei valori. Pertanto, possiamo procedere con un certo grado di sicurezza nell’utilizzare la media o la mediana per interpolare i valori mancanti.\n
-
-:green[**Strategie Efficaci per la Gestione dei Valori Mancanti**]\n
-:green[Per trattare i valori mancanti nella colonna ‘budget_della_campagna_r’ del dataset “clean_data”, ci sono diverse opzioni:]\n
-
-- Interpolazione con la Media o la Mediana: Se la distribuzione dei dati è relativamente uniforme, potresti usare la media o la mediana per riempire i valori mancanti. Questo è un approccio comune quando i dati non mostrano estreme variazioni o outlier significativi.\n
-- Interpolazione Lineare: Se ci sono tendenze o modelli nei dati, l’interpolazione lineare può essere utilizzata per stimare i valori mancanti basandosi sui valori adiacenti.\n
-- Eliminazione delle Righe: Se i valori mancanti non sono molti e se la rimozione di queste righe non influisce significativamente sulle analisi, potresti considerare di eliminare le righe con valori mancanti.\n
-- Modello di Imputazione: Per dataset più complessi, potresti utilizzare modelli statistici o di machine learning per prevedere e imputare i valori mancanti, soprattutto se la quantità di dati mancanti è rilevante.\n
-
-:red[**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.**]\n
-
-:green[**Calcolo della mediana**]\n
-mediana_budget = clean_data['budget_della_campagna_r'].median()\n
-
-:green[Preenchimento dei valori mancanti con la mediana]\n
-clean_data['budget_della_campagna_r'].fillna(mediana_budget, inplace=True)
-
-:green[Verifica se tutti i valori mancanti sono stati riempiti]\n
-valori_mancanti_dopo = clean_data['budget_della_campagna_r'].isnull().sum()
-valori_mancanti_dopo
-
-0         
-
-:green[**Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati**]\n
-Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.\n
-
-Il primo passo è verificare la presenza di duplicati per evitare sorprese durante l’analisi. Controlliamo anche la fonte dei dati, se necessario, e esaminiamo ciascuna colonna per assicurarci che non contenga duplicati inappropriati.\n
-
-Successivamente, ci concentriamo sui dati mancanti, calcolando il loro percentuale per valutare l’impatto delle nostre decisioni. Se una colonna presenta un’elevata quantità di dati mancanti, può essere più opportuno eliminarla poiché potrebbe non essere viabile per l’analisi. Altrimenti, applichiamo metodi statistici adatti per gestire questi valori mancanti.\n
-
-Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.\n
-
-:green[**Analisi dei Valori Unici**]\n
-Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.\n
-
-valori_unici = clean_data.nunique()\n
-print(valori_unici) \n
 
 Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.\n
 
