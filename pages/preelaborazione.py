@@ -302,9 +302,11 @@ with st.expander("**Esempio 2**"):
     
     Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:\n
     ''')
-    st.info("Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}")
+       
+    st.info("""Visualizzazione dei valori unici per ogni colonna in clean_data\n
+    for colonna in clean_data.columns:\n
+        print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}""",icon="ℹ️")
     
-   
     st.write('''
     Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
     
