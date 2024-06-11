@@ -13,7 +13,7 @@ st.write("6 - Cosa abbiamo sperimentato / cosa altro dobbiamo fare ?")
 st.write("----------------------------------------------------------------------------")
 
 
-st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Vai a Machine Learning", icon="🌎")
+st.page_link("https://www.geeksforgeeks.org/machine-learning/?ref=shm", label="Vai a Corso Machine Learning", icon="🌎")
 
 
 st.markdown(''':blue-background[I passi del processo sono quindi i seguenti:] ''')
