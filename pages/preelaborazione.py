@@ -388,22 +388,22 @@ with st.expander("**Esempio 2**"):
     Questa versione pulita del dataset è pronta per essere utilizzata in analisi successive, garantendo una maggiore affidabilità e precisione dei risultati.\n
     ''')
 
-st.code(f"""
-# Salvataggio della versione finale del dataset in formato CSV
-output_file_path = 'clean_data_versione_finale.csv'
-clean_data_senza_outliers.to_csv(output_file_path, index=False)
-
-output_file_path 
-""")
-st.write('''
-:green[**Conclusione**]\n
-Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.\n
-Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.\n
-In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il loro impatto e decidendo le strategie più adatte per gestirli. In particolare, abbiamo optato per l’imputazione dei valori mancanti nella colonna “budget_della_campagna_r” utilizzando la mediana, una scelta dettata dalla necessità di evitare distorsioni causate da valori estremi.\n
-Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.\n
-Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.
+    st.code(f"""
+    # Salvataggio della versione finale del dataset in formato CSV
+    output_file_path = 'clean_data_versione_finale.csv'
+    clean_data_senza_outliers.to_csv(output_file_path, index=False)
     
-    ''')
+    output_file_path 
+    """)
+    st.write('''
+    :green[**Conclusione**]\n
+    Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.\n
+    Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.\n
+    In seguito, abbiamo affrontato il problema dei valori mancanti, valutando il loro impatto e decidendo le strategie più adatte per gestirli. In particolare, abbiamo optato per l’imputazione dei valori mancanti nella colonna “budget_della_campagna_r” utilizzando la mediana, una scelta dettata dalla necessità di evitare distorsioni causate da valori estremi.\n
+    Infine, abbiamo identificato e rimosso gli outliers nella colonna “Impressões” (Impressioni), un passo decisivo per evitare che valori estremamente elevati influenzassero negativamente le analisi successive. Dopo aver completato queste fasi di pulizia, abbiamo salvato la versione finale del dataset in formato CSV, rendendola pronta per un’analisi più approfondita.\n
+    Attraverso questo processo, non solo abbiamo migliorato la qualità del dataset, ma abbiamo anche applicato principi fondamentali dell’analisi dei dati, dimostrando come un’attenta pulizia e preparazione dei dati siano essenziali per qualsiasi tipo di analisi dati. Questa esperienza serve come esempio didattico dell’importanza di esaminare, pulire e preparare i dati prima di procedere con analisi complesse, assicurando così che le conclusioni tratte siano basate su informazioni precise e affidabili.
+        
+        ''')
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
