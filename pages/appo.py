@@ -11,8 +11,8 @@ def load_column_data():
 					st.success("Caricamento effettuato !") 
 					
 					if uploaded_file is not None:                                           
-						dati_caricati = True                                            
-						df = pd.read_csv(uploaded_file) #path folder of the data file
+						#dati_caricati = True                                            
+						df = pd.read_csv(uploaded_file) 
 						st.write(df)											
 						 					
 						for col in df.columns:
@@ -32,6 +32,7 @@ def load_column_data():
 							"Select column:",
 							column_dataset,
 							[column_dataset[0], column_dataset[1]])
+						
 						st.write("You selected:", options)
 	return column_dataset
 	
