@@ -88,7 +88,7 @@ with st.expander("**Esempio 2**"):
         :green[**Traduzione delle etichette del dataset originale in italiano**]\n
         :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
         ''')
-    st.code(f"""    
+    st.write(f'''    
     traduzioni_originali = {
         'ID da Campanha': 'id_della_campagna',
         'Nome da Campanha': 'nome_della_campagna',
@@ -109,7 +109,7 @@ with st.expander("**Esempio 2**"):
     
     # Dettaglio dei Dati
     describe = data2.describe(include='all')
-    """)
+    ''')
     
     st.write(
         describe        
