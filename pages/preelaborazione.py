@@ -307,7 +307,7 @@ with st.expander("**Esempio 2**"):
     # QUESTA SEZIONE E' COMMENTATA MA ATTIVA
     # Visualizzazione dei valori unici per ogni colonna in "clean_data"
     for colonna in clean_data.columns:
-        print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}")
+        #print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}")
     """)
 
     st.write('''
