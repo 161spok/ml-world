@@ -62,73 +62,84 @@ with st.expander("**Esempio 2**"):
     st.write('''
     Il dataset presenta i seguenti problemi:
 
-- Righe duplicate
-- ID duplicati
-- Valori mancanti
-- Valori anomali (Outliers)
+        - Righe duplicate
+        - ID duplicati
+        - Valori mancanti
+        - Valori anomali (Outliers)
+        
+        :green[**CODICE**]\n''')
 
-:green[**CODICE**]\n
-import pandas as pd\n
+    st.code(f"""
+        import pandas as pd
+        
+        file_path = 'data.csv'
+        data = pd.read_csv(file_path)
+        
+        #    Ottenimento delle dimensioni del dataset
+        dimensioni = data.shape
+        
+        #    Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati
+        prime_righe = data.head()
+        """)
+    st.write('''
+        dimensioni\n
+        (1004, 12) \n
+        
+        :green[**Traduzione delle etichette del dataset originale in italiano**]\n
+        :green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
+        ''')
+    st.code(f"""    
+    traduzioni_originali = {
+        'ID da Campanha': 'id_della_campagna',
+        'Nome da Campanha': 'nome_della_campagna',
+        'Data de Início': 'data_di_inizio',
+        'Data de Término': 'data_di_fine',
+        'Orçamento da Campanha (R$)': 'budget_della_campagna_r',
+        'Canal': 'canale',
+        'Impressões': 'impressioni',
+        'Cliques': 'click',
+        'Conversões': 'conversioni',
+        'Pageviews': 'visualizzazioni_pagina',
+        'Fonte do Tráfego': 'fonte_del_traffico',
+        'Bounce Rate': 'tasso_di_rimbalzo'
+    }
+    
+    # Applicazione delle traduzioni con underscore case al dataset originale
+    data2 = data.rename(columns=traduzioni_originali)       
+    
+    # Dettaglio dei Dati
+    describe = data2.describe(include='all')
+    """)
+    
+    st.write(
+        describe        
+    )
+    st.write('''
+        
+    **id_della_campagna**: ID numerico delle campagne, varia da 1 a 1000.\n
+    **nome_della_campagna**: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
+    **data_di_inizio e data_di_fine**: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
+    **budget_della_campagna_r**: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
+    **canale**: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.\n
+    **impressioni**: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.\n
+    **click**: Numero di click, con una media di 554 e un range da 101 a 998.\n
+    **conversioni**: Numero di conversioni, con una media di 103 e un range da 10 a 200.\n
+    **visualizzazioni_pagina**: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
+    **fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
+    **tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
+    ''')
+    st.code(f"""
+    # Record Duplicati
+    
+    # Utilizzo di duplicated() per trovare i record duplicati
+    keep=False #segnala tutte le occorrenze dei record duplicati
+    duplicati = data2[data2.duplicated(keep=False)]
+    """)
 
-
-file_path = 'data.csv'\n
-data = pd.read_csv(file_path)\n
-
-:green[**Ottenimento delle dimensioni del dataset**]\n
-dimensioni = data.shape\n
-
-:green[**Visualizzazione delle prime righe del dataset per comprendere la struttura dei dati**]\n
-prime_righe = data.head()\n
-
-dimensioni\n
-(1004, 12) \n
-
-:green[**Traduzione delle etichette del dataset originale in italiano**]\n
-:green[Traduzione delle etichette del dataset originale in italiano con underscore case]\n
-
-traduzioni_originali = {\n
-    'ID da Campanha': 'id_della_campagna',\n
-    'Nome da Campanha': 'nome_della_campagna',\n
-    'Data de Início': 'data_di_inizio',\n
-    'Data de Término': 'data_di_fine',\n
-    'Orçamento da Campanha (R$)': 'budget_della_campagna_r',\n
-    'Canal': 'canale',\n
-    'Impressões': 'impressioni',\n
-    'Cliques': 'click',\n
-    'Conversões': 'conversioni',\n
-    'Pageviews': 'visualizzazioni_pagina',\n
-    'Fonte do Tráfego': 'fonte_del_traffico',\n
-    'Bounce Rate': 'tasso_di_rimbalzo'\n
-}\n
-
-:green[**Applicazione delle traduzioni con underscore case al dataset originale**]\n
-data2 = data.rename(columns=traduzioni_originali)\n        
-
-:green[**Dettaglio dei Dati**]\n
-describe = data2.describe(include='all')\n
-describe\n        
-
-**id_della_campagna**: ID numerico delle campagne, varia da 1 a 1000.\n
-**nome_della_campagna**: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
-**data_di_inizio e data_di_fine**: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
-**budget_della_campagna_r**: Budget delle campagne in Reais brasiliani, con un valore medio di circa 25.043, una deviazione standard di 14.187 e valori che variano da circa 1.042 a 49.982.\n
-**canale**: Canale di marketing utilizzato, con 5 categorie uniche. “Email” è il più frequente.\n
-**impressioni**: Numero di impressioni, con una media di circa 62.384, una deviazione standard molto elevata (293.482) e un range che va da 1.001 a 1.975.723.\n
-**click**: Numero di click, con una media di 554 e un range da 101 a 998.\n
-**conversioni**: Numero di conversioni, con una media di 103 e un range da 10 a 200.\n
-**visualizzazioni_pagina**: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
-**fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
-**tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
-
-:green[**Record Duplicati**]\n
-
-:green[Utilizzo di duplicated() per trovare i record duplicati]\n
-keep=False :green[segnala tutte le occorrenze dei record duplicati]\n
-duplicati = data2[data2.duplicated(keep=False)]\n
-
-duplicati \n       
-
-
+    st.write(
+        duplicati   
+    )
+st.write('''
 Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
 
 1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
@@ -145,6 +156,7 @@ Per questi motivi, è cruciale identificare e rimuovere i record duplicati prima
 
 :green[**Rimozione delle righe duplicate**]\n
 :green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
+''')
 
 clean_data = data2.drop_duplicates()\n
 
