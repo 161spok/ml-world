@@ -116,7 +116,7 @@ with st.expander("**Esempio 2**"):
     describe
     """)
     
-    st.write('''
+    st.code(f"""
         
     **id_della_campagna**: ID numerico delle campagne, varia da 1 a 1000.\n
     **nome_della_campagna**: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
@@ -129,7 +129,7 @@ with st.expander("**Esempio 2**"):
     **visualizzazioni_pagina**: Numero di visualizzazioni pagina, con una media di circa 5.419 e un range da 1.009 a 9.996.\n
     **fonte_del_traffico**: Fonte del traffico, con 5 categorie uniche e “Direto” come la più frequente.\n
     **tasso_di_rimbalzo**: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
-    ''')
+     """)
     
     st.code(f"""
     # Record Duplicati
