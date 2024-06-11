@@ -24,34 +24,7 @@ def load_column_data():
 	
 		df = ""
 		uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-		if st.button("Submit & Process", type="primary", key="process_button") :
-				with st.spinner("Elaborazione ..."):
-					st.success("Caricamento effettuato !") 
-					
-					if uploaded_file is not None:                                           
-						dati_caricati = True                                            
-						df = pd.read_csv(uploaded_file) #path folder of the data file
-						st.write(df)											
-						 					
-						for col in df.columns:
-							st.write(col)						
-						column_dataset = list(df.columns.values)
-						st.write(column_dataset)
-						#for col in df.columns:
-						st.write(column_dataset[1])	
-						
-						food_type = st.selectbox("Select column:", column_dataset, key=f"uno")
-						#options = st.multiselect(
-						#	"Select column:",
-						#	["Green", "Yellow", "Red", "Blue"],
-						#	["Yellow", "Red"])
-						#st.write("You selected:", options)
-						options = st.multiselect(
-							"Select column:",
-							column_dataset,
-							[column_dataset[0], column_dataset[1]])
-						st.write("You selected:", options)
-	
+			
 	return column_dataset
 	
   
