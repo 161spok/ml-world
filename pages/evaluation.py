@@ -3,7 +3,7 @@ import streamlit as st
 st.header("Evaluation")
 st.write('''Abbiamo tre tipologie: supervised learning, unsupervised learning, e reinforcement learning''')
 st.write('''L\'apprendimento supervisionato è l\'attività di apprendimento automatico di apprendere una funzione che associa un input a un output sulla base di coppie input-output di esempio. 
-I dati forniti sono etichettati. Sia i problemi di classificazione che quelli di regressione sono problemi di apprendimento supervisionato.
+I dati forniti sono etichettati. Sia i problemi di classificazione che quelli di regressione sono problemi di apprendimento supervisionato.\n
 Esempio: considera i seguenti dati relativi ai pazienti che entrano in una clinica. I dati consistono nel sesso e nell\' età dei pazienti e ogni paziente è etichettato come \'sano\' o \'malato\'.
 
 Genere        Età        Etichetta
