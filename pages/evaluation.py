@@ -41,3 +41,7 @@ M              21
 
 st.write('''In quanto tipo di apprendimento, assomiglia ai metodi utilizzati dagli esseri umani per capire che determinati oggetti o eventi appartengono alla stessa classe, ad esempio osservando \n
 il grado di somiglianza tra gli oggetti. Alcuni sistemi di raccomandazione che trovi sul web sotto forma di marketing automation si basano su questo tipo di apprendimento. ''')
+
+Apprendimento per rinforzo : un programma per computer interagisce con un ambiente dinamico in cui deve eseguire un determinato obiettivo (come guidare un veicolo o giocare contro un avversario). Al programma viene fornito un feedback in termini di ricompense e punizioni mentre naviga nello spazio problematico.
+
+
