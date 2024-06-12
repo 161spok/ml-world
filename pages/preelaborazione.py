@@ -28,6 +28,27 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
+st.markdown(
+    '''
+    <style>
+    .streamlit-expanderHeader {
+        background-color: white;
+        color: black; # Adjust this for expander header color
+    }
+    .streamlit-expanderContent {
+        background-color: white;
+        color: black; # Expander content color
+    }
+    </style>
+    ''',
+    unsafe_allow_html=True
+)
+
+with st.expander("Expand"):
+    st.write("Content inside the expander")
+
+
+
 with st.expander('<p class="small-font">See details.</p>'): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
 
