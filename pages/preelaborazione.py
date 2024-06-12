@@ -66,7 +66,7 @@ with st.expander(label='KPI', expanded=True):
 var elements = window.parent.document.querySelectorAll('streamlit-expanderHeader');
 elements[0].style.color = 'rgba(83, 36, 118, 1)';
 elements[0].style.fontFamily = 'Didot';
-elements[0].style.fontSize = 'x-large';
+elements[0].style.fontSize = 'xx-large';
 elements[0].style.fontWeight = 'bold';
 </ script›"""
     components.html(hvar, height=0,width=0)
