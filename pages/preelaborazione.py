@@ -58,7 +58,19 @@ with st.expander("label"):
 with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
+def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
+    htmlstr = """<script>var elements = window.parent.document.querySelectorAll('p'), i;
+                for (i = 0; i < elements.length; ++i) 
+                    { if (elements[i].textContent.includes(|wgt_txt|)) 
+                        { elements[i].style.fontSize ='""" + wch_font_size + """'; } }</script>  """
 
+    htmlstr = htmlstr.replace('|wgt_txt|', "'" + wgt_txt + "'")
+    components.html(f"{htmlstr}", height=0, width=0)
+
+listTabs = ['Quickview', 'About']
+tabs = st.tabs(listTabs)
+ChangeWidgetFontSize(listTabs[0], '24px')
+ChangeWidgetFontSize(listTabs[1], '9px')
 
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
