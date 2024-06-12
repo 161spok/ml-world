@@ -538,6 +538,7 @@ with st.expander("**Operare su variabili categoriche**"):
 Le variabili qualitative possono essere rappresentate anche da stringhe, in questo caso bisogna codificarle all'interno di numeri per poterle usare come input per un algoritmo di machine learning. 
 In inglese le variabili qualitative sono conosciute come categorical variables (ordinal e nominal).
     ''') 
+    st.image('tipologia_variabili.PNG', caption='')
     
 with st.expander("**Trasformazione dei dati**"):
     st.write('''
