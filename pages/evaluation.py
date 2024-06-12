@@ -18,6 +18,8 @@ M             34         in salute\n
 M             21         in salute\n
 """)
 
-st.write('''il modello o l'algoritmo viene presentato con input di esempio e i relativi output desiderati, quindi trova modelli e connessioni tra l'input e l'output. L’obiettivo è apprendere una regola generale che associa gli input agli output. Il processo di addestramento continua finché il modello non raggiunge il livello di precisione desiderato sui dati di addestramento. Alcuni esempi di vita reale sono:
--Classificazione delle immagini: ti alleni con immagini/etichette. Quindi in futuro dai una nuova immagine aspettandoti che il computer riconosca il nuovo oggetto.
--Previsione/regressione del mercato: alleni il computer con dati di mercato storici e chiedi al computer di prevedere il nuovo prezzo in futuro.''')
+st.write('''il modello o l'algoritmo viene presentato con input di esempio e i relativi output desiderati, quindi trova modelli e connessioni tra l'input e l'output. L’obiettivo è apprendere 
+una regola generale che associa gli input agli output. Il processo di addestramento continua finché il modello non raggiunge il livello di precisione desiderato sui dati di addestramento. Alcuni esempi di vita reale sono:\n
+- Classificazione delle immagini: ti alleni con immagini/etichette. Quindi in futuro dai una nuova immagine aspettandoti che il computer riconosca il nuovo oggetto.\n
+- Previsione/regressione del mercato: alleni il computer con dati di mercato storici e chiedi al computer di prevedere il nuovo prezzo in futuro.\n
+''')
