@@ -58,22 +58,18 @@ with st.expander("label"):
 with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
-def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
-    htmlstr = """<script>var elements = window.parent.document.querySelectorAll('p'), i;
-                for (i = 0; i < elements.length; ++i) 
-                    { if (elements[i].textContent.includes(|wgt_txt|)) 
-                        { elements[i].style.fontSize ='""" + wch_font_size + """'; } }</script>  """
 
-    htmlstr = htmlstr.replace('|wgt_txt|', "'" + wgt_txt + "'")
-    components.html(f"{htmlstr}", height=0, width=0)
-
-#listTabs = ['Quickview', 'About']
-listTabs = "MioTesto"
-#tabs = st.tabs(listTabs)
-exp = st.expander("Expander :red-background[red]")
-#ChangeWidgetFontSize(listTabs[0], '24px')
-#ChangeWidgetFontSize(listTabs[1], '9px')
-ChangeWidgetFontSize(listTabs, '19px')
+with st.expander(label-'KPI', expanded-True):
+    st.write("I am expanded")
+hvar = """
+‹script>
+var elements = window.parent.document.querySelectorAll('streamlit-expanderHeader');
+elements[0].style.color = 'rgba(83, 36, 118, 1)';
+elements[0].style.fontFamily = 'Didot';
+elements[0].style.fontSize = 'x-large';
+elements[0].style.fontWeight = 'bold';
+</ script›"""
+    components.html(hvar, height-0,width-0)
 
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
