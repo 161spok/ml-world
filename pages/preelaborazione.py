@@ -562,7 +562,7 @@ Ad esempio, considera un set di dati contenente due caratteristiche, età e redd
         
     ''')
      st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")                              
-
+     st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Portare%20i%20dati%20sulla%20stessa%20scala.ipynb", label="Reference", icon="🏠") 
 with st.expander("**Codifica delle etichette**"):
      st.write('''
         La codifica delle etichette è una tecnica utilizzata per convertire le colonne categoriche in colonne numeriche in modo che possano essere adattate da modelli di apprendimento automatico che accettano solo dati numerici. Si tratta di un importante passaggio di pre-elaborazione in un progetto di machine learning.
