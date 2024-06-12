@@ -535,9 +535,9 @@ with st.expander("**Operare su variabili categoriche**"):
     st.write('''
         All'interno di un dataset strutturato puoi trovare due tipologie di dati
 
-**Variabili quantitative continue:** numeri che indicano una quantità
-**Variabili qualiative ordinate (ordinali):** numeri o stringhe che rappresentano delle classi che possono essere ordinate
-**Variabili qualitative sconnesse (nominali):** numeri e stringhe rappresentanti classi che non hanno un ordine
+**Variabili quantitative continue:** numeri che indicano una quantità\n
+**Variabili qualiative ordinate (ordinali):** numeri o stringhe che rappresentano delle classi che possono essere ordinate\n
+**Variabili qualitative sconnesse (nominali):** numeri e stringhe rappresentanti classi che non hanno un ordine\n
 
 Le variabili qualitative possono essere rappresentate anche da stringhe, in questo caso bisogna codificarle all'interno di numeri per poterle usare come input per un algoritmo di machine learning. 
 In inglese le variabili qualitative sono conosciute come categorical variables (ordinal e nominal).
