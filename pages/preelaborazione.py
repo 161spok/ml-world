@@ -543,7 +543,7 @@ Le variabili qualitative possono essere rappresentate anche da stringhe, in ques
 In inglese le variabili qualitative sono conosciute come categorical variables (ordinal e nominal).
     ''') 
     st.image('tipologia_variabili.PNG', caption='')
-    
+     st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Operare%20su%20variabili%20categoriche.ipynb", label="Variabili categoriche", icon="🏠")
 with st.expander("**Trasformazione dei dati**"):
     st.write('''
         The chart above shows some numbers I picked for you.
