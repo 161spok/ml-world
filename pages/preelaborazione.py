@@ -456,9 +456,6 @@ with st.expander("**Rimozione dei duplicati**"):
         utilizzando il modulo Pandas , che ha un metodo noto come drop_duplicates.
     ''')
       
-    
-              
-  
 with st.expander("**Correzione degli errori di struttura**"):
     st.write('''
         The chart above shows some numbers I picked for you.
@@ -475,15 +472,14 @@ Calcola la media e la deviazione standard per ciascuna variabile.
 Considera come valori anomali quelli che si discostano da questa media di più di una certa soglia (ad esempio, 2 o 3 volte la deviazione standard).
 ''')
     st.code(f"""
-:green[Esempio in Python:]\n
-\n
-
-import numpy as np\n
-threshold = 2  :green[# Soglia per considerare un valore come anomalo]\n
-mean, std = np.mean(dataset), np.std(dataset)\n
-outliers = dataset[(dataset - mean) > threshold * std]\n
-\n
-""")
+    Esempio in Python
+    
+    import numpy as np\n
+    threshold = 2  :green[# Soglia per considerare un valore come anomalo]\n
+    mean, std = np.mean(dataset), np.std(dataset)\n
+    outliers = dataset[(dataset - mean) > threshold * std]\n
+    \n
+    """)
     st.write('''
     Metodo dell’Intervallo Interquartile (IQR):\n
     L’IQR è la differenza tra il terzo quartile (75%) e il primo quartile (25%).\n
@@ -492,8 +488,8 @@ outliers = dataset[(dataset - mean) > threshold * std]\n
     ''')
     
     st.code(f"""
-    :green[Esempio in Python:]\n
-    \n
+    Esempio in Python
+    
     Q1 = dataset.quantile(0.25)\n
     Q3 = dataset.quantile(0.75)\n
     IQR = Q3 - Q1\n
@@ -509,8 +505,8 @@ outliers = dataset[(dataset - mean) > threshold * std]\n
     ''')
     
     st.code(f"""
-    :green[Esempio in Python:]\n
-    \n
+    Esempio in Python
+    
     from sklearn.ensemble import IsolationForest\n
     model = IsolationForest(contamination=0.05)  # Contaminazione = percentuale di valori anomali\n
     model.fit(dataset)\n
