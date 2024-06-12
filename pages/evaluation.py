@@ -24,3 +24,20 @@ una regola generale che associa gli input agli output. Il processo di addestrame
 - Previsione/regressione del mercato: alleni il computer con dati di mercato storici e chiedi al computer di prevedere il nuovo prezzo in futuro.\n
 - Modelli generativi: dopo che un modello ha acquisito la distribuzione di probabilità dei dati di input, sarà in grado di generare più dati. Questo può essere molto utile per rendere il tuo classificatore più robusto.\n
 ''')
+st.write('''L'apprendimento non supervisionato è un tipo di algoritmo di apprendimento automatico utilizzato per trarre inferenze da set di dati costituiti da dati di input senza risposte etichettate. 
+Negli algoritmi di apprendimento non supervisionato, la classificazione o categorizzazione non è inclusa nelle osservazioni. \n
+Esempio: considerare i seguenti dati relativi ai pazienti che entrano in una clinica. I dati sono costituiti dal sesso e dall’età dei pazienti. \n
+''')
+
+st.code(f"""
+Genere         Età
+M              48
+M              67
+F              53
+M              49
+F              34
+M              21
+""")
+
+st.write('''In quanto tipo di apprendimento, assomiglia ai metodi utilizzati dagli esseri umani per capire che determinati oggetti o eventi appartengono alla stessa classe, ad esempio osservando \n
+il grado di somiglianza tra gli oggetti. Alcuni sistemi di raccomandazione che trovi sul web sotto forma di marketing automation si basano su questo tipo di apprendimento. ''')
