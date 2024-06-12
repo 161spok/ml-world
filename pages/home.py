@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Metodologia da seguire")
 
 st.markdown(''':blue-background[E' un processo iterativo] ''')
-
+st.image('imag.png', caption='Processo')
 st.write("1 - Quale problema stiamo tentando di risolvere ?")
 st.write("2 - Quali dati abbiamo ?")
 st.write("3 - Cosa definisce il successo ?")
