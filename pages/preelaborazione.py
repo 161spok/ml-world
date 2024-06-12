@@ -67,10 +67,13 @@ def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
     htmlstr = htmlstr.replace('|wgt_txt|', "'" + wgt_txt + "'")
     components.html(f"{htmlstr}", height=0, width=0)
 
-listTabs = ['Quickview', 'About']
-tabs = st.tabs(listTabs)
-ChangeWidgetFontSize(listTabs[0], '24px')
-ChangeWidgetFontSize(listTabs[1], '9px')
+#listTabs = ['Quickview', 'About']
+listTabs = "MioTesto"
+#tabs = st.tabs(listTabs)
+exp = st.expander("Expander :red-background[red]")
+#ChangeWidgetFontSize(listTabs[0], '24px')
+#ChangeWidgetFontSize(listTabs[1], '9px')
+ChangeWidgetFontSize(listTabs, '19px')
 
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
