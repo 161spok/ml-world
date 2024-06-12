@@ -8,14 +8,14 @@ Esempio: considera i seguenti dati relativi ai pazienti che entrano in una clini
 \n
 ''')
 st.code(f"""
-Genere        Età        Etichetta\n
-M             48         malato\n
-M             67         malato\n
-F             53         in salute\n
-M             49         malato\n
-F             32         in salute\n
-M             34         in salute\n
-M             21         in salute\n
+Genere        Età        Etichetta
+M             48         malato
+M             67         malato
+F             53         in salute
+M             49         malato
+F             32         in salute
+M             34         in salute
+M             21         in salute
 """)
 
 st.write('''il modello o l'algoritmo viene presentato con input di esempio e i relativi output desiderati, quindi trova modelli e connessioni tra l'input e l'output. L’obiettivo è apprendere 
