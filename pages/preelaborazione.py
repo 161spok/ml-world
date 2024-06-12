@@ -542,7 +542,7 @@ with st.expander("**Pulizia dei dati di testo**"):
         be random.
     ''')                                
 
-with st.expander("**Formattazione dei dati **"):
+with st.expander(""):
     st.write('''
         La formattazione dei dati implica la conversione dei dati in un formato o struttura standard che può essere facilmente elaborata dagli algoritmi o dai modelli 
         utilizzati per l'analisi. Qui discuteremo le tecniche di formattazione dei dati comunemente utilizzate, ad esempio ridimensionamento e normalizzazione.
