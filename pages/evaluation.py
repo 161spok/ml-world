@@ -22,4 +22,5 @@ st.write('''il modello o l'algoritmo viene presentato con input di esempio e i r
 una regola generale che associa gli input agli output. Il processo di addestramento continua finché il modello non raggiunge il livello di precisione desiderato sui dati di addestramento. Alcuni esempi di vita reale sono:\n
 - Classificazione delle immagini: ti alleni con immagini/etichette. Quindi in futuro dai una nuova immagine aspettandoti che il computer riconosca il nuovo oggetto.\n
 - Previsione/regressione del mercato: alleni il computer con dati di mercato storici e chiedi al computer di prevedere il nuovo prezzo in futuro.\n
+- Modelli generativi: dopo che un modello ha acquisito la distribuzione di probabilità dei dati di input, sarà in grado di generare più dati. Questo può essere molto utile per rendere il tuo classificatore più robusto.\n
 ''')
