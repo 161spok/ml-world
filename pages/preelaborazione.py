@@ -44,7 +44,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-with st.expander("Expand :red-background[green]"):
+with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
 
