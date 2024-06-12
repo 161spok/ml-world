@@ -4,72 +4,12 @@ import streamlit.components.v1 as components
 st.header(":blue[2 Data]")
 st.subheader("2.1 Preelaborazione dati")
 
-st.markdown("""
-<style>
-.small-font {
-    font-size: 22px;
-}
-</style>
-""", unsafe_allow_html=True)
 
-st.markdown("""
-  <style>
-     /* Streamlit class name of the div that holds the expander's title*/
-    .css-q8sbsg p {
-      font-size: 32px;
-      color: red;
-      }
-    
-     /* Streamlit class name of the div that holds the expander's text*/
-    .css-nahz7x p {
-      font-family: bariol;
-      font-size: 20px;
-      }
-  </style>
-""", unsafe_allow_html=True)
 
-st.markdown(
-    '''
-    <style>
-    .streamlit-expanderHeader {
-        background-color: blue;
-        color: black; # Adjust this for expander header color
-    }
-    .streamlit-expanderContent {
-        background-color: white;
-        color: black; # Expander content color
-    }
-    </style>
-    ''',
-    unsafe_allow_html=True
-)
-
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("style.css")
-
-with st.expander("label"):
-    st.write("text")
-    st.write("text")
-    st.write("text")
 
 with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
-
-with st.expander(label='KPI', expanded=True):
-    st.write("I am expanded")
-    hvar = """
-‹script>
-var elements = window.parent.document.querySelectorAll('streamlit-expanderHeader');
-elements[0].style.color = 'rgba(83, 36, 118, 1)';
-elements[0].style.fontFamily = 'Didot';
-elements[0].style.fontSize = 'xx-large';
-elements[0].style.fontWeight = 'bold';
-</ script›"""
-    components.html(hvar, height=0,width=0)
 
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
