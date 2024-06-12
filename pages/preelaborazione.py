@@ -53,6 +53,10 @@ with st.expander("**Preparazione**"):
      
      st.image('Immagine1.png', caption='Processo analisi esplorativa dei dati')
 
+with st.expander("**Corso**"): 
+     st.page_link("https://github.com/ProfAI/ml00/blob/master/README.md", label="Corso", icon="🏠")
+     
+
 with st.expander("**Esempio 1**"): 
      st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
      components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
