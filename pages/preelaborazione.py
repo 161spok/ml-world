@@ -44,6 +44,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("style.css")
+
+with st.expander("label"):
+    st.write("text")
+    st.write("text")
+    st.write("text")
+
 with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
