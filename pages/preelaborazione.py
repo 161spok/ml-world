@@ -59,7 +59,7 @@ with st.expander("Expand :green-background[green]"):
     st.write("Content inside the expander")
 
 
-with st.expander(label-'KPI', expanded-True):
+with st.expander(label='KPI', expanded=True):
     st.write("I am expanded")
     hvar = """
 ‹script>
