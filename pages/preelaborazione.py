@@ -69,7 +69,7 @@ elements[0].style.fontFamily = 'Didot';
 elements[0].style.fontSize = 'x-large';
 elements[0].style.fontWeight = 'bold';
 </ script›"""
-    components.html(hvar, height-0,width-0)
+    components.html(hvar, height=0,width=0)
 
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
