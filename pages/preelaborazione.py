@@ -61,7 +61,7 @@ with st.expander("Expand :green-background[green]"):
 
 with st.expander(label-'KPI', expanded-True):
     st.write("I am expanded")
-hvar = """
+    hvar = """
 ‹script>
 var elements = window.parent.document.querySelectorAll('streamlit-expanderHeader');
 elements[0].style.color = 'rgba(83, 36, 118, 1)';
