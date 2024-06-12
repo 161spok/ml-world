@@ -49,7 +49,7 @@ with st.expander("Expand :green-background[green]"):
 
 
 
-with st.expander('<p class="small-font">See details.</p>'): 
+with st.expander('<p class="small-font">See details.</p>', unsafe_allow_html=True): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
 
 
