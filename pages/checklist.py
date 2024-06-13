@@ -53,15 +53,15 @@ if uploaded_file:
             binary = uploaded_file.getvalue()            
             st.session_state['binary'] = binary
             
-pdf_viewer(
-                input=st.session_state['binary'],
-                width=width,
-                height=height,
-                annotations=annotations,
-                pages_vertical_spacing=pages_vertical_spacing,
-                annotation_outline_size=annotation_thickness,
-                pages_to_render=st.session_state['page_selection'],
-            )
+            pdf_viewer(
+                            input=st.session_state['binary'],
+                            width=width,
+                            height=height,
+                            annotations=annotations,
+                            pages_vertical_spacing=pages_vertical_spacing,
+                            annotation_outline_size=annotation_thickness,
+                            pages_to_render=st.session_state['page_selection'],
+                        )
 #with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
      #components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
