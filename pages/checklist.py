@@ -10,8 +10,8 @@ st.header(":blue[4 Machine learning]")
 st.subheader("4.1 Checklist")
 
 file_path = "ChecklistProgettoMachineLearningPython.pdf"
-os.chdir("/mount/src/ml-world/pages")
-st.write(os.getcwd())
+#os.chdir("/mount/src/ml-world/pages")
+#st.write(os.getcwd())
 
 """
 import PyPDF2
