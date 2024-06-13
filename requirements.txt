@@ -5,3 +5,4 @@ pandas
 st-pages
 matplotlib
 seaborn
+streamlit-pdf-viewer
