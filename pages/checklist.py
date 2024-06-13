@@ -12,7 +12,7 @@ st.subheader("4.1 Checklist")
 
 
 #import PyPDF
-from PyPDF import PdfReader
+from pypdf import PdfReader
 
 file_path = "ChecklistProgettoMachineLearningPython.pdf"
 if file_path is not None:
