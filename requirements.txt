@@ -5,5 +5,5 @@ pandas
 st-pages
 matplotlib
 seaborn
-#streamlit-pdf-viewer
+streamlit-pdf-viewer
 PyPDF2
