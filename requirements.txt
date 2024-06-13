@@ -6,4 +6,4 @@ st-pages
 matplotlib
 seaborn
 streamlit-pdf-viewer
-PyPDF2
+PyPDF
