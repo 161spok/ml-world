@@ -41,8 +41,10 @@ def ViewPDF(wch_fl):
         st.markdown(pdf_display, unsafe_allow_html=True)
 
 #ViewPDF("./ChecklistProgettoMachineLearningPython.pdf") 
-ViewPDF("ChecklistProgettoMachineLearningPython.pdf") 
+#ViewPDF("ChecklistProgettoMachineLearningPython.pdf") 
 #-----------------------------------------------------------------------------------
+vuoto = 0
+st.session_state['binary'] = vuoto
 uploaded_file = st.file_uploader("Upload a file",
                                  type=("pdf"),
                                  #on_change=new_file,
