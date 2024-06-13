@@ -60,6 +60,8 @@ show_pages(
         Page("pages/archiviazione.py",   "[2.4] Archiviazione e gestione dei dati", ":oil_drum:", in_section=False),
         Page("pages/visualizzazione.py", "[2.5] Visualizzazione dei dati", ":red_envelope:", in_section=False),
         Page("pages/evaluation.py",      "[3] Evaluation", ":hourglass_flowing_sand:", in_section=False),
+        Page("pages/ml.py",      "[4] Machine Learning", ":hourglass_flowing_sand:", in_section=False),
+        Page("pages/checklist.py",      "[4.1] Checklist", ":hourglass_flowing_sand:", in_section=False),
         Page("pages/appo.py",            "[x] Counter", ":hourglass_flowing_sand:", in_section=False),
         Page("pages/100projects.py",     "[x] 100 projects", ":hourglass_flowing_sand:", in_section=False),
     ]
