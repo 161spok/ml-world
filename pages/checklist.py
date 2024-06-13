@@ -20,7 +20,8 @@ if file_path is not None:
     pdf_reader = PdfReader(file_path)
     # Extract the content
     content = ""
-    for page in range(pdf_reader.getNumPages()):
+    #for page in range(pdf_reader.getNumPages()):
+    for page in range(pdf_reader.pages()):    
         content += pdf_reader.getPage(page).extractText()
     # Display the content
     st.write(content)
