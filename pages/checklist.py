@@ -10,7 +10,7 @@ st.header(":blue[4 Machine learning]")
 st.subheader("4.1 Checklist")
 
 
-"""
+
 import PyPDF2
 
 file_path = "ChecklistProgettoMachineLearningPython.pdf"
@@ -23,7 +23,7 @@ if file_path is not None:
         content += pdf_reader.getPage(page).extractText()
     # Display the content
     st.write(content)
-""" 
+ 
 
 def ViewPDF(wch_fl):
     with open(wch_fl,"rb") as pdf_file:
