@@ -17,14 +17,15 @@ from pypdf import PdfReader
 file_path = "ChecklistProgettoMachineLearningPython.pdf"
 if file_path is not None:
     # Read the PDF file
-    pdf_reader = PdfReader(file_path)
+    reader = PdfReader(file_path)
     # Extract the content
     content = ""
     #for page in range(pdf_reader.getNumPages()):
-    for page in range(pdf_reader.pages()):    
-        content += pdf_reader.getPage(page).extractText()
+    number_of_pages = len(reader.pages)
+    page = reader.pages[0]
+    text = page.extract_text()
     # Display the content
-    st.write(content)
+    st.write(text)
  
 
 def ViewPDF(wch_fl):
