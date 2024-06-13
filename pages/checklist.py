@@ -12,7 +12,7 @@ import PyPDF2
 file = "ChecklistProgettoMachineLearningPython.pdf"
 if file is not None:
     # Read the PDF file
-    pdf_reader = PyPDF2.PdfFileReader(file)
+    pdf_reader = PdfReader(file)
     # Extract the content
     content = ""
     for page in range(pdf_reader.getNumPages()):
