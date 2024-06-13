@@ -32,16 +32,16 @@ st.markdown(pdf_display, unsafe_allow_html=True)
 """
 
 import base64
-from pathlib import Path
 
-pdf_path = Path("ChecklistProgettoMachineLearningPython.pdf")
 
-base64_pdf = base64.b64encode(pdf_path.read_bytes()).decode("utf-8")
-pdf_display = f"""
-    <iframe src="data:application/pdf;base64,{base64_pdf}" width="800px" height="2100px" type="application/pdf"></iframe>
-"""
-#st.markdown(pdf_display, unsafe_allow_html=True)
-st.markdown("<!DOCTYPE html><html lang='en'><body><div> <embed src='ChecklistProgettoMachineLearningPython.pdf' width='800px' height='2100px' /></div></body></html>")
+def ViewPDF(wch_fl):
+    with open(wch_fl,"rb") as pdf_file:
+        base64_pdf = base64.b64encode(pdf_file.read()).decode('utf-8')
+        pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="1000" height="500" type="application/pdf">' 
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+ViewPDF("./ChecklistProgettoMachineLearningPython.pdf") 
+
 #with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
      #components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
