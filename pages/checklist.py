@@ -8,6 +8,18 @@ import streamlit.components.v1 as components
 st.header(":blue[4 Machine learning]")
 st.subheader("4.1 Checklist")
 
-with st.expander("**Checklist**"): 
+import PyPDF2
+file = "ChecklistProgettoMachineLearningPython.pdf"
+if file is not None:
+    # Read the PDF file
+    pdf_reader = PyPDF2.PdfFileReader(file)
+    # Extract the content
+    content = ""
+    for page in range(pdf_reader.getNumPages()):
+        content += pdf_reader.getPage(page).extractText()
+    # Display the content
+    st.write(content)
+
+#with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
      #components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
