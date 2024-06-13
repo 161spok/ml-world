@@ -23,12 +23,22 @@ if file_path is not None:
         content += pdf_reader.getPage(page).extractText()
     # Display the content
     st.write(content)
-"""    
+""" 
+"""
 pdf_file = "ChecklistProgettoMachineLearningPython.pdf"
 base64_pdf = base64.b64encode(pdf_file.read()).decode('utf-8')
 pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">' 
 st.markdown(pdf_display, unsafe_allow_html=True)
+"""
 
+import base64
+from pathlib import Path
+pdf_path = "ChecklistProgettoMachineLearningPython.pdf"
+base64_pdf = base64.b64encode(pdf_path.read_bytes()).decode("utf-8")
+pdf_display = f"""
+    <iframe src="data:application/pdf;base64,{base64_pdf}" width="800px" height="2100px" type="application/pdf"></iframe>
+"""
+st.markdown(pdf_display, unsafe_allow_html=True)
 #with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
      #components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
