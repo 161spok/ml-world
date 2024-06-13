@@ -40,7 +40,9 @@ def ViewPDF(wch_fl):
         pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="1000" height="500" type="application/pdf">' 
         st.markdown(pdf_display, unsafe_allow_html=True)
 
-ViewPDF("./ChecklistProgettoMachineLearningPython.pdf") 
+#ViewPDF("./ChecklistProgettoMachineLearningPython.pdf") 
+ViewPDF("/ChecklistProgettoMachineLearningPython.pdf") 
+
 
 #with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
