@@ -45,7 +45,7 @@ ViewPDF("ChecklistProgettoMachineLearningPython.pdf")
 #-----------------------------------------------------------------------------------
 uploaded_file = st.file_uploader("Upload a file",
                                  type=("pdf"),
-                                 on_change=new_file,
+                                 #on_change=new_file,
                                  help="The full-text is extracted using Grobid. ")
 if uploaded_file:
     if not st.session_state['binary']:
