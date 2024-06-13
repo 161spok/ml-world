@@ -1,8 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import base64
+from streamlit_pdf_viewer import pdf_viewer
 
-# from streamlit_pdf_viewer import pdf_viewer
 # è possibile utilizzare questo componente per gestire i file pdf
 # https://github.com/lfoppiano/structure-vision/blob/main/streamlit_app.py
 
@@ -42,8 +42,26 @@ def ViewPDF(wch_fl):
 
 #ViewPDF("./ChecklistProgettoMachineLearningPython.pdf") 
 ViewPDF("ChecklistProgettoMachineLearningPython.pdf") 
-
-
+#-----------------------------------------------------------------------------------
+uploaded_file = st.file_uploader("Upload a file",
+                                 type=("pdf"),
+                                 on_change=new_file,
+                                 help="The full-text is extracted using Grobid. ")
+if uploaded_file:
+    if not st.session_state['binary']:
+        with (st.spinner('Reading file, calling Grobid...')):
+            binary = uploaded_file.getvalue()            
+            st.session_state['binary'] = binary
+            
+pdf_viewer(
+                input=st.session_state['binary'],
+                width=width,
+                height=height,
+                annotations=annotations,
+                pages_vertical_spacing=pages_vertical_spacing,
+                annotation_outline_size=annotation_thickness,
+                pages_to_render=st.session_state['page_selection'],
+            )
 #with st.expander("**Checklist**"): 
      #st.page_link("\ChecklistProgettoMachineLearningPython.pdf", label="pdf", icon="🏠")
      #components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
