@@ -5,8 +5,6 @@ st.header(":blue[2 Data]")
 st.subheader("2.1 Preelaborazione dati")
 
 
-
-
 with st.expander("**Expand :green-background[green]**"):
     st.write("Content inside the expander")
 
