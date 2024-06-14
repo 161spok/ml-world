@@ -45,8 +45,8 @@ with st.expander("**Esempio 1**"):
      components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
      
 with st.expander("**Esempio 2**"): 
-     st.page_link("pages/esempio2.py", label="Esempio 2", icon="🏠")    
-     st.page_link("pages/distribuzione.py", label="Vai", icon="🌎")
+     #st.page_link("pages/esempio2.py",      label="Esempio 2", icon="🏠")    
+     st.page_link("pages/distribuzione.py", label="Vai",       icon="🌎")
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
