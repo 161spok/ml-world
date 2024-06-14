@@ -46,7 +46,7 @@ with st.expander("**Esempio 1**"):
      
 with st.expander("**Esempio 2**"): 
      #st.page_link("pages/esempio2.py",      label="Vai ad Esempio 2", icon="🏠")    
-     st.page_link("pages/esempio2.py", label="Vai ad Esempio 2",       icon="🌎")
+     st.page_link("pages/esempiodue.py", label="Vai ad Esempio 2",       icon="🌎")
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
