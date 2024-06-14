@@ -42,11 +42,13 @@ with st.expander("**Corso**"):
 
 with st.expander("**Esempio 1**"): 
      st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
+     st.page_link("pages/esempiodue.py", label="Vai a Esempio 2", icon="🌎") 
      components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
      
 with st.expander("**Esempio 2**"): 
+     pass
      #st.page_link("pages/esempio2.py",      label="Vai ad Esempio 2", icon="🏠")    
-     st.page_link("pages/esempiodue.py", label="Vai a Esempio 2", icon="🌎") 
+     #st.page_link("pages/esempiodue.py", label="Vai a Esempio 2", icon="🌎") 
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
