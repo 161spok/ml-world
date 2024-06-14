@@ -1,7 +1,8 @@
 import stramlit as st
+import streamlit.components.v1 as components
 
 #https://it.linkedin.com/pulse/guida-completa-alla-pulizia-dei-dati-csv-leonardo-anello-btj2f
-    st.write('''
+st.write('''
     Il dataset presenta i seguenti problemi:
 
         - Righe duplicate
@@ -12,7 +13,7 @@ import stramlit as st
         :green[**CODICE**]
         ''')
 
-    st.code(f"""
+st.code(f"""
         import pandas as pd
         
         # Caricamento del file dati
@@ -28,11 +29,11 @@ import stramlit as st
         (1004, 12) 
         """)
     
-    st.write('''   
+st.write('''   
     :green[**Traduzione delle etichette del dataset originale in italiano con underscore case**]\n
     ''')
 
-    st.write('''
+st.write('''
     traduzioni_originali = {\n
         'ID da Campanha': 'id_della_campagna',\n
         'Nome da Campanha': 'nome_della_campagna',\n
@@ -49,7 +50,7 @@ import stramlit as st
     }
     ''')
     
-    st.code(f"""
+st.code(f"""
     # Applicazione delle traduzioni con underscore case al dataset originale
     data2 = data.rename(columns=traduzioni_originali)       
     
@@ -58,7 +59,7 @@ import stramlit as st
     describe
     """)
     
-    st.code(f"""
+st.code(f"""
     id_della_campagna: ID numerico delle campagne, varia da 1 a 1000.\n
     nome_della_campagna: Nomi unici delle campagne, con 999 valori unici e una massima frequenza di 2 per “Balanced asymmetric architecture”.\n
     data_di_inizio e data_di_fine: Date di inizio e fine delle campagne. Presentano diverse date uniche.\n
@@ -72,7 +73,7 @@ import stramlit as st
     tasso_di_rimbalzo: Tasso di rimbalzo, con una media di 0.516 e un range da 0 a 1.\n
      """)
     
-    st.code(f"""
+st.code(f"""
     # Record Duplicati
     
     # Utilizzo di duplicated() per trovare i record duplicati
@@ -81,7 +82,7 @@ import stramlit as st
     duplicati
     """)
 
-    st.write('''
+st.write('''
     Mantenere righe duplicate in un dataset può avere diversi impatti negativi sull’analisi dei dati:
     
     1. Distorsione delle Statistiche: Le righe duplicate possono distorcere statistiche importanti come la media, la mediana, e la deviazione standard. Questo può portare a conclusioni errate riguardo alle tendenze, ai modelli e alle caratteristiche generali del dataset.
@@ -100,7 +101,7 @@ import stramlit as st
     :green[Rimozione delle righe duplicate mantenendo la prima occorrenza]\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     clean_data = data2.drop_duplicates()
     
     clean_data.shape
@@ -110,14 +111,14 @@ import stramlit as st
     (1004, 12)       
     """)
     
-    st.write('''
+st.write('''
     Le righe duplicate sono state rimosse dal dataset data2. Dopo la rimozione, il dataset contiene ora 1001 righe e 12 colonne, rispetto alle 1004 righe originali. Questo indica che 3 righe duplicate sono state rimosse.\n
     
     :green[**ID duplicato**]\n
     :green[Per identificare l’ID duplicato nel dataset, puoi utilizzare il seguente codice:]\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Identificazione degli ID duplicati nel dataset "cap3"
     ids_duplicati = clean_data[clean_data['id_della_campagna'].duplicated(keep=False)]
     
@@ -125,11 +126,11 @@ import stramlit as st
     print(ids_duplicati)      
     """)
 
-    st.write('''
+st.write('''
     Questo codice assegnerà alla riga 518 un nuovo ID, che sarà il valore massimo corrente degli ID incrementato di 1, assicurando che sia unico all’interno del dataset.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Calcolo del valore massimo di ID nel dataset e aggiunta di 1
     nuovo_id = clean_data['id_della_campagna'].max() + 1
     
@@ -141,7 +142,7 @@ import stramlit as st
     print(modifica_applicata)
     """)
     
-    st.write('''
+st.write('''
     Abbiamo affrontato il problema di un ID duplicato nel nostro dataset modificando l’ID di un record specifico (riga 518) per garantirne l’unicità. Questo è stato realizzato incrementando di 1 l’ID (1000) massimo esistente nel dataset e assegnando questo nuovo valore (1001) all’ID della riga 518.\n
     Pertanto, la duplicazione dei valori nella colonna ID rappresenta un problema. Per altre colonne con valori duplicati, è essenziale comprendere il contesto aziendale e procedere con un’analisi specifica per ogni caso.\n
     
@@ -149,18 +150,18 @@ import stramlit as st
     Finora, abbiamo risolto con successo due problemi chiave nel nostro dataset: la presenza di righe duplicate e di ID duplicati. Il prossimo passo sarà affrontare il problema dei valori mancanti. È fondamentale riconoscere che i valori mancanti possono avere un impatto significativo sulla qualità e l’accuratezza delle nostre analisi.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Verifica dei valori mancanti in "clean_data"
     valori_mancanti = clean_data.isnull().sum()
     print(valori_mancanti) 
     """)
 
-    st.write('''
+st.write('''
     Ci sono 55 valori mancanti nella colonna budget_della_campagna_r. Tutte le altre colonne del dataset non presentano valori mancanti.\n
     Adesso vedremo la percentuale dei valori mancanti nella colonna ‘budget_della_campagna_r’, che è un passaggio cruciale per decidere come gestire questi valori mancanti.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Numero totale di righe in 'budget_della_campagna_r'
     totale_righe = clean_data.shape[0]
     
@@ -174,7 +175,7 @@ import stramlit as st
     5.49%  
     """)
 
-    st.code(f"""
+st.code(f"""
     #Statistiche della colonna
     #Statistiche della colonna 'budget_della_campagna_r'
     media = clean_data['budget_della_campagna_r'].mean()
@@ -193,7 +194,7 @@ import stramlit as st
     Minimo: 1042.12  
     """)
 
-    st.write('''
+st.write('''
     I dati nella colonna ‘budget_della_campagna_r’ non mostrano significative discrepanze. La media e la mediana sono molto vicine tra loro, il che suggerisce una distribuzione relativamente uniforme dei valori. Pertanto, possiamo procedere con un certo grado di sicurezza nell’utilizzare la media o la mediana per interpolare i valori mancanti.\n
     
     :green[**Strategie Efficaci per la Gestione dei Valori Mancanti**]\n
@@ -207,7 +208,7 @@ import stramlit as st
     :red[**La scelta del metodo dipenderà dalla quantità di valori mancanti, dalla distribuzione dei dati esistenti e dall’impatto dell’imputazione sulle analisi successive.**]\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     #Calcolo della mediana
     mediana_budget = clean_data['budget_della_campagna_r'].median()
     
@@ -221,7 +222,7 @@ import stramlit as st
     0         
     """)
 
-    st.write('''
+st.write('''
     :green[**Percorso Essenziale per l’Elaborazione e l’Analisi dei Dati**]\n
     Il processo che abbiamo seguito è fondamentale nel campo dell’analisi dei dati. Iniziamo caricando i dati e fornendo un riassunto iniziale.\n
     
@@ -232,7 +233,7 @@ import stramlit as st
     Il passo successivo è risolvere il problema delle informazioni mancanti o errate, che può essere più complesso. Un approccio utile è controllare la presenza di caratteri insoliti o problemi specifici in ogni variabile, ad esempio verificando i valori unici in ciascuna di esse. Questo approccio sistematico garantisce che i dati siano accurati e pronti per analisi più dettagliate.\n
     ''')
     
-    st.code(f"""
+st.code(f"""
     #Analisi dei Valori Unici
     #Stiamo conducendo questa analisi per comprendere meglio la varietà e l’unicità dei dati in ciascuna colonna.\n
     
@@ -240,17 +241,17 @@ import stramlit as st
     print(valori_unici) 
     """)
 
-    st.write('''
+st.write('''
     Questo ci aiuterà a identificare colonne con una grande diversità di valori, colonne con potenziali valori ripetitivi o limitati, e a rilevare eventuali anomalie o inconsistenze nei dati.\n
     
     Per visualizzare ogni valore unico per ogni colonna del dataset “clean_data”, puoi utilizzare il seguente codice Python nel tuo ambiente locale:\n
     ''')
        
-    st.info("""Visualizzazione dei valori unici per ogni colonna in clean_data\n
+st.info("""Visualizzazione dei valori unici per ogni colonna in clean_data\n
     for colonna in clean_data.columns:\n
         print(f"Valori unici nella colonna '{colonna}': {clean_data[colonna].unique()}""",icon="ℹ️")
     
-    st.write('''
+st.write('''
     Questo codice stamperà l’elenco di tutti i valori unici per ciascuna colonna nel dataset “clean_data”. È un modo efficace per esplorare in dettaglio i diversi tipi di dati presenti in ogni colonna, aiutandoti a capire meglio la composizione del tuo dataset.\n
     
     :green[**Identificazione degli Outliers**]\n
@@ -259,7 +260,7 @@ import stramlit as st
     Identificarli è cruciale, poiché possono influenzare negativamente le analisi statistiche e i modelli predittivi. Utilizzeremo metodi statistici per esaminare le diverse colonne del dataset alla ricerca di questi valori anomali, garantendo così che le nostre analisi siano il più accurate e affidabili possibile.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     Selezione delle colonne numeriche
     colonne_numeriche = clean_data.select_dtypes(include=['float64', 'int64'])
     
@@ -278,13 +279,13 @@ import stramlit as st
     outliers.sum()
     """)
     
-    st.write('''
+st.write('''
     Abbiamo eseguito un’analisi per identificare gli outliers nelle colonne numeriche del dataset. Utilizzando il metodo dell’Intervallo Interquartile (IQR), abbiamo definito limiti inferiore e superiore per ciascuna colonna numerica.\n
     
     Gli outliers sono stati individuati come valori che si trovano al di fuori di questi limiti. Dai risultati, abbiamo scoperto che la colonna Impressioni contiene 38 outliers, mentre nelle altre colonne numeriche non sono stati rilevati outliers. Questo passaggio è fondamentale per garantire la correttezza delle nostre analisi, poiché gli outliers possono influenzare significativamente i risultati statistici e i modelli predittivi.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     :green[Calcolo di media, mediana, valore massimo e minimo per la colonna "Impressões" in "clean_data"]
     
     media = clean_data['impressioni'].mean()
@@ -304,7 +305,7 @@ import stramlit as st
     Valore Minimo delle Impressioni: 1.001
     """)
 
-    st.write('''
+st.write('''
     :green[**La Scelta tra Rimozione e Imputazione di Outliers nel Dataset**]\n
     Il valore massimo nella colonna Impressioni è chiaramente un outlier, in quanto si discosta significativamente dal modello generale dei dati. La media risulta essere elevata a causa dell’impatto degli outliers, mentre la mediana, essendo il valore centrale in un insieme di dati ordinato, non è influenzata in egual misura. Queste osservazioni dimostrano come l’utilizzo della media possa essere ingannevole in presenza di outliers.\n
     
@@ -313,7 +314,7 @@ import stramlit as st
     Considerando che il numero di record da rimuovere è minimo, procederemo con la rimozione dei 38 outliers identificati, preservando così la qualità e l’affidabilità del nostro dataset per le analisi successive.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Rimozione dei record con valori outlier nella colonna Impressioni nel dataset "clean_data"
     
     # Identificazione degli outliers
@@ -325,7 +326,7 @@ import stramlit as st
     clean_data_senza_outliers.shape, clean_data.shape     
     """)
     
-    st.write('''
+st.write('''
     :green[**Salvataggio della Versione Finale del Dataset Dopo la Pulizia**]
     
     Abbiamo completato il processo di pulizia del dataset “clean_data”, rimuovendo sia le righe duplicate sia gli outliers nella colonna Impressioni.\n
@@ -333,14 +334,14 @@ import stramlit as st
     Questa versione pulita del dataset è pronta per essere utilizzata in analisi successive, garantendo una maggiore affidabilità e precisione dei risultati.\n
     ''')
 
-    st.code(f"""
+st.code(f"""
     # Salvataggio della versione finale del dataset in formato CSV
     output_file_path = 'clean_data_versione_finale.csv'
     clean_data_senza_outliers.to_csv(output_file_path, index=False)
     
     output_file_path 
     """)
-    st.write('''
+st.write('''
     :green[**Conclusione**]\n
     Abbiamo intrapreso un percorso metodico e dettagliato per organizzare e pulire il nostro dataset “clean_data”, un processo fondamentale per garantire che le analisi condotte siano accurate e affidabili. Inizialmente, abbiamo caricato i dati e creato un riassunto per ottenere una visione generale del contenuto e delle caratteristiche del dataset. Questo passaggio iniziale ci ha permesso di identificare immediatamente le aree che necessitavano di attenzione.\n
     Il primo problema affrontato è stato la presenza di righe duplicate. La rimozione di queste righe è stata cruciale per evitare distorsioni nelle analisi e per garantire l’unicità dei dati. Successivamente, ci siamo concentrati sugli ID duplicati, un aspetto fondamentale per mantenere l’integrità dei dati. Abbiamo risolto questo problema modificando l’ID di un record specifico, garantendo così che tutti gli ID nel dataset fossero unici.\n
