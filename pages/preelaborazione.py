@@ -415,6 +415,21 @@ st.markdown(
 ) 
 
 #components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
+st.write('''DATA PREPROCESSING TECHNIQUES''')
+st.write('''Data cleaning, Data transformation,  Feature engineering''')
+st.write('''Data cleaning - Handling missing values ''')
+st.write('''Data cleaning - Removing outliers ''')
+st.write('''Data cleaning - Correcting errors ''')
+
+st.write('''Data transformation - Feature scaling ''')
+st.write('''Data transformation - Encoding categorical variables ''')
+st.write('''Data transformation - Data normalization ''')
+
+st.write('''Feature engineering - Feature selection ''')
+st.write('''Feature engineering - Feature extraction ''')
+st.write('''Feature engineering - Dimensonality reduction ''')
+
+st.write('''EXPLORATORY DATA ANALYSIS (EDA)''')
 
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
      st.write('''
