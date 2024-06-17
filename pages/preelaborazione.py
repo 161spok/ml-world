@@ -27,7 +27,7 @@ with st.expander("**Preparazione**"):
 
 
 
-st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
+st.markdown("**La preelaborazione dei dati (DATA PREPROCESSING TECHNIQUES) prevede i seguenti passi:**")
 
 # -------------------------------------------- https://www.geeksforgeeks.org/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/
 st.markdown(
@@ -46,8 +46,8 @@ st.markdown(
     unsafe_allow_html=True
 ) 
 
-#components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
-st.write('''**DATA PREPROCESSING TECHNIQUES**''')
+
+
 st.write(''':green-background[Data cleaning], :blue-background[Data transformation],  :red-background[Feature engineering]''')
 st.write('''Data cleaning - Handling missing values ''')
 st.write('''Data cleaning - Removing outliers ''')
@@ -82,6 +82,7 @@ capire quale colore hai di più! È un modo per rendere le informazioni facili d
 metti in gruppi separati per colore
 ''')    
      st.page_link("pages/distribuzione.py", label="Vai", icon="🌎") 
+     components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
 
 with st.expander("**:green-background[Data cleaning] Rimozione dei duplicati**"):
     st.write('''
