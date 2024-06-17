@@ -4,6 +4,7 @@ import seaborn as sns
 import pandas as pd
 import io
 import streamlit.components.v1 as components
+from IPython.core.pylabtools import figsize
 
 st.subheader("Distribuzione dati")                                 
 
