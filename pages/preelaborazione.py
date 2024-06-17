@@ -241,6 +241,17 @@ with st.expander("**:blue-background[Data transformation] One-hot encoding**"):
     ''')       
      st.page_link("https://www.geeksforgeeks.org/ml-one-hot-encoding/?ref=header_search", label="Reference", icon="🏠")
 
+with st.expander("**:blue-background[Feature engineering] Feature selection**"):
+     st.write('''
+        Feature selection is a process of selecting a subset of relevant features from the original set of features. The goal is to reduce the dimensionality of the feature space, simplify the model, and improve
+        its generalization performance. Feature selection methods can be categorized into three types:
+
+          Filter Methods
+          Wrapper methods
+          Embedded methods.
+    ''')       
+     st.page_link("https://www.geeksforgeeks.org/difference-between-feature-selection-and-feature-extraction/?ref=header_search", label="Reference", icon="🏠")
+
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
      st.write('''
         La Synthetic Minority Over-sampling TEchnique, o SMOTE in breve, è una tecnica di preelaborazione utilizzata per affrontare uno squilibrio di classi in un set di dati.
