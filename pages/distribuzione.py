@@ -65,7 +65,8 @@ else:
                                             plt.title('Distribuzione Normale dei Dati')
                                             plt.xlabel('Valore')
                                             plt.ylabel('Probabilità')
-                                            plt.show()
+                                            st.pyplot(plt.gcf())
+                                            #plt.show()
   #------------------------------------------------------------------------
   col1, col2 = st.columns(2)
   with col1:
