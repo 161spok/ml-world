@@ -86,7 +86,7 @@ else:
                                             st.pyplot(plt.gcf())
                                             #plt.show()
   #------------------------------------------------------------------------
-  df['type'].value_counts().plot(kind='bar')
+  df['Type'].value_counts().plot(kind='bar')
 
   
   col1, col2 = st.columns(2)
