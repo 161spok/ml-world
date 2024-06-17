@@ -99,8 +99,8 @@ figsize(7, 5)
 plt.hist(data['Type'], color='blue', edgecolor='black', bins=int(45/1))
 plt.xlabel('Quantità')
 plt.ylabel('Tipologia')
-plt.title('Housing prices frequencies')
-                                            st.pyplot(plt.gcf())
+plt.title('Type column frequencies')
+st.pyplot(plt.gcf())
 
   
 col1, col2 = st.columns(2)
