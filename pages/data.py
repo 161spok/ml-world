@@ -15,8 +15,8 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 #----------------------------------------------------------------------------------
 @st.cache
 def load_data(uploaded_file):
-    mdf = None
-    mdf = pd.read_csv(uploaded_file)
+    df = None
+    dataf = pd.read_csv(uploaded_file)
     
     if 'df' not in st.session_state:
         st.session_state.df = None
@@ -25,11 +25,10 @@ def load_data(uploaded_file):
         #st.session_state.df = df
       
     if uploaded_file is not None:
-      pass
-      #st.session_state.df = pd.DataFrame(df)
+      st.session_state.df = pd.DataFrame(dataf)
       
                                                    
-    return mdf
+    return df
 
 #d1 = load_data(DATA_URL_1)
 # Actually executes the function, since this is the first time it was
