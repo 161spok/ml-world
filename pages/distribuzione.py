@@ -39,6 +39,7 @@ else:
   # Carica i dati dal file CSV
   #data = np.genfromtxt('dati.csv', delimiter=',')
   data = st.dataframe(df)
+  st.write(data)
   # Calcola la media e la deviazione standard dei dati
   #mean = np.mean(data)
   #mean = data.mean(axis = 1, skipna = True)
