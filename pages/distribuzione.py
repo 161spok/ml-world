@@ -41,7 +41,8 @@ else:
   data = st.dataframe(df)
   # Calcola la media e la deviazione standard dei dati
   #mean = np.mean(data)
-  mean = data.mean(axis = 1, skipna = True)
+  #mean = data.mean(axis = 1, skipna = True)
+  mean = data.mean()
   #std_dev = np.std(data)
   std_dev = data.std(data)
   
