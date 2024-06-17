@@ -40,8 +40,10 @@ else:
   #data = np.genfromtxt('dati.csv', delimiter=',')
   data = st.dataframe(df)
   # Calcola la media e la deviazione standard dei dati
-  mean = np.mean(data)
-  std_dev = np.std(data)
+  #mean = np.mean(data)
+  mean = data.mean(axis = 1, skipna = True)
+  #std_dev = np.std(data)
+  std_dev = data.std(data)
   
   # Calcola la densità di probabilità (PDF) della distribuzione normale
   x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
