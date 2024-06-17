@@ -75,7 +75,10 @@ custom_css = """
 # Inject custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown('<div class="my-container">This is a custom-styled container</div>', unsafe_allow_html=True)
-with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
+
+#https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
+
+with st.expander('<div class="my-container">This is a custom-styled container</div>'):
      st.write('''
         Immagina che tu abbia una grande ciotola di caramelle di diversi colori e vuoi sapere quale colore c’è di più. Allora inizi a separare 
         le caramelle per colore: rosse, blu, verdi, ecc. Dopo averle separate, conti quante caramelle ci sono di ogni colore. Magari scopri che hai 
