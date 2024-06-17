@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 @st.cache
 def load_data(uploaded_file):
     df = None
-    #df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(uploaded_file)
     
     #if 'df' not in st.session_state:
         #st.session_state.df = None
