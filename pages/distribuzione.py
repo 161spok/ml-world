@@ -87,7 +87,7 @@ else:
                                             arr = data['Type']
                                             fig, ax = plt.subplots()
                                             plt.title('Distribuzione Normale dei Dati colonna Type')
-                                            ax.hist(arr, x, bins=20)                                        
+                                            ax.hist(arr, bins=20)                                        
                                             st.pyplot(fig)
  
 
