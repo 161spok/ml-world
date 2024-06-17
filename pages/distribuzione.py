@@ -23,7 +23,8 @@ else:
      
     st.page_link("https://community.sisense.com/t5/knowledge/test-for-normal-distribution-of-data-with-python/ta-p/9434", label="Test con Pandas", icon="🏠")
     
-  df = st.session_state.df
+  #df = st.session_state.df
+  df = st.session_state.['df']
   st.write("Test")
   st.write(df)
   st.write("-------------------------------------------------------------------------")
