@@ -52,8 +52,15 @@ else:
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
                                             tdata = pd.DataFrame(data)
+                                          
+                                          # media tutte le colonne escluso quelle non numeriche
                                             media = tdata.mean(axis = 0, skipna = False, numeric_only=True)
-                                            #std_dev = np.std(data)
+                                          
+                                          # media di colonne selezionate
+                                            #mean1 = tdata.iloc[:,0].mean() #calcola la media della prima colonna
+                                            mean2 = tdata.iloc[:,3].mean() # calcola la media della seconda colonna
+                                            st.write(mean2)
+                                          # deviazione standard
                                             std_dev = tdata.std(numeric_only=True)
                                             
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
