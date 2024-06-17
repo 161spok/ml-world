@@ -235,7 +235,7 @@ with st.expander("**:blue-background[Data transformation] One-hot encoding**"):
     ''')       
      st.page_link("https://www.geeksforgeeks.org/ml-one-hot-encoding/?ref=header_search", label="Reference", icon="🏠")
 
-with st.expander("**:blue-background[Feature engineering] Feature selection**"):
+with st.expander("**:red-background[Feature engineering] Feature selection**"):
      st.write('''
         Feature selection is a process of selecting a subset of relevant features from the original set of features. The goal is to reduce the dimensionality of the feature space, simplify the model, and improve
         its generalization performance. Feature selection methods can be categorized into three types:
@@ -246,7 +246,7 @@ with st.expander("**:blue-background[Feature engineering] Feature selection**"):
     ''')       
      st.page_link("https://www.geeksforgeeks.org/difference-between-feature-selection-and-feature-extraction/?ref=header_search", label="Reference", icon="🏠")
 
-with st.expander("**:blue-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
+with st.expander("**:red-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
      st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
