@@ -37,15 +37,15 @@ else:
   from scipy.stats import norm
   
   # Carica i dati dal file CSV
-  #data = np.genfromtxt('dati.csv', delimiter=',')
-  data = st.dataframe(df)
-  st.write(data)
+  #st.dataframe(df)  # Same as st.write(df)
+  #data = st.dataframe(df)
+  
   # Calcola la media e la deviazione standard dei dati
   #mean = np.mean(data)
   #mean = data.mean(axis = 1, skipna = True)
-  mean = data.mean()
+  mean = df.mean()
   #std_dev = np.std(data)
-  std_dev = data.std(data)
+  std_dev = df.std(df)
   
   # Calcola la densità di probabilità (PDF) della distribuzione normale
   x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
