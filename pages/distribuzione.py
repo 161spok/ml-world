@@ -59,10 +59,18 @@ else:
                                           # media di colonne selezionate
                                             #mean1 = tdata.iloc[:,0].mean() #calcola la media della prima colonna
                                             mean2 = tdata.iloc[:,3].mean() # calcola la media della seconda colonna
+                                            st.write("Media della colonna 4")
                                             st.write(mean2)
-                                          # deviazione standard
+                                          
+                                          # deviazione standard                                        
                                             std_dev = tdata.std(numeric_only=True)
-                                            
+                                            st.write("Deviazione standard su tutte le colonne")
+                                            st.write(std_dev)
+                                          # deviazione standard su singola colonna
+                                            std_dev = tdata.iloc[:,3].std()
+                                            st.write("Deviazione standard su colonna selezionata")
+                                            st.write(std_dev)
+                                          
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
                                             x = np.linspace(media - 3*std_dev, media + 3*std_dev, 1000)
                                             pdf = norm.pdf(x, media, std_dev)
