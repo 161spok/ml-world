@@ -50,9 +50,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
                                             
-data = pd.read_csv(uploaded_file) #path folder of the data file
-st.write(data)
-tdata = pd.DataFrame(data)
+tdata = pd.DataFrame(df)
                                           
                                           # media tutte le colonne escluso quelle non numeriche
 media = tdata.mean(axis = 0, skipna = False, numeric_only=True)
