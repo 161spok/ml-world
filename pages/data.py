@@ -24,11 +24,11 @@ def load_data(uploaded_file):
         #df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 10], [7, 8, 12]]), columns=['a', 'b', 'Prediction'])
         #st.session_state.df = df
       
-    #if uploaded_file is not None:
-      #st.session_state.df = pd.dataframe(df)
+    if uploaded_file is not None:
+      pass
+      #st.session_state.df = pd.DataFrame(df)
       
-                                                    #st.write(st.session_state.df.shape[0])
-                                                    #st.write(st.session_state['dati'])
+                                                   
     return mdf
 
 #d1 = load_data(DATA_URL_1)
