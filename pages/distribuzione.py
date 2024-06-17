@@ -54,7 +54,7 @@ else:
                                             tdata = pd.DataFrame(data)
                                             media = tdata.mean(axis = 0, skipna = False, numeric_only=True)
                                             #std_dev = np.std(data)
-                                            std_dev = tdata.std(df)
+                                            std_dev = tdata.std(data)
                                             
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
                                             x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
