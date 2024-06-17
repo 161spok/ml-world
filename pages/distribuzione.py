@@ -61,16 +61,19 @@ else:
                                             mean2 = tdata.iloc[:,3].mean() # calcola la media della seconda colonna
                                             st.write("Media della colonna 4")
                                             st.write(mean2)
-                                          
-                                          # deviazione standard                                        
+                                          df['age'].std()
+                                          # deviazione standard 
+              # In generale, una deviazione standard alta indica una maggiore variabilità dei dati, mentre una deviazione standard bassa indica una minore variabilità.
                                             std_dev = tdata.std(numeric_only=True)
                                             st.write("Deviazione standard su tutte le colonne")
                                             st.write(std_dev)
                                           # deviazione standard su singola colonna
                                             std_dev_col = tdata.iloc[:,3].std()
+                                            #  df['age'].std()
                                             st.write("Deviazione standard su colonna 4")
                                             st.write(std_dev_col)
-                                          
+
+                                            # Generate values for the x-axis
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
                                             x = np.linspace(media - 3*std_dev, media + 3*std_dev, 1000)
                                             pdf = norm.pdf(x, media, std_dev)
@@ -83,6 +86,9 @@ else:
                                             st.pyplot(plt.gcf())
                                             #plt.show()
   #------------------------------------------------------------------------
+  df['type'].value_counts().plot(kind='bar')
+
+  
   col1, col2 = st.columns(2)
   with col1:
     st.header("Head")
