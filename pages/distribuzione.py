@@ -85,9 +85,9 @@ else:
   #------------------------------------------------------------------------
   df['Type'].value_counts().plot(kind='bar')
   
-  data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
-  names = list(df.keys())
-  values = list(df.values())
+  #data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
+  #names = list(df.keys())
+  #values = list(df.values())
   
   fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
   axs[0].bar(df)
