@@ -4,9 +4,6 @@ import streamlit.components.v1 as components
 st.header(":blue[2 Data]")
 st.subheader("2.1 Preelaborazione dati")
 
-with st.expander("See details."): 
-    st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
-
 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
 
@@ -28,19 +25,7 @@ with st.expander("**Preparazione**"):
      
      st.image('Immagine1.png', caption='Processo analisi esplorativa dei dati')
 
-with st.expander("**Corso**"): 
-     st.page_link("https://github.com/ProfAI/ml00/blob/master/README.md", label="Corso", icon="🏠")
-     
 
-with st.expander("**Esempio 1**"): 
-     st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
-     #st.page_link("pages/esempiouno.py", label="Vai a Esempio 2", icon="🌎") 
-     components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
-     
-with st.expander("**Esempio 2**"): 
-     pass
-     #st.page_link("pages/esempio2.py",      label="Vai ad Esempio 2", icon="🏠")    
-     #st.page_link("pages/esempiodue.py", label="Vai a Esempio 2", icon="🌎") 
 
 st.markdown("**La preelaborazione dei dati prevede i seguenti passi:**")
 
@@ -262,6 +247,16 @@ with st.expander("**Trappola delle variabili fittizie nei modelli di regressione
         Ad esempio – 
         Consideriamo il caso del genere avente due valori maschile (0 o 1) e femminile (1 o 0). Includere entrambe le variabili fittizie può causare ridondanza perché se una persona non è maschio in tal caso quella persona è una donna, quindi non è necessario utilizzare entrambe le variabili nei modelli di regressione. Questo ci proteggerà dalla trappola delle variabili fittizie.
     ''')  
-         
+
+with st.expander("**Corso**"): 
+     st.page_link("https://github.com/ProfAI/ml00/blob/master/README.md", label="Corso", icon="🏠")
+     
+
+with st.expander("**Esempio 1**"): 
+     st.page_link("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", label="1 -Reference", icon="🏠")
+     #st.page_link("pages/esempiouno.py", label="Vai a Esempio 2", icon="🌎") 
+     components.iframe("https://www.diariodiunanalista.it/posts/analisi-esplorativa-dei-dati-con-python-e-pandas/", height = 500, scrolling = True)
+     
+ 
 
 
