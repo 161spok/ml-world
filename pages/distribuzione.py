@@ -83,7 +83,7 @@ else:
                                             st.pyplot(plt.gcf())
                                             
   #------------------------------------------------------------------------
-  st.pyplot(df['Type'].value_counts().plot(kind='bar'))
+  #st.pyplot(df['Type'].value_counts().plot(kind='bar'))
   
   x = np.linspace(-10,10,100)
  
