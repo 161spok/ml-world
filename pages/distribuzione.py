@@ -43,6 +43,10 @@ else:
   # Calcola la media e la deviazione standard dei dati
   #mean = np.mean(data)
   #mean = data.mean(axis = 1, skipna = True)
+  uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
+
+
+  
   mean = df.mean()
   #std_dev = np.std(data)
   std_dev = df.std(df)
