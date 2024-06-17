@@ -192,7 +192,7 @@ with st.expander("**:green-background[Data cleaning] Pulizia dei dati di testo**
         be random.
     ''')                                
 
-with st.expander("**:blue-background[Data transformation] Formattazione dei dati **"):
+with st.expander("**:blue-background[Data transformation] Formattazione dei dati**"):
     st.write('''
         La formattazione dei dati implica la conversione dei dati in un formato o struttura standard che può essere facilmente elaborata dagli algoritmi o dai modelli 
         utilizzati per l'analisi. Qui discuteremo le tecniche di formattazione dei dati comunemente utilizzate, ad esempio ridimensionamento e normalizzazione.
