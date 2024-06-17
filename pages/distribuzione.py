@@ -61,7 +61,7 @@ else:
                                             mean2 = tdata.iloc[:,3].mean() # calcola la media della seconda colonna
                                             st.write("Media della colonna 4")
                                             st.write(mean2)
-                                          df['age'].std()
+                                            df['age'].std()
                                           # deviazione standard 
               # In generale, una deviazione standard alta indica una maggiore variabilità dei dati, mentre una deviazione standard bassa indica una minore variabilità.
                                             std_dev = tdata.std(numeric_only=True)
