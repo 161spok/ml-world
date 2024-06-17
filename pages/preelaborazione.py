@@ -4,14 +4,8 @@ import streamlit.components.v1 as components
 st.header(":blue[2 Data]")
 st.subheader("2.1 Preelaborazione dati")
 
-
-with st.expander("**Expand :green-background[green]**"):
-    st.write("Content inside the expander")
-
-
 with st.expander("See details."): 
     st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
-
 
 predati = st.text_area('DESCRIZIONE', 'Questa fase prevede la pulizia, il filtraggio e la trasformazione dei dati per renderli idonei per ulteriori analisi. '
 'Ciò può includere la rimozione dei valori mancanti, il ridimensionamento o la normalizzazione dei dati o la loro conversione in un formato diverso.')
