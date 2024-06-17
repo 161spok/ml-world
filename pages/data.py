@@ -17,9 +17,8 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 def load_data(uploaded_file):
     
     df=""
-    df = pd.read_csv(uploaded_file) #path folder of the data file
-  
-    st.session_state.df = df
+    df = pd.read_csv(uploaded_file) 
+    st.session_state.df = pd.read_csv(uploaded_file)
       
                                                     #st.write(st.session_state.df.shape[0])
                                                     #st.write(st.session_state['dati'])
