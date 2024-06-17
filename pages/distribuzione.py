@@ -57,8 +57,8 @@ else:
                                             std_dev = tdata.std(numeric_only=True)
                                             
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
-                                            x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
-                                            pdf = norm.pdf(x, mean, std_dev)
+                                            x = np.linspace(media - 3*std_dev, media + 3*std_dev, 1000)
+                                            pdf = norm.pdf(x, media, std_dev)
                                             
                                             # Visualizza la PDF
                                             plt.plot(x, pdf)
