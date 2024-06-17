@@ -83,21 +83,25 @@ else:
                                             st.pyplot(plt.gcf())
                                             
   #------------------------------------------------------------------------
-  st.write(df['Type'].value_counts().plot(kind='bar'))
+  st.pyplot(df['Type'].value_counts().plot(kind='bar'))
   
-  #data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
-  #names = list(df.keys())
-  #values = list(df.values())
+  x = np.linspace(-10,10,100)
+ 
+  def normal_dist(x , mean , sd):
+      prob_density = np.exp(-0.5*((x-mean)/sd)**2) / np.sqrt(np.pi * sd**2)
+      return prob_density
+   
+  mean = st.slider(label='input mean', min_value=0., max_value=100., value=4.)
+  sd = st.slider(label='input std dev', min_value=0.1, max_value=100., value=4.)
+   
+  pdf = normal_dist(df,mean,sd)
+  
+  fig, ax = plt.subplots()
+  plt.plot(x, pdf , color = 'blue')
+  plt.xlabel('Data points')
+  plt.ylabel('Probability Density')
+  st.pyplot(fig)
 
-  plt.figure(figsize=(8,5))
-  sns.barplot(x='embark_town',y='fare',data=titanic, palette='rainbow')
-  plt.title("Fare of Passenger by Embarked Town")
-
-  fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
-  axs[0].bar(df)
-  #axs[1].scatter(names, values)
-  #axs[2].plot(names, values)
-  fig.suptitle('Categorical Plotting')
   
   col1, col2 = st.columns(2)
   with col1:
