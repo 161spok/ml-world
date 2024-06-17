@@ -67,9 +67,9 @@ else:
                                             st.write("Deviazione standard su tutte le colonne")
                                             st.write(std_dev)
                                           # deviazione standard su singola colonna
-                                            std_dev = tdata.iloc[:,3].std()
-                                            st.write("Deviazione standard su colonna selezionata")
-                                            st.write(std_dev)
+                                            std_dev_col = tdata.iloc[:,3].std()
+                                            st.write("Deviazione standard su colonna 4")
+                                            st.write(std_dev_col)
                                           
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
                                             x = np.linspace(media - 3*std_dev, media + 3*std_dev, 1000)
