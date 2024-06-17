@@ -83,12 +83,16 @@ else:
                                             st.pyplot(plt.gcf())
                                             
   #------------------------------------------------------------------------
-  df['Type'].value_counts().plot(kind='bar')
+  st.write(df['Type'].value_counts().plot(kind='bar'))
   
   #data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
   #names = list(df.keys())
   #values = list(df.values())
-  
+
+  plt.figure(figsize=(8,5))
+  sns.barplot(x='embark_town',y='fare',data=titanic, palette='rainbow')
+  plt.title("Fare of Passenger by Embarked Town")
+
   fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
   axs[0].bar(df)
   #axs[1].scatter(names, values)
