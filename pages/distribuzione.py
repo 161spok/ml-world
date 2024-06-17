@@ -82,14 +82,13 @@ else:
                                             plt.ylabel('Probabilità')
                                             st.pyplot(plt.gcf())
                                             
-  #------------------------------------------------------------------------
-  #st.pyplot(df['Type'].value_counts().plot(kind='bar'))
-  
-  arr = data['Type']
-  fig, ax = plt.subplots()
-  ax.hist(arr, bins=20)
-
-  st.pyplot(fig)
+                                            #------------------------------------------------------------------------                                        
+                                            x = np.linspace(0, 10000, 500)
+                                            arr = data['Type']
+                                            fig, ax = plt.subplots()
+                                            plt.title('Distribuzione Normale dei Dati colonna Type')
+                                            ax.hist(arr, x, bins=20)                                        
+                                            st.pyplot(fig)
  
 
   
