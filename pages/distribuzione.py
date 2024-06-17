@@ -26,9 +26,14 @@ else:
   #df = st.session_state.df
   if 'df' not in st.session_state:
       df = st.session_state['df']
-      st.write("Test")
+      st.write("Test 1")
       st.write(df)
       st.write("-------------------------------------------------------------------------")
+  else:
+      st.write("Test 2")
+      st.write(df)
+      st.write("-------------------------------------------------------------------------")
+  
   
   # -----------------------------------------distribuzione dei dati
   import numpy as np
