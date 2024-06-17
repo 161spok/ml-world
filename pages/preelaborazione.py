@@ -62,7 +62,7 @@ st.write('''Feature engineering - Feature extraction ''')
 st.write('''Feature engineering - Dimensonality reduction ''')
 
 st.write('''EXPLORATORY DATA ANALYSIS (EDA)''')
-
+st.markdown('<div class="my-container">This is a custom-styled container</div>', unsafe_allow_html=True)
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
      st.write('''
         Immagina che tu abbia una grande ciotola di caramelle di diversi colori e vuoi sapere quale colore c’è di più. Allora inizi a separare 
