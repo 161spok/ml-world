@@ -26,8 +26,8 @@ def load_data(uploaded_file):
       
     if uploaded_file is not None:
       st.session_state.df = pd.DataFrame(dataf)
-      #mdati = st.session_state.df
-      #st.write(mdati)
+      mdati = st.session_state.df
+      st.write(mdati)
                                                    
     return dataf
 
