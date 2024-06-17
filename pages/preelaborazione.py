@@ -221,7 +221,7 @@ with st.expander("**:blue-background[Data transformation] Formattazione dei dati
         Il ridimensionamento Min-Max ridimensiona i valori in un intervallo specificato, in genere tra 0 e 1. Preserva la distribuzione originale e garantisce che il valore minimo sia mappato su 0 e il valore massimo sia mappato su 1.
     ''') 
 
-with st.expander("**:blue-background[Data transformation] Standardizzazione dei dati - Feature Scaling**"):
+with st.expander("**:blue-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
      st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
