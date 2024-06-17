@@ -29,7 +29,7 @@ def load_data(uploaded_file):
       #mdati = st.session_state.df
       #st.write(mdati)
                                                    
-    return df
+    return dataf
 
 #d1 = load_data(DATA_URL_1)
 # Actually executes the function, since this is the first time it was
