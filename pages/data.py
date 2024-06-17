@@ -19,13 +19,13 @@ def load_data(uploaded_file):
     dataf = pd.read_csv(uploaded_file)
     
     if 'df' not in st.session_state:
-        #st.session_state.df = None
+        st.session_state.df = None
         st.session_state['df'] = None
       
     if uploaded_file is not None:
       st.session_state.df = pd.DataFrame(dataf)
       st.session_state['df'] = pd.DataFrame(dataf)
-      mdati = st.session_state.df
+      #mdati = st.session_state.df
       #mdati = st.session_state['df']
       #st.write(mdati)
                                                    
