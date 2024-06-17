@@ -51,10 +51,10 @@ else:
                                            
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
-  
-                                            media = data.mean()
+                                            tdata = pd.dataframe(data)
+                                            media = tdata.mean()
                                             #std_dev = np.std(data)
-                                            std_dev = data.std(df)
+                                            std_dev = tdata.std(df)
                                             
                                             # Calcola la densità di probabilità (PDF) della distribuzione normale
                                             x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
