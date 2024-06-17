@@ -44,23 +44,28 @@ else:
   #mean = np.mean(data)
   #mean = data.mean(axis = 1, skipna = True)
   uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
-
-
+  if st.button("Submit & Process", type="primary", key="process_button") :
+            with st.spinner("Elaborazione ..."):
+                                        st.success("Caricamento effettuato !") 
+                                        if uploaded_file is not None:                                           
+                                           
+                                            data = pd.read_csv(uploaded_file) #path folder of the data file
+                                            st.write(data)
   
-  mean = df.mean()
-  #std_dev = np.std(data)
-  std_dev = df.std(df)
-  
-  # Calcola la densità di probabilità (PDF) della distribuzione normale
-  x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
-  pdf = norm.pdf(x, mean, std_dev)
-  
-  # Visualizza la PDF
-  plt.plot(x, pdf)
-  plt.title('Distribuzione Normale dei Dati')
-  plt.xlabel('Valore')
-  plt.ylabel('Probabilità')
-  plt.show()
+                                            mean = data.mean()
+                                            #std_dev = np.std(data)
+                                            std_dev = data.std(df)
+                                            
+                                            # Calcola la densità di probabilità (PDF) della distribuzione normale
+                                            x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
+                                            pdf = norm.pdf(x, mean, std_dev)
+                                            
+                                            # Visualizza la PDF
+                                            plt.plot(x, pdf)
+                                            plt.title('Distribuzione Normale dei Dati')
+                                            plt.xlabel('Valore')
+                                            plt.ylabel('Probabilità')
+                                            plt.show()
   #------------------------------------------------------------------------
   col1, col2 = st.columns(2)
   with col1:
