@@ -62,6 +62,18 @@ st.write('''Feature engineering - Feature extraction ''')
 st.write('''Feature engineering - Dimensonality reduction ''')
 
 st.write('''EXPLORATORY DATA ANALYSIS (EDA)''')
+custom_css = """
+<style>
+.my-container {
+ background-color: #AED6F1;
+ padding: 10px;
+ border-radius: 5px;
+}
+</style>
+"""
+
+# Inject custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown('<div class="my-container">This is a custom-styled container</div>', unsafe_allow_html=True)
 with st.expander("**Distribuzione dati**"): #https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione
      st.write('''
