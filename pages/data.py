@@ -15,11 +15,11 @@ uploaded_file = st.file_uploader("Scegli un file", key="pdf_uploader")
 #----------------------------------------------------------------------------------
 @st.cache
 def load_data(uploaded_file):
-    df = None
-    df = pd.read_csv(uploaded_file)
+    mdf = None
+    mdf = pd.read_csv(uploaded_file)
     
-    #if 'df' not in st.session_state:
-        #st.session_state.df = None
+    if 'df' not in st.session_state:
+        st.session_state.df = None
    
         #df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 10], [7, 8, 12]]), columns=['a', 'b', 'Prediction'])
         #st.session_state.df = df
@@ -29,7 +29,7 @@ def load_data(uploaded_file):
       
                                                     #st.write(st.session_state.df.shape[0])
                                                     #st.write(st.session_state['dati'])
-    return df
+    return mdf
 
 #d1 = load_data(DATA_URL_1)
 # Actually executes the function, since this is the first time it was
@@ -53,6 +53,6 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             
                                             if 'dati' not in st.session_state:
                                                     st.session_state['dati'] = 'caricati'
-                                                    #mdati = st.session_state.df
-                                                    #st.write(mdati)
+                                                    mdati = st.session_state.df
+                                                    st.write(mdati)
                                            
