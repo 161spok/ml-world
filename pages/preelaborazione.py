@@ -177,7 +177,14 @@ with st.expander("**:green-background[Data cleaning] Gestione dei dati mancanti*
         I valori mancanti sono punti dati assenti per una variabile specifica in un set di dati. Possono essere rappresentati in vari modi, ad esempio celle vuote, valori nulli o simboli speciali come "NA" o "sconosciuto". Questi punti dati mancanti rappresentano una sfida significativa nell’analisi dei dati e possono portare a risultati imprecisi o distorti.
     ''')                               
     st.page_link("https://www.geeksforgeeks.org/ml-handling-missing-values/?ref=header_search", label="Reference", icon="🏠")
-    
+
+with st.expander("**:green-background[Data cleaning] Pulizia dei dati di testo**"):
+    st.write('''
+        The chart above shows some numbers I picked for you.
+        I rolled actual dice for these, so they're *guaranteed* to
+        be random.
+    ''')
+     
 with st.expander("**:blue-background[Data transformation] Operare su variabili categoriche**"):
     st.write('''
         All'interno di un dataset strutturato puoi trovare due tipologie di dati
@@ -200,12 +207,7 @@ with st.expander("**:blue-background[Data transformation]**"):
         Le trasformazioni complesse dei dati includono processi più avanzati come l'integrazione, la migrazione, la replica e l'arricchimento dei dati. Queste trasformazioni spesso richiedono metodi complessi di manipolazione dei dati come la modellazione, la mappatura e la convalida dei dati e sono comunemente utilizzati per preparare i dati per applicazioni di analisi avanzata, machine learning o data warehousing.
     ''')  
 
-with st.expander("**:green-background[Data cleaning] Pulizia dei dati di testo**"):
-    st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    ''')                                
+                                
 
 with st.expander("**:blue-background[Data transformation] Formattazione dei dati**"):
     st.write('''
