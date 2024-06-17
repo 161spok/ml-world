@@ -52,7 +52,8 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             st.write(data)
                                             
                                             if 'dati' not in st.session_state:
-                                                    st.session_state['dati'] = 'caricati'
-                                                    mdati = st.session_state.df
-                                                    st.write(mdati)
+                                              pass
+                                                    #st.session_state['dati'] = 'caricati'
+                                                    #mdati = st.session_state.df
+                                                    #st.write(mdati)
                                            
