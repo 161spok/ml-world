@@ -25,7 +25,7 @@ def load_data(uploaded_file):
         #st.session_state.df = df
       
     if uploaded_file is not None:
-      st.session_state.df = pd.read_csv(uploaded_file)
+      st.session_state.df = pd.dataframe(df)
       
                                                     #st.write(st.session_state.df.shape[0])
                                                     #st.write(st.session_state['dati'])
