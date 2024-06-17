@@ -87,14 +87,14 @@ st.pyplot(plt.gcf())
                                             
                                             #------------------------------------------------------------------------                                        
 x = np.linspace(0, 10000, 500)
-arr = data['Type']
+arr = df['Type']
 fig, ax = plt.subplots()
 plt.title('Distribuzione Normale dei Dati colonna Type')
 ax.hist(arr, bins=20)                                        
 st.pyplot(fig)
                                             #------------------------------------------------------------------------ 
 figsize(7, 5)
-plt.hist(data['Type'], color='blue', edgecolor='black', bins=int(45/1))
+plt.hist(df['Type'], color='blue', edgecolor='black', bins=int(45/1))
 plt.xlabel('Quantità')
 plt.ylabel('Tipologia')
 plt.title('Type column frequencies')
