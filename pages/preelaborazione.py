@@ -104,14 +104,14 @@ metti in gruppi separati per colore
 ''')    
      st.page_link("pages/distribuzione.py", label="Vai", icon="🌎") 
 
-with st.expander("**Rimozione dei duplicati**"):
+with st.expander("**:green-background[Data cleaning] Rimozione dei duplicati**"):
     st.write('''
         Rimuovere i duplicati è un'abilità essenziale 
         per ottenere conteggi accurati perché spesso non si desidera contare la stessa cosa più volte. In Python, ciò potrebbe essere ottenuto 
         utilizzando il modulo Pandas , che ha un metodo noto come drop_duplicates.
     ''')
       
-with st.expander("**Correzione degli errori di struttura**"):
+with st.expander("**:green-background[Data cleaning] Correzione degli errori di struttura**"):
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
@@ -119,7 +119,7 @@ with st.expander("**Correzione degli errori di struttura**"):
     ''')                       
   
  # https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/
-with st.expander("**Gestione dei valori anomali**"):
+with st.expander("**:green-background[Data cleaning] Gestione dei valori anomali**"):
     st.write('''
         Metodo della Deviazione Standard:
 Questo metodo identifica i valori anomali basandosi sulla deviazione standard dei dati.
@@ -175,7 +175,7 @@ Considera come valori anomali quelli che si discostano da questa media di più d
     st.page_link("https://www.diariodiunanalista.it/posts/come-identificare-anomalie-nei-tuoi-dati/", label="Reference", icon="🏠")
     st.page_link("https://www.intelligenzaartificialeitalia.net/post/come-rimuovere-e-gestire-i-valori-anomali-con-python-nel-machine-learning", label="Reference", icon="🏠")
 
-with st.expander("**Gestione dei dati mancanti**"):
+with st.expander("**:green-background[Data cleaning] Gestione dei dati mancanti**"):
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
@@ -203,14 +203,14 @@ with st.expander("**Trasformazione dei dati**"):
         be random.
     ''')  
 
-with st.expander("**Pulizia dei dati di testo**"):
+with st.expander("**:green-background[Data cleaning] Pulizia dei dati di testo**"):
     st.write('''
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
     ''')                                
 
-with st.expander("**Formattazione dei dati **"):
+with st.expander("**:blue-background[Data transformation] Formattazione dei dati **"):
     st.write('''
         La formattazione dei dati implica la conversione dei dati in un formato o struttura standard che può essere facilmente elaborata dagli algoritmi o dai modelli 
         utilizzati per l'analisi. Qui discuteremo le tecniche di formattazione dei dati comunemente utilizzate, ad esempio ridimensionamento e normalizzazione.
@@ -222,7 +222,7 @@ I metodi di ridimensionamento comuni includono il ridimensionamento Min-Max e la
         Il ridimensionamento Min-Max ridimensiona i valori in un intervallo specificato, in genere tra 0 e 1. Preserva la distribuzione originale e garantisce che il valore minimo sia mappato su 0 e il valore massimo sia mappato su 1.
     ''') 
 
-with st.expander("**Standardizzazione dei dati - Feature Scaling**"):
+with st.expander("**:blue-background[Data transformation] Standardizzazione dei dati - Feature Scaling**"):
      st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
