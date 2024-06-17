@@ -182,25 +182,26 @@ with st.expander("**:green-background[Data cleaning] Gestione dei dati mancanti*
         be random.
     ''')                               
 
-with st.expander("**Operare su variabili categoriche**"):
+with st.expander("**:blue-background[Data transformation] Operare su variabili categoriche**"):
     st.write('''
         All'interno di un dataset strutturato puoi trovare due tipologie di dati
 
-**Variabili quantitative continue:** numeri che indicano una quantità\n
-**Variabili qualiative ordinate (ordinali):** numeri o stringhe che rappresentano delle classi che possono essere ordinate\n
-**Variabili qualitative sconnesse (nominali):** numeri e stringhe rappresentanti classi che non hanno un ordine\n
-
-Le variabili qualitative possono essere rappresentate anche da stringhe, in questo caso bisogna codificarle all'interno di numeri per poterle usare come input per un algoritmo di machine learning. 
-In inglese le variabili qualitative sono conosciute come categorical variables (ordinal e nominal).
+        **Variabili quantitative continue:** numeri che indicano una quantità\n
+        **Variabili qualiative ordinate (ordinali):** numeri o stringhe che rappresentano delle classi che possono essere ordinate\n
+        **Variabili qualitative sconnesse (nominali):** numeri e stringhe rappresentanti classi che non hanno un ordine\n
+        
+        Le variabili qualitative possono essere rappresentate anche da stringhe, in questo caso bisogna codificarle all'interno di numeri per poterle usare come input per un algoritmo di machine learning. 
+        In inglese le variabili qualitative sono conosciute come categorical variables (ordinal e nominal).
     ''') 
     st.image('tipologia_variabili.PNG', caption='')
     st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Operare%20su%20variabili%20categoriche.ipynb", label="Variabili categoriche", icon="🏠")
     
-with st.expander("**Trasformazione dei dati**"):
+with st.expander("**:blue-background[Data transformation]**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        Il processo di trasformazione dei dati prevede la conversione, la pulizia e la strutturazione dei dati in un formato utilizzabile che viene utilizzato per analizzare per supportare i processi decisionali. Include la modifica del formato, dell'organizzazione o dei valori dei dati per prepararli all'utilizzo da parte di un'applicazione o all'analisi. Questo processo cruciale viene intrapreso dalle organizzazioni che cercano di sfruttare i propri dati per fornire approfondimenti aziendali tempestivi, garantendo che le informazioni siano accessibili, coerenti, sicure ed eventualmente riconosciute dagli utenti aziendali target.
+        Le trasformazioni possono essere suddivise in due categorie: trasformazioni semplici e trasformazioni dati complesse.
+        Le trasformazioni semplici dei dati includono procedure semplici che includono la pulizia dei dati, la standardizzazione, l'aggregazione e il filtraggio. Queste trasformazioni vengono spesso eseguite utilizzando semplici metodi di manipolazione dei dati e vengono spesso utilizzate per preparare i dati per l'analisi o il reporting.
+        Le trasformazioni complesse dei dati includono processi più avanzati come l'integrazione, la migrazione, la replica e l'arricchimento dei dati. Queste trasformazioni spesso richiedono metodi complessi di manipolazione dei dati come la modellazione, la mappatura e la convalida dei dati e sono comunemente utilizzati per preparare i dati per applicazioni di analisi avanzata, machine learning o data warehousing.
     ''')  
 
 with st.expander("**:green-background[Data cleaning] Pulizia dei dati di testo**"):
