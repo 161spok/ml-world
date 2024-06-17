@@ -177,11 +177,12 @@ Considera come valori anomali quelli che si discostano da questa media di più d
 
 with st.expander("**:green-background[Data cleaning] Gestione dei dati mancanti**"):
     st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        I valori mancanti sono un problema comune nell'apprendimento automatico. Ciò si verifica quando una particolare variabile non dispone di punti dati, risultando in informazioni incomplete e potenzialmente danneggiando l'accuratezza e l'affidabilità dei modelli. È essenziale affrontare i valori mancanti in modo efficiente per garantire risultati forti e imparziali nei tuoi progetti di machine learning. In questo articolo vedremo come gestire i valori mancanti nei set di dati in Machine Learning .
+        Cos'è un valore mancante?
+        I valori mancanti sono punti dati assenti per una variabile specifica in un set di dati. Possono essere rappresentati in vari modi, ad esempio celle vuote, valori nulli o simboli speciali come "NA" o "sconosciuto". Questi punti dati mancanti rappresentano una sfida significativa nell’analisi dei dati e possono portare a risultati imprecisi o distorti.
     ''')                               
-
+    st.page_link("https://www.geeksforgeeks.org/ml-handling-missing-values/?ref=header_search", label="Reference", icon="🏠")
+    
 with st.expander("**:blue-background[Data transformation] Operare su variabili categoriche**"):
     st.write('''
         All'interno di un dataset strutturato puoi trovare due tipologie di dati
@@ -216,9 +217,9 @@ with st.expander("**:blue-background[Data transformation] Formattazione dei dati
         La formattazione dei dati implica la conversione dei dati in un formato o struttura standard che può essere facilmente elaborata dagli algoritmi o dai modelli 
         utilizzati per l'analisi. Qui discuteremo le tecniche di formattazione dei dati comunemente utilizzate, ad esempio ridimensionamento e normalizzazione.
         Ridimensionamento
-Il ridimensionamento implica la trasformazione dei valori delle funzionalità in un intervallo specifico. Mantiene la forma della distribuzione originale pur modificando la scala.
-Particolarmente utile quando le caratteristiche hanno scale diverse e alcuni algoritmi sono sensibili alla grandezza delle caratteristiche.
-I metodi di ridimensionamento comuni includono il ridimensionamento Min-Max e la standardizzazione (ridimensionamento del punteggio Z).
+        Il ridimensionamento implica la trasformazione dei valori delle funzionalità in un intervallo specifico. Mantiene la forma della distribuzione originale pur modificando la scala.
+        Particolarmente utile quando le caratteristiche hanno scale diverse e alcuni algoritmi sono sensibili alla grandezza delle caratteristiche.
+        I metodi di ridimensionamento comuni includono il ridimensionamento Min-Max e la standardizzazione (ridimensionamento del punteggio Z).
         Ridimensionamento Min-Max
         Il ridimensionamento Min-Max ridimensiona i valori in un intervallo specificato, in genere tra 0 e 1. Preserva la distribuzione originale e garantisce che il valore minimo sia mappato su 0 e il valore massimo sia mappato su 1.
     ''') 
@@ -227,7 +228,7 @@ with st.expander("**:blue-background[Data transformation] Standardizzazione dei 
      st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
-Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
+        Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
         
     ''')
      st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")                              
@@ -255,17 +256,17 @@ with st.expander("**Trappola delle variabili fittizie nei modelli di regressione
     st.write('''
         Prima di conoscere la trappola delle variabili fittizie, capiamo innanzitutto cos'è in realtà la variabile fittizia. 
 
-Variabile fittizia nei modelli di regressione: 
-nelle statistiche, soprattutto nei modelli di regressione, abbiamo a che fare con vari tipi di dati. I dati possono essere quantitativi (numerici) o qualitativi (categoriali). I dati numerici possono essere facilmente gestiti nei modelli di regressione ma non possiamo utilizzare direttamente i dati categorici, devono essere trasformati in qualche modo. 
-
-Per trasformare gli attributi categoriali in attributi numerici, possiamo utilizzare la procedura di codifica delle etichette (la codifica delle etichette assegna un intero univoco a ciascuna categoria di dati). Ma questa procedura non è l'unica adatta, quindi, una codifica a caldo viene utilizzata nei modelli di regressione successivi alla codifica dell'etichetta. Ciò ci consente di creare nuovi attributi in base al numero di classi presenti nell'attributo categoriale, ovvero se ci sono n numero di categorie nell'attributo categoriale, verranno creati n nuovi attributi. Questi attributi creati sono chiamati variabili fittizie . Pertanto, le variabili dummy sono variabili “proxy” per i dati categorici nei modelli di regressione. 
-Queste variabili fittizie verranno create con codifica one-hot e ciascun attributo avrà un valore pari a 0 o 1, che rappresenta la presenza o l'assenza di tale attributo. 
-
-Trappola delle variabili fittizie: 
-la trappola delle variabili fittizie è uno scenario in cui sono presenti attributi altamente correlati (multicollineari) e una variabile predice il valore delle altre. Quando utilizziamo la codifica one-hot per gestire i dati categorici, è possibile prevedere una variabile fittizia (attributo) con l'aiuto di altre variabili fittizie. Pertanto, una variabile fittizia è altamente correlata con altre variabili fittizie. L'utilizzo di tutte le variabili dummy per i modelli di regressione porta a una trappola delle variabili dummy . Pertanto, i modelli di regressione dovrebbero essere progettati per escludere una variabile fittizia. 
-
-Ad esempio – 
-Consideriamo il caso del genere avente due valori maschile (0 o 1) e femminile (1 o 0). Includere entrambe le variabili fittizie può causare ridondanza perché se una persona non è maschio in tal caso quella persona è una donna, quindi non è necessario utilizzare entrambe le variabili nei modelli di regressione. Questo ci proteggerà dalla trappola delle variabili fittizie.
+        Variabile fittizia nei modelli di regressione: 
+        nelle statistiche, soprattutto nei modelli di regressione, abbiamo a che fare con vari tipi di dati. I dati possono essere quantitativi (numerici) o qualitativi (categoriali). I dati numerici possono essere facilmente gestiti nei modelli di regressione ma non possiamo utilizzare direttamente i dati categorici, devono essere trasformati in qualche modo. 
+        
+        Per trasformare gli attributi categoriali in attributi numerici, possiamo utilizzare la procedura di codifica delle etichette (la codifica delle etichette assegna un intero univoco a ciascuna categoria di dati). Ma questa procedura non è l'unica adatta, quindi, una codifica a caldo viene utilizzata nei modelli di regressione successivi alla codifica dell'etichetta. Ciò ci consente di creare nuovi attributi in base al numero di classi presenti nell'attributo categoriale, ovvero se ci sono n numero di categorie nell'attributo categoriale, verranno creati n nuovi attributi. Questi attributi creati sono chiamati variabili fittizie . Pertanto, le variabili dummy sono variabili “proxy” per i dati categorici nei modelli di regressione. 
+        Queste variabili fittizie verranno create con codifica one-hot e ciascun attributo avrà un valore pari a 0 o 1, che rappresenta la presenza o l'assenza di tale attributo. 
+        
+        Trappola delle variabili fittizie: 
+        la trappola delle variabili fittizie è uno scenario in cui sono presenti attributi altamente correlati (multicollineari) e una variabile predice il valore delle altre. Quando utilizziamo la codifica one-hot per gestire i dati categorici, è possibile prevedere una variabile fittizia (attributo) con l'aiuto di altre variabili fittizie. Pertanto, una variabile fittizia è altamente correlata con altre variabili fittizie. L'utilizzo di tutte le variabili dummy per i modelli di regressione porta a una trappola delle variabili dummy . Pertanto, i modelli di regressione dovrebbero essere progettati per escludere una variabile fittizia. 
+        
+        Ad esempio – 
+        Consideriamo il caso del genere avente due valori maschile (0 o 1) e femminile (1 o 0). Includere entrambe le variabili fittizie può causare ridondanza perché se una persona non è maschio in tal caso quella persona è una donna, quindi non è necessario utilizzare entrambe le variabili nei modelli di regressione. Questo ci proteggerà dalla trappola delle variabili fittizie.
     ''')  
          
 
