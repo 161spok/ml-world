@@ -237,11 +237,9 @@ with st.expander("**Codifica delle etichette**"):
     ''')  
      st.page_link("https://www.geeksforgeeks.org/ml-label-encoding-of-datasets-in-python/", label="Reference", icon="🏠")
 
-with st.expander("**One-hot encoding**"):
+with st.expander("**:blue-background[Data transformation] One-hot encoding**"):
      st.write('''
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        Una codifica a caldo è una tecnica che utilizziamo per rappresentare le variabili categoriali come valori numerici in un modello di machine learning.
     ''')       
      st.page_link("https://www.geeksforgeeks.org/ml-one-hot-encoding/?ref=header_search", label="Reference", icon="🏠")
 
