@@ -69,7 +69,7 @@ st.markdown(
 
 #components.iframe("https://ccaudek.github.io/bookdown_psicometria/chapter-descript.html#forma-di-una-distribuzione", height = 500, scrolling = True)
 st.write('''DATA PREPROCESSING TECHNIQUES''')
-st.write('''Data cleaning, Data transformation,  Feature engineering''')
+st.write(''':green-background[Data cleaning], :green-background[Data transformation],  :green-background[Feature engineering]''')
 st.write('''Data cleaning - Handling missing values ''')
 st.write('''Data cleaning - Removing outliers ''')
 st.write('''Data cleaning - Correcting errors ''')
