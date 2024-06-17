@@ -274,7 +274,7 @@ Nell'apprendimento automatico, i dati ad alta dimensione si riferiscono a dati c
 
 La riduzione della dimensionalità può aiutare a mitigare questi problemi riducendo la complessità del modello e migliorando le sue prestazioni di generalizzazione. Esistono due approcci principali alla riduzione della dimensionalità: feature selection e feature extraction.
     ''')
-      st.page_link("https://www.geeksforgeeks.org/dimensionality-reduction/?ref=header_search", label="Reference", icon="🏠")
+     st.page_link("https://www.geeksforgeeks.org/dimensionality-reduction/?ref=header_search", label="Reference", icon="🏠")
 
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
      st.write('''
