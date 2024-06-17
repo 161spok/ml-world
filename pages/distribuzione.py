@@ -28,7 +28,30 @@ else:
   #  st.area_chart(df)
   #  st.bar_chart(df)
   #  st.line_chart(data=df)
-
+  
+  # -----------------------------------------distribuzione dei dati
+  import numpy as np
+  import matplotlib.pyplot as plt
+  from scipy.stats import norm
+  
+  # Carica i dati dal file CSV
+  #data = np.genfromtxt('dati.csv', delimiter=',')
+  data = st.dataframe(df)
+  # Calcola la media e la deviazione standard dei dati
+  mean = np.mean(data)
+  std_dev = np.std(data)
+  
+  # Calcola la densità di probabilità (PDF) della distribuzione normale
+  x = np.linspace(mean - 3*std_dev, mean + 3*std_dev, 1000)
+  pdf = norm.pdf(x, mean, std_dev)
+  
+  # Visualizza la PDF
+  plt.plot(x, pdf)
+  plt.title('Distribuzione Normale dei Dati')
+  plt.xlabel('Valore')
+  plt.ylabel('Probabilità')
+  plt.show()
+  #------------------------------------------------------------------------
   col1, col2 = st.columns(2)
   with col1:
     st.header("Head")
