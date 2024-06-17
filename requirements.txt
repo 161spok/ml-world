@@ -8,3 +8,4 @@ seaborn
 streamlit-pdf-viewer
 PyPDF
 scipy
+IPython
