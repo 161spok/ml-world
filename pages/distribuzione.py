@@ -25,6 +25,7 @@ else:
   df = st.session_state.df
   st.write("Test")
   st.write(df)
+  st.write("-------------------------------------------------------------------------")
   #st.dataframe(df)
   #st.area_chart(df)
   #st.bar_chart(df)
