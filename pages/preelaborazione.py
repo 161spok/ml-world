@@ -246,6 +246,16 @@ with st.expander("**:red-background[Feature engineering] Feature selection**"):
     ''')       
      st.page_link("https://www.geeksforgeeks.org/difference-between-feature-selection-and-feature-extraction/?ref=header_search", label="Reference", icon="🏠")
 
+with st.expander("**:red-background[Feature engineering] Feature extraction**"):
+     st.write('''
+        Feature extraction is a process of transforming the original features into a new set of features that are more informative and compact. The goal is to capture the essential information from the original features and represent it in a lower-dimensional feature space. Feature extraction methods can be categorized into linear methods and nonlinear methods.
+
+Linear methods use linear transformations such as Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) to extract features. PCA finds the principal components that explain the maximum variance in the data, while LDA finds the projection that maximizes the class separability.
+Nonlinear methods use nonlinear transformations such as Kernel PCA and Autoencoder to extract features. Kernel PCA uses kernel functions to map the data into a higher-dimensional space and finds the principal components in that space. Autoencoder is a neural network architecture that learns to compress the data into a lower-dimensional representation and reconstruct it back to the original space.
+Here is an example of feature extraction in the Mel-Frequency Cepstral Coefficients (MFCC) method. MFCC is a nonlinear method that extracts features from audio signals for speech recognition tasks. It first applies a filter bank to the audio signals to extract the spectral features, then applies the Discrete Cosine Transform (DCT) to the log-magnitude spectrum to extract the cepstral features.
+    ''')       
+     st.page_link("https://www.geeksforgeeks.org/difference-between-feature-selection-and-feature-extraction/?ref=header_search", label="Reference", icon="🏠")
+
 with st.expander("**:red-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
      st.write('''
         Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
@@ -255,7 +265,17 @@ with st.expander("**:red-background[Feature engineering] Standardizzazione dei d
     ''')
      st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")                              
      st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Portare%20i%20dati%20sulla%20stessa%20scala.ipynb", label="Reference", icon="🏠") 
-     
+
+with st.expander("**:red-background[Feature engineering] Dimensionality Reduction**"):
+     st.write('''
+        La riduzione della dimensionalità è una tecnica utilizzata per ridurre il numero di caratteristiche in un set di dati conservando quante più informazioni importanti possibile. In altre parole, è un processo di trasformazione dei dati ad alta dimensionalità in uno spazio a dimensione inferiore che conserva ancora l’essenza dei dati originali.
+
+Nell'apprendimento automatico, i dati ad alta dimensione si riferiscono a dati con un gran numero di caratteristiche o variabili. La maledizione della dimensionalità è un problema comune nell’apprendimento automatico, dove le prestazioni del modello peggiorano all’aumentare del numero di funzionalità. Questo perché la complessità del modello aumenta con il numero delle funzionalità e diventa più difficile trovare una buona soluzione. Inoltre, i dati ad alta dimensionalità possono anche portare a un overfitting, in cui il modello si adatta troppo fedelmente ai dati di addestramento e non si generalizza bene ai nuovi dati.
+
+La riduzione della dimensionalità può aiutare a mitigare questi problemi riducendo la complessità del modello e migliorando le sue prestazioni di generalizzazione. Esistono due approcci principali alla riduzione della dimensionalità: feature selection e feature extraction.
+    ''')
+      st.page_link("https://www.geeksforgeeks.org/dimensionality-reduction/?ref=header_search", label="Reference", icon="🏠")
+
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
      st.write('''
         La Synthetic Minority Over-sampling TEchnique, o SMOTE in breve, è una tecnica di preelaborazione utilizzata per affrontare uno squilibrio di classi in un set di dati.
