@@ -34,7 +34,16 @@ else:
       st.write("Test 2")
       st.write(df)
       st.write("-------------------------------------------------------------------------")
-  
+      tdata = pd.DataFrame(df)
+                                          
+                                          # media tutte le colonne escluso quelle non numeriche
+      media = tdata.mean(axis = 0, skipna = False, numeric_only=True)
+                                          
+                                          # media di colonne selezionate
+                                            #mean1 = tdata.iloc[:,0].mean() #calcola la media della prima colonna
+      mean2 = tdata.iloc[:,3].mean() # calcola la media della seconda colonna
+      st.write("Media della colonna 4")
+      st.write(mean2)
   
   # -----------------------------------------distribuzione dei dati
   import numpy as np
