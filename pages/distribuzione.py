@@ -52,7 +52,7 @@ else:
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
                                             tdata = pd.DataFrame(data)
-                                            media = tdata.mean(axis = 0, skipna = False)
+                                            media = tdata.mean(axis = 0, skipna = False, numeric_only=True)
                                             #std_dev = np.std(data)
                                             std_dev = tdata.std(df)
                                             
