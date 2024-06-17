@@ -20,13 +20,13 @@ def load_data(uploaded_file):
     
     if 'df' not in st.session_state:
         st.session_state.df = None
-   
-        #df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 10], [7, 8, 12]]), columns=['a', 'b', 'Prediction'])
-        #st.session_state.df = df
+        st.session_state['df'] = None
       
     if uploaded_file is not None:
       st.session_state.df = pd.DataFrame(dataf)
-      mdati = st.session_state.df
+      st.session_state['df'] = pd.DataFrame(dataf)
+      #mdati = st.session_state.df
+      mdati = st.session_state['df']
       st.write(mdati)
                                                    
     return dataf
