@@ -19,15 +19,15 @@ def load_data(uploaded_file):
     dataf = pd.read_csv(uploaded_file)
     
     if 'df' not in st.session_state:
-        st.session_state.df = None
+        #st.session_state.df = None
         st.session_state['df'] = None
       
     if uploaded_file is not None:
-      st.session_state.df = pd.DataFrame(dataf)
+      #st.session_state.df = pd.DataFrame(dataf)
       st.session_state['df'] = pd.DataFrame(dataf)
       #mdati = st.session_state.df
-      mdati = st.session_state['df']
-      st.write(mdati)
+      #mdati = st.session_state['df']
+      #st.write(mdati)
                                                    
     return dataf
 
@@ -51,9 +51,8 @@ if st.button("Submit & Process", type="primary", key="process_button") :
                                             #data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
                                             
-                                            if 'dati' not in st.session_state:
-                                              pass
-                                                    #st.session_state['dati'] = 'caricati'
+                                            if 'dati' not in st.session_state:                                         
+                                                    st.session_state['dati'] = 'caricati'
                                                     #mdati = st.session_state.df
                                                     #st.write(mdati)
                                            
