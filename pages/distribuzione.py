@@ -26,10 +26,6 @@ else:
   st.write("Test")
   st.write(df)
   st.write("-------------------------------------------------------------------------")
-  #st.dataframe(df)
-  #st.area_chart(df)
-  #st.bar_chart(df)
-  #st.line_chart(data=df)
   
   # -----------------------------------------distribuzione dei dati
   import numpy as np
@@ -67,6 +63,7 @@ else:
                                             std_dev = tdata.std(numeric_only=True)
                                             st.write("Deviazione standard su tutte le colonne")
                                             st.write(std_dev)
+                                          
                                           # deviazione standard su singola colonna
                                             std_dev_col = tdata.iloc[:,3].std()
                                             #  df['age'].std()
@@ -84,10 +81,19 @@ else:
                                             plt.xlabel('Valore')
                                             plt.ylabel('Probabilità')
                                             st.pyplot(plt.gcf())
-                                            #plt.show()
+                                            
   #------------------------------------------------------------------------
   df['Type'].value_counts().plot(kind='bar')
-
+  
+  data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
+  names = list(df.keys())
+  values = list(df.values())
+  
+  fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
+  axs[0].bar(df)
+  #axs[1].scatter(names, values)
+  #axs[2].plot(names, values)
+  fig.suptitle('Categorical Plotting')
   
   col1, col2 = st.columns(2)
   with col1:
