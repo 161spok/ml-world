@@ -83,8 +83,13 @@ else:
                                             st.pyplot(plt.gcf())
                                             
   #------------------------------------------------------------------------
-  st.pyplot(df['Type'].value_counts().plot(kind='bar'))
+  #st.pyplot(df['Type'].value_counts().plot(kind='bar'))
   
+  arr = data
+  fig, ax = plt.subplots()
+  ax.hist(arr, bins=20)
+
+  st.pyplot(fig)
  
 
   
