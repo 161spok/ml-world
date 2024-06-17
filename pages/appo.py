@@ -2,6 +2,9 @@ import streamlit as st
 #from IPython.display import HTML
 import pandas as pd
 				
+with st.expander("See details."): 
+    st.markdown('<p class="small-font">This is some text with a smaller font size.</p>', unsafe_allow_html=True)
+
 
 def load_column_data():
 	df = ""
