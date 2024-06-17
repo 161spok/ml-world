@@ -85,7 +85,7 @@ else:
   #------------------------------------------------------------------------
   #st.pyplot(df['Type'].value_counts().plot(kind='bar'))
   
-  arr = data
+  arr = data['Type']
   fig, ax = plt.subplots()
   ax.hist(arr, bins=20)
 
