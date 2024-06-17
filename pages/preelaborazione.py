@@ -221,15 +221,7 @@ with st.expander("**:blue-background[Data transformation] Formattazione dei dati
         Il ridimensionamento Min-Max ridimensiona i valori in un intervallo specificato, in genere tra 0 e 1. Preserva la distribuzione originale e garantisce che il valore minimo sia mappato su 0 e il valore massimo sia mappato su 1.
     ''') 
 
-with st.expander("**:blue-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
-     st.write('''
-        Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
 
-        Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
-        
-    ''')
-     st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")                              
-     st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Portare%20i%20dati%20sulla%20stessa%20scala.ipynb", label="Reference", icon="🏠") 
 
 with st.expander("**:blue-background[Data transformation] Codifica delle etichette**"):
      st.write('''
@@ -254,6 +246,16 @@ with st.expander("**:blue-background[Feature engineering] Feature selection**"):
     ''')       
      st.page_link("https://www.geeksforgeeks.org/difference-between-feature-selection-and-feature-extraction/?ref=header_search", label="Reference", icon="🏠")
 
+with st.expander("**:blue-background[Feature engineering] Standardizzazione dei dati - Feature Scaling**"):
+     st.write('''
+        Nel Machine Learning, un modello sarà buono (o altrettanto cattivo) quanto i dati con cui lo addestri. L'entità delle diverse funzionalità influisce sui diversi modelli di machine learning per vari motivi.
+
+        Ad esempio, considera un set di dati contenente due caratteristiche, età e reddito. Qui l’età varia da 0 a 100, mentre il reddito varia da 0 a un importo enorme, per lo più superiore a 100. Il reddito è circa 1.000 volte maggiore dell’età. Quindi, queste due funzionalità rientrano in intervalli molto diversi. Quando eseguiamo ulteriori analisi, come ad esempio la regressione lineare multivariata, il reddito attribuito influenzerà intrinsecamente maggiormente il risultato a causa del suo valore maggiore. Ma questo non significa necessariamente che sia più importante come predittore. Pertanto, la portata di tutti gli elementi dovrebbe essere ridimensionata in modo che ogni elemento contribuisca in modo approssimativamente proporzionale alla distanza finale.
+        
+    ''')
+     st.page_link("https://towardsdatascience.com/normalization-vs-standardization-cb8fe15082eb", label="Reference", icon="🏠")                              
+     st.page_link("https://github.com/ProfAI/ml00/blob/master/2%20-%20Datasets%20e%20data%20preprocessing/Portare%20i%20dati%20sulla%20stessa%20scala.ipynb", label="Reference", icon="🏠") 
+     
 with st.expander("**Gestione dei dati sbilanciati con SMOTE e l'algoritmo Near Miss**"):
      st.write('''
         La Synthetic Minority Over-sampling TEchnique, o SMOTE in breve, è una tecnica di preelaborazione utilizzata per affrontare uno squilibrio di classi in un set di dati.
