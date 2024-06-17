@@ -52,7 +52,7 @@ else:
                                             data = pd.read_csv(uploaded_file) #path folder of the data file
                                             st.write(data)
   
-                                            mean = data.mean()
+                                            media = data.mean()
                                             #std_dev = np.std(data)
                                             std_dev = data.std(df)
                                             
