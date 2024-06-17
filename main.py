@@ -66,5 +66,5 @@ show_pages(
         Page("pages/100projects.py",     "[x] 100 projects", ":hourglass_flowing_sand:", in_section=False),
     ]
 )    
-file = st.sidebar.file_uploader('Upload',type=["pdf","txt"])         
+#file = st.sidebar.file_uploader('Upload',type=["pdf","txt"])         
 
