@@ -87,7 +87,11 @@ st.pyplot(plt.gcf())
                                             
                                             #------------------------------------------------------------------------ 
 
+cols = st.multiselect('select columns:', tdata.columns, default=[])
+st.write('You selected:', cols)
 
+# show dataframe with the selected columns
+st.write(tdata[cols])
 
 '''
 x = np.linspace(0, 10000, 500)
