@@ -85,13 +85,18 @@ plt.xlabel('Valore')
 plt.ylabel('Probabilità')
 st.pyplot(plt.gcf())
                                             
-                                            #------------------------------------------------------------------------                                        
+                                            #------------------------------------------------------------------------ 
+
+
+
+'''
 x = np.linspace(0, 10000, 500)
 arr = df['Type']
 fig, ax = plt.subplots()
 plt.title('Distribuzione Normale dei Dati colonna Type')
 ax.hist(arr, bins=20)                                        
 st.pyplot(fig)
+'''
                                             #------------------------------------------------------------------------ 
 figsize(7, 5)
 plt.hist(df['Type'], color='blue', edgecolor='black', bins=int(45/1))
