@@ -93,17 +93,17 @@ st.write('You selected:', cols)
 # show dataframe with the selected columns
 st.write(tdata[cols])
 
-'''
+
 x = np.linspace(0, 10000, 500)
-arr = df['Type']
+arr = tdata[cols]
 fig, ax = plt.subplots()
 plt.title('Distribuzione Normale dei Dati colonna Type')
 ax.hist(arr, bins=20)                                        
 st.pyplot(fig)
-'''
+
                                             #------------------------------------------------------------------------ 
 figsize(7, 5)
-plt.hist(df['Type'], color='blue', edgecolor='black', bins=int(45/1))
+plt.hist(tdata[cols], color='blue', edgecolor='black', bins=int(45/1))
 plt.xlabel('Quantità')
 plt.ylabel('Tipologia')
 plt.title('Type column frequencies')
